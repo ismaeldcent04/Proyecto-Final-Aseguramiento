@@ -11,50 +11,42 @@ using System.Runtime.InteropServices;
 
 namespace Calculadora_Indice_Academico
 {
-    public partial class Login : Form
+    public partial class Recuperar_ContraseñaHome : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
-      (
+        (
           int nLeftRect,     // x-coordinate of upper-left corner
           int nTopRect,      // y-coordinate of upper-left corner
           int nRightRect,    // x-coordinate of lower-right corner
           int nBottomRect,   // y-coordinate of lower-right corner
           int nWidthEllipse, // height of ellipse
           int nHeightEllipse // width of ellipse
-      );
-        public Login()
+        );
+        public Recuperar_ContraseñaHome()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
-        private void close_button_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void Login_Load(object sender, EventArgs e)
+        private void Recuperar_ContraseñaHome_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void txt_nombreUsuario_TextChanged(object sender, EventArgs e)
-        {
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_olvidasteContraseña_Click(object sender, EventArgs e)
+        private void btn_back_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Recuperar_ContraseñaHome rcHome = new Recuperar_ContraseñaHome();
-            rcHome.Show();
+            Login login = new Login();
+            login.Show();
+        }
+
+        private void btn_recuperarContraseña_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Recuperar_Contraseña rc = new Recuperar_Contraseña();
+            rc.Show();
         }
     }
 }

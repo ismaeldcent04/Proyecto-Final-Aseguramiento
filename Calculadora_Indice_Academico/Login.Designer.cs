@@ -29,48 +29,45 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.label1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_olvidasteContraseña = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_contraseñaUsuario = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.close_button = new System.Windows.Forms.Button();
+            this.txt_nombreUsuario = new System.Windows.Forms.TextBox();
+            this.llb = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(772, 443);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(94, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "No tienes cuenta?";
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox1.Location = new System.Drawing.Point(784, 363);
+            this.checkBox1.Location = new System.Drawing.Point(709, 339);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(107, 17);
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Recordar usuario";
             this.checkBox1.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // lbl_olvidasteContraseña
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.ForeColor = System.Drawing.Color.IndianRed;
-            this.label2.Location = new System.Drawing.Point(985, 364);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Olvidaste tu contraseña?";
+            this.lbl_olvidasteContraseña.AutoSize = true;
+            this.lbl_olvidasteContraseña.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_olvidasteContraseña.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_olvidasteContraseña.Location = new System.Drawing.Point(910, 340);
+            this.lbl_olvidasteContraseña.Name = "lbl_olvidasteContraseña";
+            this.lbl_olvidasteContraseña.Size = new System.Drawing.Size(125, 13);
+            this.lbl_olvidasteContraseña.TabIndex = 4;
+            this.lbl_olvidasteContraseña.Text = "Olvidaste tu contraseña?";
+            this.lbl_olvidasteContraseña.Click += new System.EventHandler(this.lbl_olvidasteContraseña_Click);
             // 
             // label3
             // 
@@ -78,85 +75,162 @@
             this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.IndianRed;
-            this.label3.Location = new System.Drawing.Point(886, 251);
+            this.label3.Location = new System.Drawing.Point(811, 182);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 40);
             this.label3.TabIndex = 5;
             this.label3.Text = "Log In";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.ForeColor = System.Drawing.Color.IndianRed;
-            this.label4.Location = new System.Drawing.Point(890, 443);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Registrar";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.IndianRed;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(863, 395);
+            this.button1.Location = new System.Drawing.Point(788, 371);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 25);
             this.button1.TabIndex = 7;
             this.button1.Text = "Log in";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txt_contraseñaUsuario
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(784, 294);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(326, 13);
-            this.textBox1.TabIndex = 8;
+            this.txt_contraseñaUsuario.BackColor = System.Drawing.Color.Gainsboro;
+            this.txt_contraseñaUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_contraseñaUsuario.Location = new System.Drawing.Point(709, 313);
+            this.txt_contraseñaUsuario.Name = "txt_contraseñaUsuario";
+            this.txt_contraseñaUsuario.Size = new System.Drawing.Size(326, 13);
+            this.txt_contraseñaUsuario.TabIndex = 9;
             // 
-            // textBox2
+            // pictureBox1
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(784, 337);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(326, 13);
-            this.textBox2.TabIndex = 9;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(41, 112);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(635, 386);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.IndianRed;
+            this.label5.Location = new System.Drawing.Point(129, 536);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(512, 40);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Cálculo de Índice Académico";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(209, 105);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // close_button
+            // 
+            this.close_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("close_button.BackgroundImage")));
+            this.close_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.close_button.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.close_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_button.Location = new System.Drawing.Point(1063, 1);
+            this.close_button.Name = "close_button";
+            this.close_button.Size = new System.Drawing.Size(27, 23);
+            this.close_button.TabIndex = 13;
+            this.close_button.UseVisualStyleBackColor = true;
+            this.close_button.Click += new System.EventHandler(this.close_button_Click);
+            // 
+            // txt_nombreUsuario
+            // 
+            this.txt_nombreUsuario.BackColor = System.Drawing.Color.Gainsboro;
+            this.txt_nombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_nombreUsuario.Location = new System.Drawing.Point(709, 274);
+            this.txt_nombreUsuario.Name = "txt_nombreUsuario";
+            this.txt_nombreUsuario.Size = new System.Drawing.Size(326, 13);
+            this.txt_nombreUsuario.TabIndex = 14;
+            this.txt_nombreUsuario.TextChanged += new System.EventHandler(this.txt_nombreUsuario_TextChanged);
+            // 
+            // llb
+            // 
+            this.llb.AutoSize = true;
+            this.llb.BackColor = System.Drawing.Color.White;
+            this.llb.ForeColor = System.Drawing.Color.IndianRed;
+            this.llb.Location = new System.Drawing.Point(843, 419);
+            this.llb.Name = "llb";
+            this.llb.Size = new System.Drawing.Size(49, 13);
+            this.llb.TabIndex = 6;
+            this.llb.Text = "Registrar";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(706, 258);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "ID Usuario";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(706, 297);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Contraseña";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1177, 628);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(1090, 620);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.txt_nombreUsuario);
+            this.Controls.Add(this.close_button);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txt_contraseñaUsuario);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.llb);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_olvidasteContraseña);
+            this.Controls.Add(this.checkBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "v";
+            this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_olvidasteContraseña;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_contraseñaUsuario;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button close_button;
+        private System.Windows.Forms.TextBox txt_nombreUsuario;
+        private System.Windows.Forms.Label llb;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }
 
