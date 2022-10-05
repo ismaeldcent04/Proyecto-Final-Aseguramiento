@@ -56,5 +56,11 @@ namespace Calculadora_Indice_Academico
             Recuperar_ContraseñaHome rcHome = new Recuperar_ContraseñaHome();
             rcHome.Show();
         }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            DashboardEstudiante dashboardEstudiante = new DashboardEstudiante();
+            dashboardEstudiante.Show();
+        }
     }
 }
