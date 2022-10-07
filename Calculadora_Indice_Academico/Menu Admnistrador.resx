@@ -117,16 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Seccion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="fdsalklsdafkjf.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Seccion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="fdsalklsdafkjf.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_profesores.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAN0AAADdAXBTogcAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAACfklEQVRYR+3XTYhNYRzH8UczjLzElJGVsRqilCxm461Ikp3FbMgUEmZhIVMWspgyRLFiIRElOyFS
+        xIaIhaSwmBov0aAUecvL9f0d/+fMM8899845M3NX7r8+9z6v5/mf03PuOdeVSqVMxEY8xCfcwZqgbzx2
+        4DHUUFQfujGlbGFbYA/84K9BucP6O6z+A/0j8AWa3521+DR8xy+shc52C9T51sbctPr8eH4exAwoib6s
+        zmVQ4UrU/sTaZ0NnQfPQuUX4Y2R1LEw6nHuOcdY2GR/xB7pCNU2gEc+STueuYyfuWf1GODmcV5Q/RqXO
+        RXidDBj0FK3WP/YJEA3QwpuxC3txHroKZ7EBTeFkP7caog3rMtoHEyAW4EHSUN0HbMOwCRBzcQ66m9TQ
+        FvX/S4BowTurvEEvdAViB/ENGvdT33agduhHaSuaEC88gK5wcZuXJnDCCmfQGA8MEavhk5DbQVl0IuHC
+        uzGpwrHSBPyO1+03AUexOGuSEKsQ/jpqvq7QVau/R8WFPSJNQPf2K2tcAhVOxhNCxFKcgjZmg7Vthwq9
+        8fgYMRWf8VIVtfRbxwqrn44nVULMxGH4q6J99GgY2swauw/5EyD0kNIBVqIVWtg/WIrQ/jiAZiQNeROI
+        N53ozI9Az4jpOaWbXaHPogncx2UcwqyssXkp9Fk0gTlZ/SOhuAXdCdrR+gEZkgDREpRrksB6O2goSYDY
+        ZPXlVh/7BJIP5+ZBO/oS1OAT2G/1TqvXJoG0Eu0Bop5APYF6Av9fAnrE/sZd6C/ZBahDD52JeAH9Wa36
+        tlNEeYNz16BC+NoV1o/Hc0ajvIHLi2PQm40eTp24CL0+9SB9OI1eyf0FrSnjhLUplH8AAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="btn_estudiantes.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        tAAAALQB65csewAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFySURBVEhL7dS9
+        SkNBFATg1YQ0aVJoIVYx6ZIqfSDPYWVlXkSIEHwFiZ1NqhB8BHtBCxsFS2sLUbzOhD1w7u7cq4JlDnyQ
+        nJ2dLfwJRVH8CNOAY7iL+Lmhsim5NJgmnMAjcOFxx7Omumv0MoQWnMIT+FKFGWZbsitbhDCGF/Alv8E7
+        46wvW4SwBxfwBr6gDrP3sJ/1pQvDMDyAL1KYYfZc9qilwazAlymrmL2C7OdQ+pLCzMGKqsxj9gb+/MAa
+        rKjKOmaf4SjrSBceL4MVVbEHDmEn60gXHmYCH2BlKZ5N1F0jlx5mFsuUmbrjyaWH6cBrLPS466g7nlym
+        MD24BSvn557KpuSyCuaA1FkVuTSYIVxCV5x149kwPfP0MoQBXMMXcLEQmUU8Y4bZQZrZ5EpfQhjBEqzY
+        fELf5fpx5zO8w7ujUqe7NAV/IcV/BbsRP6uMmZYewLThPR7WOYvUmceutn+Av+s+8B82fyPbB+rggSJ8
+        A9tPAr8bzmaKAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

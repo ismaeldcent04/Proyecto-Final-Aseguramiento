@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.pnlHorario = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Seccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fdsalklsdafkjf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label14 = new System.Windows.Forms.Label();
             this.pnlAvisos = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -68,6 +71,7 @@
             this.proAprobadas = new CircularProgressBar.CircularProgressBar();
             this.label15 = new System.Windows.Forms.Label();
             this.pnlHorario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlAvisos.SuspendLayout();
             this.panel5.SuspendLayout();
             this.pnlDatosGenerales.SuspendLayout();
@@ -84,11 +88,35 @@
             // pnlHorario
             // 
             this.pnlHorario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.pnlHorario.Controls.Add(this.dataGridView1);
             this.pnlHorario.Controls.Add(this.label14);
             this.pnlHorario.Location = new System.Drawing.Point(270, 448);
             this.pnlHorario.Name = "pnlHorario";
             this.pnlHorario.Size = new System.Drawing.Size(1039, 373);
             this.pnlHorario.TabIndex = 17;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Seccion,
+            this.fdsalklsdafkjf});
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 55);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(247, 43);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // Seccion
+            // 
+            this.Seccion.HeaderText = "Column1";
+            this.Seccion.Name = "Seccion";
+            // 
+            // fdsalklsdafkjf
+            // 
+            this.fdsalklsdafkjf.HeaderText = "dafsdf";
+            this.fdsalklsdafkjf.Name = "fdsalklsdafkjf";
             // 
             // label14
             // 
@@ -583,6 +611,7 @@
             this.proAprobadas.InnerWidth = -1;
             this.proAprobadas.Location = new System.Drawing.Point(35, 15);
             this.proAprobadas.MarqueeAnimationSpeed = 2000;
+            this.proAprobadas.Maximum = 500;
             this.proAprobadas.Name = "proAprobadas";
             this.proAprobadas.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.proAprobadas.OuterMargin = -25;
@@ -601,7 +630,8 @@
             this.proAprobadas.TabIndex = 4;
             this.proAprobadas.Text = "10";
             this.proAprobadas.TextMargin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.proAprobadas.Value = 13;
+            this.proAprobadas.Value = 50;
+            this.proAprobadas.Click += new System.EventHandler(this.proAprobadas_Click);
             // 
             // label15
             // 
@@ -632,6 +662,7 @@
             this.Text = "DashboardEstudiante";
             this.pnlHorario.ResumeLayout(false);
             this.pnlHorario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlAvisos.ResumeLayout(false);
             this.pnlAvisos.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -691,5 +722,8 @@
         private System.Windows.Forms.Panel pnlAprobadas;
         private CircularProgressBar.CircularProgressBar proAprobadas;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Seccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fdsalklsdafkjf;
     }
 }
