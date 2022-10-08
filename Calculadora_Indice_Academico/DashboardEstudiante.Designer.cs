@@ -40,14 +40,205 @@
             this.btnFinales = new System.Windows.Forms.Button();
             this.btnMedio = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.dashboardEstudianteUc = new Calculadora_Indice_Academico.DashboardEstudianteUc();
-            this.historialUc = new Calculadora_Indice_Academico.HistorialUc();
+            this.pnlCreditos = new System.Windows.Forms.Panel();
+            this.proCreditos = new CircularProgressBar.CircularProgressBar();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pnlTrimestres = new System.Windows.Forms.Panel();
+            this.proTrimestres = new CircularProgressBar.CircularProgressBar();
+            this.label17 = new System.Windows.Forms.Label();
+            this.pnlIndice = new System.Windows.Forms.Panel();
+            this.proIndice = new CircularProgressBar.CircularProgressBar();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pnlAprobadas = new System.Windows.Forms.Panel();
+            this.proAprobadas = new CircularProgressBar.CircularProgressBar();
+            this.label15 = new System.Windows.Forms.Label();
+            this.pnlHorario.SuspendLayout();
+            this.pnlAvisos.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.pnlDatosGenerales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlMenu.SuspendLayout();
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pnlHorario
+            // 
+            this.pnlHorario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.pnlHorario.Controls.Add(this.label14);
+            this.pnlHorario.Location = new System.Drawing.Point(270, 448);
+            this.pnlHorario.Name = "pnlHorario";
+            this.pnlHorario.Size = new System.Drawing.Size(1039, 373);
+            this.pnlHorario.TabIndex = 17;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(20, 20);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(370, 32);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Asignaturas Seleccionadas";
+            // 
+            // pnlAvisos
+            // 
+            this.pnlAvisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.pnlAvisos.Controls.Add(this.panel5);
+            this.pnlAvisos.Controls.Add(this.label12);
+            this.pnlAvisos.Location = new System.Drawing.Point(270, 231);
+            this.pnlAvisos.Name = "pnlAvisos";
+            this.pnlAvisos.Size = new System.Drawing.Size(590, 200);
+            this.pnlAvisos.TabIndex = 16;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Location = new System.Drawing.Point(25, 55);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(540, 130);
+            this.panel5.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(200, 60);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(142, 16);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Usted no tiene avisos";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(20, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(102, 32);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Avisos";
+            // 
+            // pnlDatosGenerales
+            // 
+            this.pnlDatosGenerales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.pnlDatosGenerales.Controls.Add(this.label11);
+            this.pnlDatosGenerales.Controls.Add(this.label10);
+            this.pnlDatosGenerales.Controls.Add(this.label9);
+            this.pnlDatosGenerales.Controls.Add(this.label8);
+            this.pnlDatosGenerales.Controls.Add(this.pictureBox2);
+            this.pnlDatosGenerales.Controls.Add(this.label7);
+            this.pnlDatosGenerales.Controls.Add(this.label6);
+            this.pnlDatosGenerales.Controls.Add(this.label5);
+            this.pnlDatosGenerales.Controls.Add(this.label4);
+            this.pnlDatosGenerales.Controls.Add(this.label3);
+            this.pnlDatosGenerales.Location = new System.Drawing.Point(270, 21);
+            this.pnlDatosGenerales.Name = "pnlDatosGenerales";
+            this.pnlDatosGenerales.Size = new System.Drawing.Size(590, 200);
+            this.pnlDatosGenerales.TabIndex = 15;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(170, 140);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 16);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "21 de 279";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(180, 115);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(15, 16);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "2";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(100, 90);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(258, 16);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "(IDS 2020) INGENIERIA DE SOFTWARE";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(50, 65);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 16);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "1100462";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Calculadora_Indice_Academico.Properties.Resources.user_in_a_square_150x150;
+            this.pictureBox2.Location = new System.Drawing.Point(415, 20);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(20, 140);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(150, 16);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Creditos Aprobados:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(20, 115);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(156, 16);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Trimestres Cursados:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(20, 90);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 16);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Programa:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(20, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 16);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "ID:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(20, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(230, 32);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Datos Generales";
             // 
             // pnlMenu
             // 
@@ -234,11 +425,35 @@
             // 
             // dashboardEstudianteUc
             // 
-            this.dashboardEstudianteUc.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dashboardEstudianteUc.Location = new System.Drawing.Point(250, 0);
-            this.dashboardEstudianteUc.Name = "dashboardEstudianteUc";
-            this.dashboardEstudianteUc.Size = new System.Drawing.Size(1117, 850);
-            this.dashboardEstudianteUc.TabIndex = 16;
+            this.proAprobadas.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.proAprobadas.AnimationSpeed = 500;
+            this.proAprobadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.proAprobadas.Font = new System.Drawing.Font("Arial", 45F, System.Drawing.FontStyle.Bold);
+            this.proAprobadas.ForeColor = System.Drawing.Color.White;
+            this.proAprobadas.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.proAprobadas.InnerMargin = 0;
+            this.proAprobadas.InnerWidth = -1;
+            this.proAprobadas.Location = new System.Drawing.Point(35, 15);
+            this.proAprobadas.MarqueeAnimationSpeed = 2000;
+            this.proAprobadas.Name = "proAprobadas";
+            this.proAprobadas.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.proAprobadas.OuterMargin = -25;
+            this.proAprobadas.OuterWidth = 26;
+            this.proAprobadas.ProgressColor = System.Drawing.Color.White;
+            this.proAprobadas.ProgressWidth = 7;
+            this.proAprobadas.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.proAprobadas.Size = new System.Drawing.Size(128, 128);
+            this.proAprobadas.StartAngle = 270;
+            this.proAprobadas.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.proAprobadas.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.proAprobadas.SubscriptText = "";
+            this.proAprobadas.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.proAprobadas.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.proAprobadas.SuperscriptText = "";
+            this.proAprobadas.TabIndex = 4;
+            this.proAprobadas.Text = "10";
+            this.proAprobadas.TextMargin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.proAprobadas.Value = 13;
             // 
             // historialUc
             // 
@@ -260,6 +475,15 @@
             this.Name = "DashboardEstudiante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardEstudiante";
+            this.pnlHorario.ResumeLayout(false);
+            this.pnlHorario.PerformLayout();
+            this.pnlAvisos.ResumeLayout(false);
+            this.pnlAvisos.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.pnlDatosGenerales.ResumeLayout(false);
+            this.pnlDatosGenerales.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.pnlUsuario.ResumeLayout(false);
             this.pnlUsuario.PerformLayout();
@@ -280,10 +504,19 @@
         private System.Windows.Forms.Button btnMedio;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnHistorial;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker2;
-        private DashboardEstudianteUc dashboardEstudianteUc;
-        private HistorialUc historialUc;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnReportes;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Panel pnlCreditos;
+        private CircularProgressBar.CircularProgressBar proCreditos;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel pnlTrimestres;
+        private CircularProgressBar.CircularProgressBar proTrimestres;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel pnlIndice;
+        private CircularProgressBar.CircularProgressBar proIndice;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel pnlAprobadas;
+        private CircularProgressBar.CircularProgressBar proAprobadas;
+        private System.Windows.Forms.Label label15;
     }
 }

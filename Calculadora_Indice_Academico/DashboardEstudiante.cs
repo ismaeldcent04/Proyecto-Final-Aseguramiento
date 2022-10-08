@@ -39,28 +39,5 @@ namespace Calculadora_Indice_Academico
             login.Show();
             this.Close();
         }
-
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            historialUc.Hide();
-            btnDashboard.BackColor = Color.FromArgb(221, 113, 113);
-            btnDashboard.ForeColor = Color.White;
-            btnHistorial.BackColor = Color.FromArgb(245, 166, 166);
-            btnHistorial.ForeColor = Color.Black;
-            dashboardEstudianteUc.Show();
-            dashboardEstudianteUc.BringToFront();
-
-        }
-
-        private void btnHistorial_Click(object sender, EventArgs e)
-        {
-            dashboardEstudianteUc.Hide();
-            btnDashboard.BackColor = Color.FromArgb(245, 166, 166);
-            btnDashboard.ForeColor = Color.Black;
-            btnHistorial.BackColor = Color.FromArgb(221, 113, 113);
-            btnHistorial.ForeColor = Color.White;
-            historialUc.Show();
-            historialUc.BringToFront();
-        }
     }
 }

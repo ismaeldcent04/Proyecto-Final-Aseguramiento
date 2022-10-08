@@ -31,6 +31,9 @@ namespace Calculadora_Indice_Academico
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
+        private void txt_nombreUsuario_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
