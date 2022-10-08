@@ -114,11 +114,11 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportesUc.cs">
+    <Compile Include="FinalesUc.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ReportesUc.Designer.cs">
-      <DependentUpon>ReportesUc.cs</DependentUpon>
+    <Compile Include="FinalesUc.Designer.cs">
+      <DependentUpon>FinalesUc.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DashboardEstudiante.resx">
       <DependentUpon>DashboardEstudiante.cs</DependentUpon>
@@ -154,8 +154,8 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportesUc.resx">
-      <DependentUpon>ReportesUc.cs</DependentUpon>
+    <EmbeddedResource Include="FinalesUc.resx">
+      <DependentUpon>FinalesUc.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

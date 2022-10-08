@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Calculadora_Indice_Academico
 {
-    public partial class ReportesUc : UserControl
+    public partial class FinalesUc : UserControl
     {
-        public ReportesUc()
+        public FinalesUc()
         {
             InitializeComponent();
         }

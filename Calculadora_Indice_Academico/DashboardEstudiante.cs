@@ -28,6 +28,48 @@ namespace Calculadora_Indice_Academico
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            customizeDesign();
+            historialUc.Hide();
+            medioTerminoUc.Hide();
+            finalesUc.Hide();
+            dashboardEstudianteUc.Show();
+            dashboardEstudianteUc.BringToFront();
+        }
+
+        private void customizeDesign()
+        {
+            subMenuRpts.Visible = false;
+        }
+
+        private void hideSubMenu()
+        {
+            if (subMenuRpts.Visible == true)
+                subMenuRpts.Visible = false;
+        }
+
+        private void showSubMenu()
+        {
+            if(subMenuRpts.Visible == false)
+            {
+                hideSubMenu();
+                subMenuRpts.Visible = true;
+            }
+            else
+            {
+                subMenuRpts.Visible = false;
+            }
+        }
+
+        private void btnSeleccionado(Button button)
+        {
+            button.BackColor = Color.FromArgb(221, 133, 133);
+            button.ForeColor = Color.White;
+        }
+
+        private void btnNoSeleccionado(Button button)
+        {
+            button.BackColor = Color.FromArgb(245, 166, 166);
+            button.ForeColor = Color.Black;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -35,6 +77,65 @@ namespace Calculadora_Indice_Academico
             Login login = new Login();
             login.Show();
             this.Close();
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            showSubMenu();
+        }
+
+
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            historialUc.Hide();
+            medioTerminoUc.Hide();
+            dashboardEstudianteUc.Show();
+            dashboardEstudianteUc.BringToFront();
+            btnSeleccionado(btnDashboard);
+            btnNoSeleccionado(btnHistorial);
+            btnNoSeleccionado(btnMedio);
+            btnNoSeleccionado(btnFinales);
+            hideSubMenu();
+        }
+
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            dashboardEstudianteUc.Hide();
+            medioTerminoUc.Hide();
+            finalesUc.Hide();
+            historialUc.Show();
+            historialUc.BringToFront();
+            btnSeleccionado(btnHistorial);
+            btnNoSeleccionado(btnDashboard);
+            btnNoSeleccionado(btnMedio);
+            btnNoSeleccionado(btnFinales);
+        }
+
+        private void btnMedio_Click(object sender, EventArgs e)
+        {
+            dashboardEstudianteUc.Hide();
+            historialUc.Hide();
+            finalesUc.Hide();
+            medioTerminoUc.Show();
+            medioTerminoUc.BringToFront();
+            btnSeleccionado(btnMedio);
+            btnNoSeleccionado(btnDashboard);
+            btnNoSeleccionado(btnHistorial);
+            btnNoSeleccionado(btnFinales);
+        }
+
+        private void btnFinales_Click(object sender, EventArgs e)
+        {
+            dashboardEstudianteUc.Hide();
+            historialUc.Hide();
+            medioTerminoUc.Hide();
+            finalesUc.Show();
+            finalesUc.BringToFront();
+            btnSeleccionado(btnFinales);
+            btnNoSeleccionado(btnDashboard);
+            btnNoSeleccionado(btnHistorial);
+            btnNoSeleccionado(btnMedio);
         }
     }
 }
