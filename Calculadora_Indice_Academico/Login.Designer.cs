@@ -39,9 +39,9 @@
             this.llb = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.close_button = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.close_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -153,19 +153,6 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Contraseña";
             // 
-            // close_button
-            // 
-            this.close_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("close_button.BackgroundImage")));
-            this.close_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.close_button.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.close_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close_button.Location = new System.Drawing.Point(1063, 1);
-            this.close_button.Name = "close_button";
-            this.close_button.Size = new System.Drawing.Size(27, 23);
-            this.close_button.TabIndex = 13;
-            this.close_button.UseVisualStyleBackColor = true;
-            this.close_button.Click += new System.EventHandler(this.close_button_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -186,6 +173,19 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            // 
+            // close_button
+            // 
+            this.close_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.close_button.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.close_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_button.Image = ((System.Drawing.Image)(resources.GetObject("close_button.Image")));
+            this.close_button.Location = new System.Drawing.Point(1062, 1);
+            this.close_button.Name = "close_button";
+            this.close_button.Size = new System.Drawing.Size(27, 23);
+            this.close_button.TabIndex = 13;
+            this.close_button.UseVisualStyleBackColor = true;
+            this.close_button.Click += new System.EventHandler(this.close_button_Click);
             // 
             // Login
             // 
@@ -227,11 +227,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button close_button;
         private System.Windows.Forms.TextBox txt_nombreUsuario;
         private System.Windows.Forms.Label llb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button close_button;
     }
 }
 

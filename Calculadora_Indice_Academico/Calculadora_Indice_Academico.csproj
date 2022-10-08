@@ -58,6 +58,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarEstudiantes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AgregarEstudiantes.Designer.cs">
+      <DependentUpon>AgregarEstudiantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashboardEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarEstudiantes.resx">
+      <DependentUpon>AgregarEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashboardEstudiante.resx">
       <DependentUpon>DashboardEstudiante.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +167,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user-in-a-square_150x150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\class.png" />
+    <Content Include="Resources\Students.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

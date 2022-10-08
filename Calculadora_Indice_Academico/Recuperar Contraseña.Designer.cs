@@ -122,7 +122,7 @@
             // 
             this.btn_recuperarContraseña.BackColor = System.Drawing.Color.IndianRed;
             this.btn_recuperarContraseña.ForeColor = System.Drawing.Color.White;
-            this.btn_recuperarContraseña.Location = new System.Drawing.Point(519, 327);
+            this.btn_recuperarContraseña.Location = new System.Drawing.Point(480, 326);
             this.btn_recuperarContraseña.Name = "btn_recuperarContraseña";
             this.btn_recuperarContraseña.Size = new System.Drawing.Size(168, 23);
             this.btn_recuperarContraseña.TabIndex = 9;
