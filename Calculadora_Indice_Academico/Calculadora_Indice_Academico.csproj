@@ -64,6 +64,12 @@
     <Compile Include="AgregarEstudiantes.Designer.cs">
       <DependentUpon>AgregarEstudiantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarProfesores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AgregarProfesores.Designer.cs">
+      <DependentUpon>AgregarProfesores.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashboardEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,18 @@
     </Compile>
     <Compile Include="DashboardEstudianteUc.Designer.cs">
       <DependentUpon>DashboardEstudianteUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarEstudiantes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EliminarEstudiantes.Designer.cs">
+      <DependentUpon>EliminarEstudiantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarProfesores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EliminarProfesores.Designer.cs">
+      <DependentUpon>EliminarProfesores.cs</DependentUpon>
     </Compile>
     <Compile Include="HistorialUc.cs">
       <SubType>UserControl</SubType>
@@ -93,6 +111,12 @@
     </Compile>
     <Compile Include="MedioTerminoUc.Designer.cs">
       <DependentUpon>MedioTerminoUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Administrador.Designer.cs">
+      <DependentUpon>Menu Administrador.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,11 +144,23 @@
     <Compile Include="ReportesUc.Designer.cs">
       <DependentUpon>ReportesUc.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarEstudiantes.resx">
+      <DependentUpon>AgregarEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarProfesores.resx">
+      <DependentUpon>AgregarProfesores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashboardEstudiante.resx">
       <DependentUpon>DashboardEstudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashboardEstudianteUc.resx">
       <DependentUpon>DashboardEstudianteUc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarEstudiantes.resx">
+      <DependentUpon>EliminarEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarProfesores.resx">
+      <DependentUpon>EliminarProfesores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HistorialUc.resx">
       <DependentUpon>HistorialUc.cs</DependentUpon>
@@ -134,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MedioTerminoUc.resx">
       <DependentUpon>MedioTerminoUc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Administrador.resx">
+      <DependentUpon>Menu Administrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -194,6 +233,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\seleccione_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Students.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\class.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
