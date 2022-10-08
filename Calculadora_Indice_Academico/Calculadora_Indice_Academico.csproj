@@ -58,6 +58,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarEstudiantes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AgregarEstudiantes.Designer.cs">
+      <DependentUpon>AgregarEstudiantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashboardEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>

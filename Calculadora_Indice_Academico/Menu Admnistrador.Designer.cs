@@ -30,26 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Admnistrador));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_estudiantes = new System.Windows.Forms.Button();
+            this.Profesores_Panel = new System.Windows.Forms.Panel();
+            this.btn_eliminarProfesores = new System.Windows.Forms.Button();
+            this.btn_agregarProfesores = new System.Windows.Forms.Button();
+            this.StudentsPanel = new System.Windows.Forms.Panel();
+            this.btn_eliminarEstudiantes = new System.Windows.Forms.Button();
+            this.btn_agregarEstudiantes = new System.Windows.Forms.Button();
             this.pnlUsuario = new System.Windows.Forms.Panel();
-            this.btnSetting = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_profesores = new System.Windows.Forms.Button();
+            this.btn_estudiantes = new System.Windows.Forms.Button();
+            this.btnSetting = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
-            this.StudentsPanel = new System.Windows.Forms.Panel();
-            this.btn_agregarEstudiantes = new System.Windows.Forms.Button();
-            this.btn_eliminarEstudiantes = new System.Windows.Forms.Button();
-            this.btn_profesores = new System.Windows.Forms.Button();
-            this.Profesores_Panel = new System.Windows.Forms.Panel();
-            this.btn_agregarProfesores = new System.Windows.Forms.Button();
-            this.btn_eliminarProfesores = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.Profesores_Panel.SuspendLayout();
+            this.StudentsPanel.SuspendLayout();
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.StudentsPanel.SuspendLayout();
-            this.Profesores_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,25 +68,101 @@
             this.panel1.Size = new System.Drawing.Size(246, 815);
             this.panel1.TabIndex = 0;
             // 
-            // btn_estudiantes
+            // Profesores_Panel
             // 
-            this.btn_estudiantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.btn_estudiantes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_estudiantes.FlatAppearance.BorderSize = 0;
-            this.btn_estudiantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_estudiantes.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_estudiantes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_estudiantes.Image = ((System.Drawing.Image)(resources.GetObject("btn_estudiantes.Image")));
-            this.btn_estudiantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_estudiantes.Location = new System.Drawing.Point(0, 60);
-            this.btn_estudiantes.Name = "btn_estudiantes";
-            this.btn_estudiantes.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
-            this.btn_estudiantes.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_estudiantes.Size = new System.Drawing.Size(246, 60);
-            this.btn_estudiantes.TabIndex = 5;
-            this.btn_estudiantes.Text = "Estudiantes";
-            this.btn_estudiantes.UseVisualStyleBackColor = false;
-            this.btn_estudiantes.Click += new System.EventHandler(this.btn_estudiantes_Click);
+            this.Profesores_Panel.Controls.Add(this.btn_eliminarProfesores);
+            this.Profesores_Panel.Controls.Add(this.btn_agregarProfesores);
+            this.Profesores_Panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Profesores_Panel.Location = new System.Drawing.Point(0, 303);
+            this.Profesores_Panel.Name = "Profesores_Panel";
+            this.Profesores_Panel.Size = new System.Drawing.Size(246, 137);
+            this.Profesores_Panel.TabIndex = 8;
+            // 
+            // btn_eliminarProfesores
+            // 
+            this.btn_eliminarProfesores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_eliminarProfesores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_eliminarProfesores.FlatAppearance.BorderSize = 0;
+            this.btn_eliminarProfesores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_eliminarProfesores.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminarProfesores.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_eliminarProfesores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_eliminarProfesores.Location = new System.Drawing.Point(0, 60);
+            this.btn_eliminarProfesores.Name = "btn_eliminarProfesores";
+            this.btn_eliminarProfesores.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.btn_eliminarProfesores.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_eliminarProfesores.Size = new System.Drawing.Size(246, 50);
+            this.btn_eliminarProfesores.TabIndex = 8;
+            this.btn_eliminarProfesores.Text = "Eliminar Profesores";
+            this.btn_eliminarProfesores.UseVisualStyleBackColor = false;
+            this.btn_eliminarProfesores.Click += new System.EventHandler(this.btn_eliminarProfesores_Click);
+            // 
+            // btn_agregarProfesores
+            // 
+            this.btn_agregarProfesores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_agregarProfesores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_agregarProfesores.FlatAppearance.BorderSize = 0;
+            this.btn_agregarProfesores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregarProfesores.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregarProfesores.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_agregarProfesores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_agregarProfesores.Location = new System.Drawing.Point(0, 0);
+            this.btn_agregarProfesores.Name = "btn_agregarProfesores";
+            this.btn_agregarProfesores.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.btn_agregarProfesores.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_agregarProfesores.Size = new System.Drawing.Size(246, 60);
+            this.btn_agregarProfesores.TabIndex = 7;
+            this.btn_agregarProfesores.Text = "Agregar Profesores";
+            this.btn_agregarProfesores.UseVisualStyleBackColor = false;
+            this.btn_agregarProfesores.Click += new System.EventHandler(this.btn_agregarProfesores_Click);
+            // 
+            // StudentsPanel
+            // 
+            this.StudentsPanel.Controls.Add(this.btn_eliminarEstudiantes);
+            this.StudentsPanel.Controls.Add(this.btn_agregarEstudiantes);
+            this.StudentsPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.StudentsPanel.Location = new System.Drawing.Point(0, 120);
+            this.StudentsPanel.Name = "StudentsPanel";
+            this.StudentsPanel.Size = new System.Drawing.Size(246, 123);
+            this.StudentsPanel.TabIndex = 6;
+            // 
+            // btn_eliminarEstudiantes
+            // 
+            this.btn_eliminarEstudiantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_eliminarEstudiantes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_eliminarEstudiantes.FlatAppearance.BorderSize = 0;
+            this.btn_eliminarEstudiantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_eliminarEstudiantes.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminarEstudiantes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_eliminarEstudiantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_eliminarEstudiantes.Location = new System.Drawing.Point(0, 60);
+            this.btn_eliminarEstudiantes.Name = "btn_eliminarEstudiantes";
+            this.btn_eliminarEstudiantes.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.btn_eliminarEstudiantes.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_eliminarEstudiantes.Size = new System.Drawing.Size(246, 60);
+            this.btn_eliminarEstudiantes.TabIndex = 7;
+            this.btn_eliminarEstudiantes.Text = "Eliminar Estudiantes";
+            this.btn_eliminarEstudiantes.UseVisualStyleBackColor = false;
+            this.btn_eliminarEstudiantes.Click += new System.EventHandler(this.btn_eliminarEstudiantes_Click);
+            // 
+            // btn_agregarEstudiantes
+            // 
+            this.btn_agregarEstudiantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_agregarEstudiantes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_agregarEstudiantes.FlatAppearance.BorderSize = 0;
+            this.btn_agregarEstudiantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregarEstudiantes.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregarEstudiantes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_agregarEstudiantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_agregarEstudiantes.Location = new System.Drawing.Point(0, 0);
+            this.btn_agregarEstudiantes.Name = "btn_agregarEstudiantes";
+            this.btn_agregarEstudiantes.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.btn_agregarEstudiantes.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_agregarEstudiantes.Size = new System.Drawing.Size(246, 60);
+            this.btn_agregarEstudiantes.TabIndex = 6;
+            this.btn_agregarEstudiantes.Text = "Agregar Estudiantes";
+            this.btn_agregarEstudiantes.UseVisualStyleBackColor = false;
+            this.btn_agregarEstudiantes.Click += new System.EventHandler(this.btn_agregarEstudiantes_Click);
             // 
             // pnlUsuario
             // 
@@ -99,18 +175,6 @@
             this.pnlUsuario.Name = "pnlUsuario";
             this.pnlUsuario.Size = new System.Drawing.Size(246, 100);
             this.pnlUsuario.TabIndex = 4;
-            // 
-            // btnSetting
-            // 
-            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Image = global::Calculadora_Indice_Academico.Properties.Resources.settings_32x32;
-            this.btnSetting.Location = new System.Drawing.Point(190, 25);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(48, 48);
-            this.btnSetting.TabIndex = 3;
-            this.btnSetting.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -132,6 +196,58 @@
             this.label1.Size = new System.Drawing.Size(83, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "User Name";
+            // 
+            // btn_profesores
+            // 
+            this.btn_profesores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.btn_profesores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_profesores.FlatAppearance.BorderSize = 0;
+            this.btn_profesores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_profesores.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_profesores.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_profesores.Image = ((System.Drawing.Image)(resources.GetObject("btn_profesores.Image")));
+            this.btn_profesores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_profesores.Location = new System.Drawing.Point(0, 243);
+            this.btn_profesores.Name = "btn_profesores";
+            this.btn_profesores.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.btn_profesores.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_profesores.Size = new System.Drawing.Size(246, 60);
+            this.btn_profesores.TabIndex = 7;
+            this.btn_profesores.Text = "Profesores";
+            this.btn_profesores.UseVisualStyleBackColor = false;
+            this.btn_profesores.Click += new System.EventHandler(this.btn_profesores_Click);
+            // 
+            // btn_estudiantes
+            // 
+            this.btn_estudiantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.btn_estudiantes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_estudiantes.FlatAppearance.BorderSize = 0;
+            this.btn_estudiantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_estudiantes.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_estudiantes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_estudiantes.Image = ((System.Drawing.Image)(resources.GetObject("btn_estudiantes.Image")));
+            this.btn_estudiantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_estudiantes.Location = new System.Drawing.Point(0, 60);
+            this.btn_estudiantes.Name = "btn_estudiantes";
+            this.btn_estudiantes.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.btn_estudiantes.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_estudiantes.Size = new System.Drawing.Size(246, 60);
+            this.btn_estudiantes.TabIndex = 5;
+            this.btn_estudiantes.Text = "Estudiantes";
+            this.btn_estudiantes.UseVisualStyleBackColor = false;
+            this.btn_estudiantes.Click += new System.EventHandler(this.btn_estudiantes_Click);
+            // 
+            // btnSetting
+            // 
+            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.btnSetting.FlatAppearance.BorderSize = 0;
+            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetting.Image = global::Calculadora_Indice_Academico.Properties.Resources.settings_32x32;
+            this.btnSetting.Location = new System.Drawing.Point(190, 25);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(48, 48);
+            this.btnSetting.TabIndex = 3;
+            this.btnSetting.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -181,122 +297,6 @@
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = false;
             // 
-            // StudentsPanel
-            // 
-            this.StudentsPanel.Controls.Add(this.btn_eliminarEstudiantes);
-            this.StudentsPanel.Controls.Add(this.btn_agregarEstudiantes);
-            this.StudentsPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.StudentsPanel.Location = new System.Drawing.Point(0, 120);
-            this.StudentsPanel.Name = "StudentsPanel";
-            this.StudentsPanel.Size = new System.Drawing.Size(246, 123);
-            this.StudentsPanel.TabIndex = 6;
-            // 
-            // btn_agregarEstudiantes
-            // 
-            this.btn_agregarEstudiantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_agregarEstudiantes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_agregarEstudiantes.FlatAppearance.BorderSize = 0;
-            this.btn_agregarEstudiantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregarEstudiantes.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregarEstudiantes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_agregarEstudiantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_agregarEstudiantes.Location = new System.Drawing.Point(0, 0);
-            this.btn_agregarEstudiantes.Name = "btn_agregarEstudiantes";
-            this.btn_agregarEstudiantes.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
-            this.btn_agregarEstudiantes.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_agregarEstudiantes.Size = new System.Drawing.Size(246, 60);
-            this.btn_agregarEstudiantes.TabIndex = 6;
-            this.btn_agregarEstudiantes.Text = "Agregar Estudiantes";
-            this.btn_agregarEstudiantes.UseVisualStyleBackColor = false;
-            this.btn_agregarEstudiantes.Click += new System.EventHandler(this.btn_agregarEstudiantes_Click);
-            // 
-            // btn_eliminarEstudiantes
-            // 
-            this.btn_eliminarEstudiantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_eliminarEstudiantes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_eliminarEstudiantes.FlatAppearance.BorderSize = 0;
-            this.btn_eliminarEstudiantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_eliminarEstudiantes.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminarEstudiantes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_eliminarEstudiantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_eliminarEstudiantes.Location = new System.Drawing.Point(0, 60);
-            this.btn_eliminarEstudiantes.Name = "btn_eliminarEstudiantes";
-            this.btn_eliminarEstudiantes.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
-            this.btn_eliminarEstudiantes.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_eliminarEstudiantes.Size = new System.Drawing.Size(246, 60);
-            this.btn_eliminarEstudiantes.TabIndex = 7;
-            this.btn_eliminarEstudiantes.Text = "Eliminar Estudiantes";
-            this.btn_eliminarEstudiantes.UseVisualStyleBackColor = false;
-            this.btn_eliminarEstudiantes.Click += new System.EventHandler(this.btn_eliminarEstudiantes_Click);
-            // 
-            // btn_profesores
-            // 
-            this.btn_profesores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.btn_profesores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_profesores.FlatAppearance.BorderSize = 0;
-            this.btn_profesores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_profesores.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_profesores.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_profesores.Image = ((System.Drawing.Image)(resources.GetObject("btn_profesores.Image")));
-            this.btn_profesores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_profesores.Location = new System.Drawing.Point(0, 243);
-            this.btn_profesores.Name = "btn_profesores";
-            this.btn_profesores.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
-            this.btn_profesores.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_profesores.Size = new System.Drawing.Size(246, 60);
-            this.btn_profesores.TabIndex = 7;
-            this.btn_profesores.Text = "Profesores";
-            this.btn_profesores.UseVisualStyleBackColor = false;
-            this.btn_profesores.Click += new System.EventHandler(this.btn_profesores_Click);
-            // 
-            // Profesores_Panel
-            // 
-            this.Profesores_Panel.Controls.Add(this.btn_eliminarProfesores);
-            this.Profesores_Panel.Controls.Add(this.btn_agregarProfesores);
-            this.Profesores_Panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Profesores_Panel.Location = new System.Drawing.Point(0, 303);
-            this.Profesores_Panel.Name = "Profesores_Panel";
-            this.Profesores_Panel.Size = new System.Drawing.Size(246, 129);
-            this.Profesores_Panel.TabIndex = 8;
-            // 
-            // btn_agregarProfesores
-            // 
-            this.btn_agregarProfesores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_agregarProfesores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_agregarProfesores.FlatAppearance.BorderSize = 0;
-            this.btn_agregarProfesores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregarProfesores.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregarProfesores.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_agregarProfesores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_agregarProfesores.Location = new System.Drawing.Point(0, 0);
-            this.btn_agregarProfesores.Name = "btn_agregarProfesores";
-            this.btn_agregarProfesores.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
-            this.btn_agregarProfesores.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_agregarProfesores.Size = new System.Drawing.Size(246, 60);
-            this.btn_agregarProfesores.TabIndex = 7;
-            this.btn_agregarProfesores.Text = "Agregar Profesores";
-            this.btn_agregarProfesores.UseVisualStyleBackColor = false;
-            this.btn_agregarProfesores.Click += new System.EventHandler(this.btn_agregarProfesores_Click);
-            // 
-            // btn_eliminarProfesores
-            // 
-            this.btn_eliminarProfesores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_eliminarProfesores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_eliminarProfesores.FlatAppearance.BorderSize = 0;
-            this.btn_eliminarProfesores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_eliminarProfesores.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminarProfesores.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_eliminarProfesores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_eliminarProfesores.Location = new System.Drawing.Point(0, 60);
-            this.btn_eliminarProfesores.Name = "btn_eliminarProfesores";
-            this.btn_eliminarProfesores.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
-            this.btn_eliminarProfesores.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_eliminarProfesores.Size = new System.Drawing.Size(246, 69);
-            this.btn_eliminarProfesores.TabIndex = 8;
-            this.btn_eliminarProfesores.Text = "Eliminar Profesores";
-            this.btn_eliminarProfesores.UseVisualStyleBackColor = false;
-            this.btn_eliminarProfesores.Click += new System.EventHandler(this.btn_eliminarProfesores_Click);
-            // 
             // Menu_Admnistrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,11 +306,11 @@
             this.Name = "Menu_Admnistrador";
             this.Text = "Menu_Admnistrador";
             this.panel1.ResumeLayout(false);
+            this.Profesores_Panel.ResumeLayout(false);
+            this.StudentsPanel.ResumeLayout(false);
             this.pnlUsuario.ResumeLayout(false);
             this.pnlUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.StudentsPanel.ResumeLayout(false);
-            this.Profesores_Panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
