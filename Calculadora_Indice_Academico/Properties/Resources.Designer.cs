@@ -63,6 +63,16 @@ namespace Calculadora_Indice_Academico.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _class {
+            get {
+                object obj = ResourceManager.GetObject("class", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap historia_32x32 {
             get {
                 object obj = ResourceManager.GetObject("historia_32x32", resourceCulture);
@@ -126,6 +136,16 @@ namespace Calculadora_Indice_Academico.Properties {
         internal static System.Drawing.Bitmap settings_32x32 {
             get {
                 object obj = ResourceManager.GetObject("settings_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Students {
+            get {
+                object obj = ResourceManager.GetObject("Students", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
