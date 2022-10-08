@@ -28,18 +28,16 @@ namespace Calculadora_Indice_Academico
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-            proAprobadas.Text = "20";
-            proAprobadas.Value = 50;
+            historialUc.Hide();
+            dashboardEstudianteUc.Show();
+            dashboardEstudianteUc.BringToFront();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            Login login = new Login();
+            login.Show();
             this.Close();
-        }
-
-        private void proAprobadas_Click(object sender, EventArgs e)
-        {
-           
         }
     }
 }

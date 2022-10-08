@@ -28,35 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlHorario = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Seccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fdsalklsdafkjf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pnlAvisos = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pnlDatosGenerales = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
             this.pnlUsuario = new System.Windows.Forms.Panel();
             this.btnSetting = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnHistorial = new System.Windows.Forms.Button();
-            this.btnReportes = new System.Windows.Forms.Button();
+            this.btnFinales = new System.Windows.Forms.Button();
+            this.btnMedio = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.pnlCreditos = new System.Windows.Forms.Panel();
             this.proCreditos = new CircularProgressBar.CircularProgressBar();
@@ -71,7 +53,6 @@
             this.proAprobadas = new CircularProgressBar.CircularProgressBar();
             this.label15 = new System.Windows.Forms.Label();
             this.pnlHorario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlAvisos.SuspendLayout();
             this.panel5.SuspendLayout();
             this.pnlDatosGenerales.SuspendLayout();
@@ -79,44 +60,16 @@
             this.pnlMenu.SuspendLayout();
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlCreditos.SuspendLayout();
-            this.pnlTrimestres.SuspendLayout();
-            this.pnlIndice.SuspendLayout();
-            this.pnlAprobadas.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHorario
             // 
             this.pnlHorario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.pnlHorario.Controls.Add(this.dataGridView1);
             this.pnlHorario.Controls.Add(this.label14);
             this.pnlHorario.Location = new System.Drawing.Point(270, 448);
             this.pnlHorario.Name = "pnlHorario";
             this.pnlHorario.Size = new System.Drawing.Size(1039, 373);
             this.pnlHorario.TabIndex = 17;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Seccion,
-            this.fdsalklsdafkjf});
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(247, 43);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // Seccion
-            // 
-            this.Seccion.HeaderText = "Column1";
-            this.Seccion.Name = "Seccion";
-            // 
-            // fdsalklsdafkjf
-            // 
-            this.fdsalklsdafkjf.HeaderText = "dafsdf";
-            this.fdsalklsdafkjf.Name = "fdsalklsdafkjf";
             // 
             // label14
             // 
@@ -290,16 +243,55 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.pnlMenu.Controls.Add(this.button1);
+            this.pnlMenu.Controls.Add(this.btnHistorial);
             this.pnlMenu.Controls.Add(this.pnlUsuario);
             this.pnlMenu.Controls.Add(this.btnLogout);
-            this.pnlMenu.Controls.Add(this.btnHistorial);
-            this.pnlMenu.Controls.Add(this.btnReportes);
+            this.pnlMenu.Controls.Add(this.btnFinales);
+            this.pnlMenu.Controls.Add(this.btnMedio);
             this.pnlMenu.Controls.Add(this.btnDashboard);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(250, 854);
+            this.pnlMenu.Size = new System.Drawing.Size(250, 850);
             this.pnlMenu.TabIndex = 14;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Image = global::Calculadora_Indice_Academico.Properties.Resources.seleccione_32x32;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 240);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.button1.Size = new System.Drawing.Size(250, 60);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Selección";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnHistorial
+            // 
+            this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHistorial.FlatAppearance.BorderSize = 0;
+            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorial.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorial.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnHistorial.Image = global::Calculadora_Indice_Academico.Properties.Resources.historia_32x32;
+            this.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorial.Location = new System.Drawing.Point(0, 180);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.btnHistorial.Size = new System.Drawing.Size(250, 60);
+            this.btnHistorial.TabIndex = 3;
+            this.btnHistorial.Text = "Historial";
+            this.btnHistorial.UseVisualStyleBackColor = false;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
             // pnlUsuario
             // 
@@ -308,7 +300,7 @@
             this.pnlUsuario.Controls.Add(this.label1);
             this.pnlUsuario.Controls.Add(this.pictureBox1);
             this.pnlUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlUsuario.Location = new System.Drawing.Point(0, 694);
+            this.pnlUsuario.Location = new System.Drawing.Point(0, 690);
             this.pnlUsuario.Name = "pnlUsuario";
             this.pnlUsuario.Size = new System.Drawing.Size(250, 100);
             this.pnlUsuario.TabIndex = 0;
@@ -366,7 +358,7 @@
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnLogout.Image = global::Calculadora_Indice_Academico.Properties.Resources.log_out_32x32;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 794);
+            this.btnLogout.Location = new System.Drawing.Point(0, 790);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
             this.btnLogout.Size = new System.Drawing.Size(250, 60);
@@ -375,41 +367,41 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnHistorial
+            // btnFinales
             // 
-            this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHistorial.FlatAppearance.BorderSize = 0;
-            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorial.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorial.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnHistorial.Image = global::Calculadora_Indice_Academico.Properties.Resources.historia_32x32;
-            this.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistorial.Location = new System.Drawing.Point(0, 120);
-            this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
-            this.btnHistorial.Size = new System.Drawing.Size(250, 60);
-            this.btnHistorial.TabIndex = 2;
-            this.btnHistorial.Text = "Historial";
-            this.btnHistorial.UseVisualStyleBackColor = false;
+            this.btnFinales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.btnFinales.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFinales.FlatAppearance.BorderSize = 0;
+            this.btnFinales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinales.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinales.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnFinales.Image = global::Calculadora_Indice_Academico.Properties.Resources.reportes;
+            this.btnFinales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFinales.Location = new System.Drawing.Point(0, 120);
+            this.btnFinales.Name = "btnFinales";
+            this.btnFinales.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.btnFinales.Size = new System.Drawing.Size(250, 60);
+            this.btnFinales.TabIndex = 2;
+            this.btnFinales.Text = "Calif. Finales";
+            this.btnFinales.UseVisualStyleBackColor = false;
             // 
-            // btnReportes
+            // btnMedio
             // 
-            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReportes.Image = global::Calculadora_Indice_Academico.Properties.Resources.reportes;
-            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 60);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
-            this.btnReportes.Size = new System.Drawing.Size(250, 60);
-            this.btnReportes.TabIndex = 2;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnMedio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.btnMedio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMedio.FlatAppearance.BorderSize = 0;
+            this.btnMedio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMedio.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMedio.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnMedio.Image = global::Calculadora_Indice_Academico.Properties.Resources.reportes;
+            this.btnMedio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMedio.Location = new System.Drawing.Point(0, 60);
+            this.btnMedio.Name = "btnMedio";
+            this.btnMedio.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.btnMedio.Size = new System.Drawing.Size(250, 60);
+            this.btnMedio.TabIndex = 2;
+            this.btnMedio.Text = "Medio Término";
+            this.btnMedio.UseVisualStyleBackColor = false;
             // 
             // btnDashboard
             // 
@@ -429,177 +421,9 @@
             this.btnDashboard.TabIndex = 1;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // pnlCreditos
-            // 
-            this.pnlCreditos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.pnlCreditos.Controls.Add(this.proCreditos);
-            this.pnlCreditos.Controls.Add(this.label18);
-            this.pnlCreditos.Location = new System.Drawing.Point(1109, 231);
-            this.pnlCreditos.Name = "pnlCreditos";
-            this.pnlCreditos.Size = new System.Drawing.Size(200, 200);
-            this.pnlCreditos.TabIndex = 14;
-            // 
-            // proCreditos
-            // 
-            this.proCreditos.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-            this.proCreditos.AnimationSpeed = 500;
-            this.proCreditos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.proCreditos.Font = new System.Drawing.Font("Arial", 45F, System.Drawing.FontStyle.Bold);
-            this.proCreditos.ForeColor = System.Drawing.Color.White;
-            this.proCreditos.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.proCreditos.InnerMargin = 0;
-            this.proCreditos.InnerWidth = -1;
-            this.proCreditos.Location = new System.Drawing.Point(35, 15);
-            this.proCreditos.MarqueeAnimationSpeed = 2000;
-            this.proCreditos.Name = "proCreditos";
-            this.proCreditos.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.proCreditos.OuterMargin = -25;
-            this.proCreditos.OuterWidth = 26;
-            this.proCreditos.ProgressColor = System.Drawing.Color.White;
-            this.proCreditos.ProgressWidth = 7;
-            this.proCreditos.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.proCreditos.Size = new System.Drawing.Size(128, 128);
-            this.proCreditos.StartAngle = 270;
-            this.proCreditos.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.proCreditos.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-            this.proCreditos.SubscriptText = "";
-            this.proCreditos.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.proCreditos.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-            this.proCreditos.SuperscriptText = "";
-            this.proCreditos.TabIndex = 4;
-            this.proCreditos.Text = "21";
-            this.proCreditos.TextMargin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.proCreditos.Value = 10;
-            // 
-            // label18
-            // 
-            this.label18.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.Control;
-            this.label18.Location = new System.Drawing.Point(35, 150);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(124, 36);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Créditos aprobados de 279";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlTrimestres
-            // 
-            this.pnlTrimestres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.pnlTrimestres.Controls.Add(this.proTrimestres);
-            this.pnlTrimestres.Controls.Add(this.label17);
-            this.pnlTrimestres.Location = new System.Drawing.Point(879, 231);
-            this.pnlTrimestres.Name = "pnlTrimestres";
-            this.pnlTrimestres.Size = new System.Drawing.Size(200, 200);
-            this.pnlTrimestres.TabIndex = 15;
-            // 
-            // proTrimestres
-            // 
-            this.proTrimestres.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-            this.proTrimestres.AnimationSpeed = 500;
-            this.proTrimestres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.proTrimestres.Font = new System.Drawing.Font("Arial", 45F, System.Drawing.FontStyle.Bold);
-            this.proTrimestres.ForeColor = System.Drawing.Color.White;
-            this.proTrimestres.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.proTrimestres.InnerMargin = 0;
-            this.proTrimestres.InnerWidth = -1;
-            this.proTrimestres.Location = new System.Drawing.Point(35, 15);
-            this.proTrimestres.MarqueeAnimationSpeed = 2000;
-            this.proTrimestres.Name = "proTrimestres";
-            this.proTrimestres.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.proTrimestres.OuterMargin = -25;
-            this.proTrimestres.OuterWidth = 26;
-            this.proTrimestres.ProgressColor = System.Drawing.Color.White;
-            this.proTrimestres.ProgressWidth = 7;
-            this.proTrimestres.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.proTrimestres.Size = new System.Drawing.Size(128, 128);
-            this.proTrimestres.StartAngle = 270;
-            this.proTrimestres.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.proTrimestres.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-            this.proTrimestres.SubscriptText = "";
-            this.proTrimestres.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.proTrimestres.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-            this.proTrimestres.SuperscriptText = "";
-            this.proTrimestres.TabIndex = 4;
-            this.proTrimestres.Text = "2";
-            this.proTrimestres.TextMargin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.proTrimestres.Value = 10;
-            // 
-            // label17
-            // 
-            this.label17.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.Control;
-            this.label17.Location = new System.Drawing.Point(30, 150);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(140, 36);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Trimestres cursados de 13";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlIndice
-            // 
-            this.pnlIndice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.pnlIndice.Controls.Add(this.proIndice);
-            this.pnlIndice.Controls.Add(this.label16);
-            this.pnlIndice.Location = new System.Drawing.Point(1109, 21);
-            this.pnlIndice.Name = "pnlIndice";
-            this.pnlIndice.Size = new System.Drawing.Size(200, 200);
-            this.pnlIndice.TabIndex = 16;
-            // 
-            // proIndice
-            // 
-            this.proIndice.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-            this.proIndice.AnimationSpeed = 500;
-            this.proIndice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.proIndice.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold);
-            this.proIndice.ForeColor = System.Drawing.Color.White;
-            this.proIndice.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.proIndice.InnerMargin = 0;
-            this.proIndice.InnerWidth = -1;
-            this.proIndice.Location = new System.Drawing.Point(35, 15);
-            this.proIndice.MarqueeAnimationSpeed = 2000;
-            this.proIndice.Name = "proIndice";
-            this.proIndice.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.proIndice.OuterMargin = -25;
-            this.proIndice.OuterWidth = 26;
-            this.proIndice.ProgressColor = System.Drawing.Color.White;
-            this.proIndice.ProgressWidth = 7;
-            this.proIndice.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.proIndice.Size = new System.Drawing.Size(128, 128);
-            this.proIndice.StartAngle = 270;
-            this.proIndice.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.proIndice.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-            this.proIndice.SubscriptText = "";
-            this.proIndice.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.proIndice.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-            this.proIndice.SuperscriptText = "";
-            this.proIndice.TabIndex = 4;
-            this.proIndice.Text = "3.80";
-            this.proIndice.TextMargin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.proIndice.Value = 80;
-            // 
-            // label16
-            // 
-            this.label16.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.Control;
-            this.label16.Location = new System.Drawing.Point(25, 150);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(150, 36);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "Índice General de 4";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlAprobadas
-            // 
-            this.pnlAprobadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.pnlAprobadas.Controls.Add(this.proAprobadas);
-            this.pnlAprobadas.Controls.Add(this.label15);
-            this.pnlAprobadas.Location = new System.Drawing.Point(879, 21);
-            this.pnlAprobadas.Name = "pnlAprobadas";
-            this.pnlAprobadas.Size = new System.Drawing.Size(200, 200);
-            this.pnlAprobadas.TabIndex = 17;
-            // 
-            // proAprobadas
+            // dashboardEstudianteUc
             // 
             this.proAprobadas.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.proAprobadas.AnimationSpeed = 500;
@@ -611,7 +435,6 @@
             this.proAprobadas.InnerWidth = -1;
             this.proAprobadas.Location = new System.Drawing.Point(35, 15);
             this.proAprobadas.MarqueeAnimationSpeed = 2000;
-            this.proAprobadas.Maximum = 500;
             this.proAprobadas.Name = "proAprobadas";
             this.proAprobadas.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.proAprobadas.OuterMargin = -25;
@@ -630,39 +453,30 @@
             this.proAprobadas.TabIndex = 4;
             this.proAprobadas.Text = "10";
             this.proAprobadas.TextMargin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.proAprobadas.Value = 50;
-            this.proAprobadas.Click += new System.EventHandler(this.proAprobadas_Click);
+            this.proAprobadas.Value = 13;
             // 
-            // label15
+            // historialUc
             // 
-            this.label15.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.Control;
-            this.label15.Location = new System.Drawing.Point(25, 150);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(150, 36);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Asignaturas aprobadas de 113";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.historialUc.Dock = System.Windows.Forms.DockStyle.Right;
+            this.historialUc.Location = new System.Drawing.Point(250, 0);
+            this.historialUc.Name = "historialUc";
+            this.historialUc.Size = new System.Drawing.Size(1100, 850);
+            this.historialUc.TabIndex = 15;
             // 
             // DashboardEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1328, 854);
-            this.Controls.Add(this.pnlCreditos);
-            this.Controls.Add(this.pnlHorario);
-            this.Controls.Add(this.pnlTrimestres);
-            this.Controls.Add(this.pnlAvisos);
-            this.Controls.Add(this.pnlIndice);
-            this.Controls.Add(this.pnlDatosGenerales);
-            this.Controls.Add(this.pnlAprobadas);
+            this.ClientSize = new System.Drawing.Size(1350, 850);
+            this.Controls.Add(this.dashboardEstudianteUc);
+            this.Controls.Add(this.historialUc);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DashboardEstudiante";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardEstudiante";
             this.pnlHorario.ResumeLayout(false);
             this.pnlHorario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlAvisos.ResumeLayout(false);
             this.pnlAvisos.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -674,32 +488,11 @@
             this.pnlUsuario.ResumeLayout(false);
             this.pnlUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlCreditos.ResumeLayout(false);
-            this.pnlTrimestres.ResumeLayout(false);
-            this.pnlIndice.ResumeLayout(false);
-            this.pnlAprobadas.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel pnlHorario;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Panel pnlAvisos;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel pnlDatosGenerales;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Panel pnlUsuario;
         private System.Windows.Forms.Button btnSetting;
@@ -707,6 +500,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnFinales;
+        private System.Windows.Forms.Button btnMedio;
+        private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnDashboard;
@@ -722,8 +518,5 @@
         private System.Windows.Forms.Panel pnlAprobadas;
         private CircularProgressBar.CircularProgressBar proAprobadas;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Seccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fdsalklsdafkjf;
     }
 }
