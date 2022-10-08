@@ -64,11 +64,29 @@
     <Compile Include="DashboardEstudiante.Designer.cs">
       <DependentUpon>DashboardEstudiante.cs</DependentUpon>
     </Compile>
+    <Compile Include="DashboardEstudianteUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DashboardEstudianteUc.Designer.cs">
+      <DependentUpon>DashboardEstudianteUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistorialUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HistorialUc.Designer.cs">
+      <DependentUpon>HistorialUc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedioTerminoUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MedioTerminoUc.Designer.cs">
+      <DependentUpon>MedioTerminoUc.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,11 +108,26 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportesUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportesUc.Designer.cs">
+      <DependentUpon>ReportesUc.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DashboardEstudiante.resx">
       <DependentUpon>DashboardEstudiante.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DashboardEstudianteUc.resx">
+      <DependentUpon>DashboardEstudianteUc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistorialUc.resx">
+      <DependentUpon>HistorialUc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedioTerminoUc.resx">
+      <DependentUpon>MedioTerminoUc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesUc.resx">
+      <DependentUpon>ReportesUc.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -149,6 +185,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user-in-a-square_150x150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seleccione_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

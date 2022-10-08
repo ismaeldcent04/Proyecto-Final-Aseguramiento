@@ -113,6 +113,16 @@ namespace Calculadora_Indice_Academico.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap seleccione_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("seleccione_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap settings_32x32 {
             get {
                 object obj = ResourceManager.GetObject("settings_32x32", resourceCulture);

@@ -28,11 +28,39 @@ namespace Calculadora_Indice_Academico
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            historialUc.Hide();
+            dashboardEstudianteUc.Show();
+            dashboardEstudianteUc.BringToFront();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            Login login = new Login();
+            login.Show();
             this.Close();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            historialUc.Hide();
+            btnDashboard.BackColor = Color.FromArgb(221, 113, 113);
+            btnDashboard.ForeColor = Color.White;
+            btnHistorial.BackColor = Color.FromArgb(245, 166, 166);
+            btnHistorial.ForeColor = Color.Black;
+            dashboardEstudianteUc.Show();
+            dashboardEstudianteUc.BringToFront();
+
+        }
+
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            dashboardEstudianteUc.Hide();
+            btnDashboard.BackColor = Color.FromArgb(245, 166, 166);
+            btnDashboard.ForeColor = Color.Black;
+            btnHistorial.BackColor = Color.FromArgb(221, 113, 113);
+            btnHistorial.ForeColor = Color.White;
+            historialUc.Show();
+            historialUc.BringToFront();
         }
     }
 }
