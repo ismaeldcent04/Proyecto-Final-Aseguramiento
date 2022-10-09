@@ -16,5 +16,10 @@ namespace Calculadora_Indice_Academico
         {
             InitializeComponent();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

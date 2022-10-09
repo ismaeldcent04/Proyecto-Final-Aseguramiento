@@ -144,6 +144,12 @@
     <Compile Include="FinalesUc.Designer.cs">
       <DependentUpon>FinalesUc.cs</DependentUpon>
     </Compile>
+    <Compile Include="SeleccionUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SeleccionUc.Designer.cs">
+      <DependentUpon>SeleccionUc.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AgregarEstudiantes.resx">
       <DependentUpon>AgregarEstudiantes.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +202,9 @@
     <EmbeddedResource Include="FinalesUc.resx">
       <DependentUpon>FinalesUc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SeleccionUc.resx">
+      <DependentUpon>SeleccionUc.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -239,6 +248,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas_1_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas-simbolo-negro_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

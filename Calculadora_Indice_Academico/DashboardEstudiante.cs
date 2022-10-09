@@ -32,6 +32,7 @@ namespace Calculadora_Indice_Academico
             historialUc.Hide();
             medioTerminoUc.Hide();
             finalesUc.Hide();
+            seleccionUc.Hide();
             dashboardEstudianteUc.Show();
             dashboardEstudianteUc.BringToFront();
         }
@@ -90,12 +91,15 @@ namespace Calculadora_Indice_Academico
         {
             historialUc.Hide();
             medioTerminoUc.Hide();
+            finalesUc.Hide();
+            seleccionUc.Hide();
             dashboardEstudianteUc.Show();
             dashboardEstudianteUc.BringToFront();
             btnSeleccionado(btnDashboard);
             btnNoSeleccionado(btnHistorial);
             btnNoSeleccionado(btnMedio);
             btnNoSeleccionado(btnFinales);
+            btnNoSeleccionado(btnSeleccion);
             hideSubMenu();
         }
 
@@ -104,12 +108,14 @@ namespace Calculadora_Indice_Academico
             dashboardEstudianteUc.Hide();
             medioTerminoUc.Hide();
             finalesUc.Hide();
+            seleccionUc.Hide();
             historialUc.Show();
             historialUc.BringToFront();
             btnSeleccionado(btnHistorial);
             btnNoSeleccionado(btnDashboard);
             btnNoSeleccionado(btnMedio);
             btnNoSeleccionado(btnFinales);
+            btnNoSeleccionado(btnSeleccion);
         }
 
         private void btnMedio_Click(object sender, EventArgs e)
@@ -117,12 +123,14 @@ namespace Calculadora_Indice_Academico
             dashboardEstudianteUc.Hide();
             historialUc.Hide();
             finalesUc.Hide();
+            seleccionUc.Hide();
             medioTerminoUc.Show();
             medioTerminoUc.BringToFront();
             btnSeleccionado(btnMedio);
             btnNoSeleccionado(btnDashboard);
             btnNoSeleccionado(btnHistorial);
             btnNoSeleccionado(btnFinales);
+            btnNoSeleccionado(btnSeleccion);
         }
 
         private void btnFinales_Click(object sender, EventArgs e)
@@ -130,12 +138,30 @@ namespace Calculadora_Indice_Academico
             dashboardEstudianteUc.Hide();
             historialUc.Hide();
             medioTerminoUc.Hide();
+            seleccionUc.Hide();
             finalesUc.Show();
             finalesUc.BringToFront();
             btnSeleccionado(btnFinales);
             btnNoSeleccionado(btnDashboard);
             btnNoSeleccionado(btnHistorial);
             btnNoSeleccionado(btnMedio);
+            btnNoSeleccionado(btnSeleccion);
+        }
+
+        private void btnSeleccion_Click(object sender, EventArgs e)
+        {
+            dashboardEstudianteUc.Hide();
+            historialUc.Hide();
+            medioTerminoUc.Hide();
+            finalesUc.Hide();
+            seleccionUc.Show();
+            seleccionUc.BringToFront();
+            btnSeleccionado(btnSeleccion);
+            btnNoSeleccionado(btnFinales);
+            btnNoSeleccionado(btnDashboard);
+            btnNoSeleccionado(btnHistorial);
+            btnNoSeleccionado(btnMedio);
+            hideSubMenu();
         }
     }
 }
