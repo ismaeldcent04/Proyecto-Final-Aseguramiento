@@ -15,6 +15,17 @@ namespace Calculadora_Indice_Academico
         public AgregarProfesores()
         {
             InitializeComponent();
+            pnlDatosGenerales.Hide();
+        }
+
+        private void pnlDatosGenerales_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            pnlDatosGenerales.Show();
         }
     }
 }

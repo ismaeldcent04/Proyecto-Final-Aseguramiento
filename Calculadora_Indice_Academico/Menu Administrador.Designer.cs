@@ -43,6 +43,7 @@
             this.eliminarEstudiantes1 = new Calculadora_Indice_Academico.btn_eliminar();
             this.agregarProfesores1 = new Calculadora_Indice_Academico.AgregarProfesores();
             this.eliminarProfesores1 = new Calculadora_Indice_Academico.EliminarProfesores();
+            this.dashboardAdmin1 = new Calculadora_Indice_Academico.DashboardAdmin();
             this.panel1.SuspendLayout();
             this.PanelTeachers.SuspendLayout();
             this.panelStudents.SuspendLayout();
@@ -233,6 +234,7 @@
             this.btnDashboard.TabIndex = 3;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // agregarEstudiantes1
             // 
@@ -262,11 +264,19 @@
             this.eliminarProfesores1.Size = new System.Drawing.Size(1080, 799);
             this.eliminarProfesores1.TabIndex = 4;
             // 
+            // dashboardAdmin1
+            // 
+            this.dashboardAdmin1.Location = new System.Drawing.Point(251, 0);
+            this.dashboardAdmin1.Name = "dashboardAdmin1";
+            this.dashboardAdmin1.Size = new System.Drawing.Size(1080, 799);
+            this.dashboardAdmin1.TabIndex = 5;
+            // 
             // Menu_Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 811);
+            this.Controls.Add(this.dashboardAdmin1);
             this.Controls.Add(this.eliminarProfesores1);
             this.Controls.Add(this.agregarProfesores1);
             this.Controls.Add(this.eliminarEstudiantes1);
@@ -298,5 +308,6 @@
         private btn_eliminar eliminarEstudiantes1;
         private AgregarProfesores agregarProfesores1;
         private EliminarProfesores eliminarProfesores1;
+        private DashboardAdmin dashboardAdmin1;
     }
 }

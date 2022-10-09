@@ -66,22 +66,22 @@
             this.Creditos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlDatosGenerales = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -378,6 +378,17 @@
             this.pnlDatosGenerales.TabIndex = 21;
             this.pnlDatosGenerales.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDatosGenerales_Paint);
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(540, 70);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(31, 16);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "279";
+            this.label16.Click += new System.EventHandler(this.label11_Click);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -398,6 +409,26 @@
             this.label10.Size = new System.Drawing.Size(15, 16);
             this.label10.TabIndex = 3;
             this.label10.Text = "0";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(575, 95);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(58, 16);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "ACTIVO";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(90, 95);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "ACTIVO";
             // 
             // label20
             // 
@@ -429,6 +460,28 @@
             this.label8.TabIndex = 3;
             this.label8.Text = "1100462";
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(400, 95);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(172, 16);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Asignaturas Aprobadas:";
+            this.label17.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(400, 70);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(141, 16);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Créditos Programa:";
+            this.label15.Click += new System.EventHandler(this.label7_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -449,26 +502,6 @@
             this.label6.Size = new System.Drawing.Size(170, 16);
             this.label6.TabIndex = 1;
             this.label6.Text = "Créditos Convalidados:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 70);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 16);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Programa:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(20, 20);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(25, 16);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "ID:";
             // 
             // label13
             // 
@@ -491,58 +524,25 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Estatus:";
             // 
-            // label4
+            // label5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(90, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "ACTIVO";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(20, 70);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 16);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Programa:";
             // 
-            // label15
+            // label12
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(400, 70);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(141, 16);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "Créditos Programa:";
-            this.label15.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(540, 70);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(31, 16);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "279";
-            this.label16.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(400, 95);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(172, 16);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Asignaturas Aprobadas:";
-            this.label17.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(575, 95);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(58, 16);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "ACTIVO";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(20, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(25, 16);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "ID:";
             // 
             // label19
             // 
@@ -1124,7 +1124,7 @@
             this.dataGridViewTextBoxColumn48});
             this.dataGridView9.EnableHeadersVisualStyles = false;
             this.dataGridView9.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dataGridView9.Location = new System.Drawing.Point(28, 2608);
+            this.dataGridView9.Location = new System.Drawing.Point(28, 2590);
             this.dataGridView9.Name = "dataGridView9";
             this.dataGridView9.ReadOnly = true;
             dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -1300,7 +1300,7 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.dataGridView1);
             this.Name = "HistorialUc";
-            this.Size = new System.Drawing.Size(1083, 850);
+            this.Size = new System.Drawing.Size(1066, 833);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlDatosGenerales.ResumeLayout(false);

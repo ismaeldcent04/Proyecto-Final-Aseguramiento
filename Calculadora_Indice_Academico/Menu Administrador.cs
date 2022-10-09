@@ -90,5 +90,11 @@ namespace Calculadora_Indice_Academico
             Login login = new Login();
             login.Show();
         }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            dashboardAdmin1.Show();
+            dashboardAdmin1.BringToFront();
+        }
     }
 }

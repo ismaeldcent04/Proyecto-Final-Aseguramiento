@@ -15,11 +15,17 @@ namespace Calculadora_Indice_Academico
         public AgregarEstudiantes()
         {
             InitializeComponent();
+            pnlDatosGenerales.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            pnlDatosGenerales.Show();
         }
     }
 }
