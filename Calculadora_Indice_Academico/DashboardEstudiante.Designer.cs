@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnSeleccion = new System.Windows.Forms.Button();
             this.subMenuRpts = new System.Windows.Forms.Panel();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnFinales = new System.Windows.Forms.Button();
             this.btnMedio = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.pnlUsuario = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -53,12 +53,11 @@
             this.proAprobadas = new CircularProgressBar.CircularProgressBar();
             this.label15 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.dashboardEstudianteUc = new Calculadora_Indice_Academico.DashboardEstudianteUc();
-            this.historialUc = new Calculadora_Indice_Academico.HistorialUc();
             this.medioTerminoUc = new Calculadora_Indice_Academico.MedioTerminoUc();
             this.finalesUc = new Calculadora_Indice_Academico.FinalesUc();
             this.seleccionUc = new Calculadora_Indice_Academico.SeleccionUc();
-            this.btnSeleccion = new System.Windows.Forms.Button();
+            this.dashboardEstudianteUc = new Calculadora_Indice_Academico.DashboardEstudianteUc();
+            this.historialUc = new Calculadora_Indice_Academico.HistorialUc();
             this.pnlMenu.SuspendLayout();
             this.subMenuRpts.SuspendLayout();
             this.pnlUsuario.SuspendLayout();
@@ -79,6 +78,25 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(250, 850);
             this.pnlMenu.TabIndex = 14;
+            // 
+            // btnSeleccion
+            // 
+            this.btnSeleccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.btnSeleccion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSeleccion.FlatAppearance.BorderSize = 0;
+            this.btnSeleccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccion.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccion.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSeleccion.Image = global::Calculadora_Indice_Academico.Properties.Resources.seleccione_32x32;
+            this.btnSeleccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeleccion.Location = new System.Drawing.Point(0, 300);
+            this.btnSeleccion.Name = "btnSeleccion";
+            this.btnSeleccion.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.btnSeleccion.Size = new System.Drawing.Size(250, 60);
+            this.btnSeleccion.TabIndex = 16;
+            this.btnSeleccion.Text = "Seleccion";
+            this.btnSeleccion.UseVisualStyleBackColor = false;
+            this.btnSeleccion.Click += new System.EventHandler(this.btnSeleccion_Click);
             // 
             // subMenuRpts
             // 
@@ -166,7 +184,6 @@
             // 
             // pnlUsuario
             // 
-            this.pnlUsuario.Controls.Add(this.label2);
             this.pnlUsuario.Controls.Add(this.label1);
             this.pnlUsuario.Controls.Add(this.pictureBox1);
             this.pnlUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -175,24 +192,14 @@
             this.pnlUsuario.Size = new System.Drawing.Size(250, 100);
             this.pnlUsuario.TabIndex = 0;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(80, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 14);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "View profile";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(80, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 16);
+            this.label1.Size = new System.Drawing.Size(93, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "User Name";
             // 
@@ -425,22 +432,6 @@
             this.label15.Size = new System.Drawing.Size(100, 23);
             this.label15.TabIndex = 0;
             // 
-            // dashboardEstudianteUc
-            // 
-            this.dashboardEstudianteUc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashboardEstudianteUc.Location = new System.Drawing.Point(250, 0);
-            this.dashboardEstudianteUc.Name = "dashboardEstudianteUc";
-            this.dashboardEstudianteUc.Size = new System.Drawing.Size(1100, 850);
-            this.dashboardEstudianteUc.TabIndex = 19;
-            // 
-            // historialUc
-            // 
-            this.historialUc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.historialUc.Location = new System.Drawing.Point(0, 0);
-            this.historialUc.Name = "historialUc";
-            this.historialUc.Size = new System.Drawing.Size(1350, 850);
-            this.historialUc.TabIndex = 16;
-            // 
             // medioTerminoUc
             // 
             this.medioTerminoUc.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -465,36 +456,34 @@
             this.seleccionUc.Size = new System.Drawing.Size(1350, 850);
             this.seleccionUc.TabIndex = 20;
             // 
-            // btnSeleccion
+            // dashboardEstudianteUc
             // 
-            this.btnSeleccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.btnSeleccion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSeleccion.FlatAppearance.BorderSize = 0;
-            this.btnSeleccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccion.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccion.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSeleccion.Image = global::Calculadora_Indice_Academico.Properties.Resources.seleccione_32x32;
-            this.btnSeleccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeleccion.Location = new System.Drawing.Point(0, 300);
-            this.btnSeleccion.Name = "btnSeleccion";
-            this.btnSeleccion.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
-            this.btnSeleccion.Size = new System.Drawing.Size(250, 60);
-            this.btnSeleccion.TabIndex = 16;
-            this.btnSeleccion.Text = "Seleccion";
-            this.btnSeleccion.UseVisualStyleBackColor = false;
-            this.btnSeleccion.Click += new System.EventHandler(this.btnSeleccion_Click);
+            this.dashboardEstudianteUc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboardEstudianteUc.Location = new System.Drawing.Point(0, 0);
+            this.dashboardEstudianteUc.Name = "dashboardEstudianteUc";
+            this.dashboardEstudianteUc.Size = new System.Drawing.Size(1350, 850);
+            this.dashboardEstudianteUc.TabIndex = 21;
+            // 
+            // historialUc
+            // 
+            this.historialUc.AutoScroll = true;
+            this.historialUc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.historialUc.Location = new System.Drawing.Point(250, 0);
+            this.historialUc.Name = "historialUc";
+            this.historialUc.Size = new System.Drawing.Size(1100, 850);
+            this.historialUc.TabIndex = 22;
             // 
             // DashboardEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 850);
-            this.Controls.Add(this.dashboardEstudianteUc);
-            this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.historialUc);
+            this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.medioTerminoUc);
             this.Controls.Add(this.finalesUc);
             this.Controls.Add(this.seleccionUc);
+            this.Controls.Add(this.dashboardEstudianteUc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DashboardEstudiante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -511,7 +500,6 @@
         #endregion
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Panel pnlUsuario;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogout;
@@ -534,11 +522,11 @@
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Panel subMenuRpts;
         private System.Windows.Forms.Button btnFinales;
-        private HistorialUc historialUc;
         private MedioTerminoUc medioTerminoUc;
         private FinalesUc finalesUc;
-        private DashboardEstudianteUc dashboardEstudianteUc;
         private SeleccionUc seleccionUc;
         private System.Windows.Forms.Button btnSeleccion;
+        private DashboardEstudianteUc dashboardEstudianteUc;
+        private HistorialUc historialUc;
     }
 }

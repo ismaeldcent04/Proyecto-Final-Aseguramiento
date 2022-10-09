@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlCreditos = new System.Windows.Forms.Panel();
             this.proCreditos = new CircularProgressBar.CircularProgressBar();
             this.label18 = new System.Windows.Forms.Label();
@@ -71,6 +71,10 @@
             this.pnlAprobadas = new System.Windows.Forms.Panel();
             this.proAprobadas = new CircularProgressBar.CircularProgressBar();
             this.label15 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.pnlCreditos.SuspendLayout();
             this.pnlHorario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -88,9 +92,9 @@
             this.pnlCreditos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.pnlCreditos.Controls.Add(this.proCreditos);
             this.pnlCreditos.Controls.Add(this.label18);
-            this.pnlCreditos.Location = new System.Drawing.Point(861, 224);
+            this.pnlCreditos.Location = new System.Drawing.Point(861, 243);
             this.pnlCreditos.Name = "pnlCreditos";
-            this.pnlCreditos.Size = new System.Drawing.Size(200, 200);
+            this.pnlCreditos.Size = new System.Drawing.Size(200, 210);
             this.pnlCreditos.TabIndex = 18;
             // 
             // proCreditos
@@ -141,9 +145,9 @@
             this.pnlHorario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.pnlHorario.Controls.Add(this.label14);
             this.pnlHorario.Controls.Add(this.dataGridView1);
-            this.pnlHorario.Location = new System.Drawing.Point(22, 441);
+            this.pnlHorario.Location = new System.Drawing.Point(22, 469);
             this.pnlHorario.Name = "pnlHorario";
-            this.pnlHorario.Size = new System.Drawing.Size(1039, 373);
+            this.pnlHorario.Size = new System.Drawing.Size(1039, 345);
             this.pnlHorario.TabIndex = 23;
             // 
             // label14
@@ -163,14 +167,14 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seccion,
@@ -189,16 +193,16 @@
             this.dataGridView1.Location = new System.Drawing.Point(20, 55);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.Size = new System.Drawing.Size(1000, 300);
+            this.dataGridView1.Size = new System.Drawing.Size(1000, 258);
             this.dataGridView1.TabIndex = 1;
             // 
             // Seccion
@@ -283,9 +287,9 @@
             this.pnlTrimestres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.pnlTrimestres.Controls.Add(this.proTrimestres);
             this.pnlTrimestres.Controls.Add(this.label17);
-            this.pnlTrimestres.Location = new System.Drawing.Point(631, 224);
+            this.pnlTrimestres.Location = new System.Drawing.Point(631, 243);
             this.pnlTrimestres.Name = "pnlTrimestres";
-            this.pnlTrimestres.Size = new System.Drawing.Size(200, 200);
+            this.pnlTrimestres.Size = new System.Drawing.Size(200, 210);
             this.pnlTrimestres.TabIndex = 19;
             // 
             // proTrimestres
@@ -336,7 +340,7 @@
             this.pnlAvisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.pnlAvisos.Controls.Add(this.panel5);
             this.pnlAvisos.Controls.Add(this.label12);
-            this.pnlAvisos.Location = new System.Drawing.Point(22, 224);
+            this.pnlAvisos.Location = new System.Drawing.Point(22, 253);
             this.pnlAvisos.Name = "pnlAvisos";
             this.pnlAvisos.Size = new System.Drawing.Size(590, 200);
             this.pnlAvisos.TabIndex = 21;
@@ -380,7 +384,7 @@
             this.pnlIndice.Controls.Add(this.label16);
             this.pnlIndice.Location = new System.Drawing.Point(861, 14);
             this.pnlIndice.Name = "pnlIndice";
-            this.pnlIndice.Size = new System.Drawing.Size(200, 200);
+            this.pnlIndice.Size = new System.Drawing.Size(200, 220);
             this.pnlIndice.TabIndex = 22;
             // 
             // proIndice
@@ -431,24 +435,28 @@
             this.pnlDatosGenerales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.pnlDatosGenerales.Controls.Add(this.label11);
             this.pnlDatosGenerales.Controls.Add(this.label10);
+            this.pnlDatosGenerales.Controls.Add(this.label20);
+            this.pnlDatosGenerales.Controls.Add(this.label19);
             this.pnlDatosGenerales.Controls.Add(this.label9);
             this.pnlDatosGenerales.Controls.Add(this.label8);
             this.pnlDatosGenerales.Controls.Add(this.pictureBox2);
             this.pnlDatosGenerales.Controls.Add(this.label7);
             this.pnlDatosGenerales.Controls.Add(this.label6);
+            this.pnlDatosGenerales.Controls.Add(this.label2);
+            this.pnlDatosGenerales.Controls.Add(this.label1);
             this.pnlDatosGenerales.Controls.Add(this.label5);
             this.pnlDatosGenerales.Controls.Add(this.label4);
             this.pnlDatosGenerales.Controls.Add(this.label3);
             this.pnlDatosGenerales.Location = new System.Drawing.Point(22, 14);
             this.pnlDatosGenerales.Name = "pnlDatosGenerales";
-            this.pnlDatosGenerales.Size = new System.Drawing.Size(590, 200);
+            this.pnlDatosGenerales.Size = new System.Drawing.Size(590, 223);
             this.pnlDatosGenerales.TabIndex = 20;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(170, 140);
+            this.label11.Location = new System.Drawing.Point(170, 190);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 16);
             this.label11.TabIndex = 3;
@@ -458,7 +466,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(180, 115);
+            this.label10.Location = new System.Drawing.Point(180, 165);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(15, 16);
             this.label10.TabIndex = 3;
@@ -468,7 +476,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(100, 90);
+            this.label9.Location = new System.Drawing.Point(100, 140);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(258, 16);
             this.label9.TabIndex = 3;
@@ -498,7 +506,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 140);
+            this.label7.Location = new System.Drawing.Point(20, 190);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(150, 16);
             this.label7.TabIndex = 1;
@@ -508,7 +516,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 115);
+            this.label6.Location = new System.Drawing.Point(20, 165);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(156, 16);
             this.label6.TabIndex = 1;
@@ -518,7 +526,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 90);
+            this.label5.Location = new System.Drawing.Point(20, 140);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 16);
             this.label5.TabIndex = 1;
@@ -553,7 +561,7 @@
             this.pnlAprobadas.Controls.Add(this.label15);
             this.pnlAprobadas.Location = new System.Drawing.Point(631, 14);
             this.pnlAprobadas.Name = "pnlAprobadas";
-            this.pnlAprobadas.Size = new System.Drawing.Size(200, 200);
+            this.pnlAprobadas.Size = new System.Drawing.Size(200, 220);
             this.pnlAprobadas.TabIndex = 24;
             // 
             // proAprobadas
@@ -598,6 +606,46 @@
             this.label15.TabIndex = 3;
             this.label15.Text = "Asignaturas aprobadas de 113";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Correo:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(20, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Telefono:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(95, 115);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(97, 16);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "800-950-6333";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(80, 90);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(177, 16);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "1100462@est.intec.edu.do";
             // 
             // DashboardEstudianteUc
             // 
@@ -673,5 +721,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Viernes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sabado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Profesor;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label2;
     }
 }
