@@ -35,6 +35,18 @@
             this.label18 = new System.Windows.Forms.Label();
             this.pnlHorario = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Seccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asignatura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Creditos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Aula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lunes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Martes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Miercoles = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Jueves = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Viernes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sabado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTrimestres = new System.Windows.Forms.Panel();
             this.proTrimestres = new CircularProgressBar.CircularProgressBar();
             this.label17 = new System.Windows.Forms.Label();
@@ -50,6 +62,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,29 +71,16 @@
             this.pnlAprobadas = new System.Windows.Forms.Panel();
             this.proAprobadas = new CircularProgressBar.CircularProgressBar();
             this.label15 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.Seccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asignatura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Creditos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Aula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lunes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Martes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Miercoles = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Jueves = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Viernes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sabado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlCreditos.SuspendLayout();
             this.pnlHorario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlTrimestres.SuspendLayout();
             this.pnlAvisos.SuspendLayout();
             this.panel5.SuspendLayout();
             this.pnlIndice.SuspendLayout();
             this.pnlDatosGenerales.SuspendLayout();
-            this.pnlAprobadas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlAprobadas.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCreditos
@@ -150,11 +150,133 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.label14.Location = new System.Drawing.Point(20, 20);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(370, 32);
             this.label14.TabIndex = 0;
             this.label14.Text = "Asignaturas Seleccionadas";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Seccion,
+            this.Asignatura,
+            this.Creditos,
+            this.Aula,
+            this.Lunes,
+            this.Martes,
+            this.Miercoles,
+            this.Jueves,
+            this.Viernes,
+            this.Sabado,
+            this.Profesor});
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlText;
+            this.dataGridView1.Location = new System.Drawing.Point(20, 55);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView1.Size = new System.Drawing.Size(1000, 300);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // Seccion
+            // 
+            this.Seccion.HeaderText = "Sección";
+            this.Seccion.Name = "Seccion";
+            this.Seccion.ReadOnly = true;
+            this.Seccion.Width = 70;
+            // 
+            // Asignatura
+            // 
+            this.Asignatura.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Asignatura.HeaderText = "Asignatura";
+            this.Asignatura.Name = "Asignatura";
+            this.Asignatura.ReadOnly = true;
+            // 
+            // Creditos
+            // 
+            this.Creditos.HeaderText = "Cr.";
+            this.Creditos.Name = "Creditos";
+            this.Creditos.ReadOnly = true;
+            this.Creditos.Width = 50;
+            // 
+            // Aula
+            // 
+            this.Aula.HeaderText = "Aula";
+            this.Aula.Name = "Aula";
+            this.Aula.ReadOnly = true;
+            this.Aula.Width = 80;
+            // 
+            // Lunes
+            // 
+            this.Lunes.HeaderText = "Lun";
+            this.Lunes.Name = "Lunes";
+            this.Lunes.ReadOnly = true;
+            this.Lunes.Width = 60;
+            // 
+            // Martes
+            // 
+            this.Martes.HeaderText = "Ma";
+            this.Martes.Name = "Martes";
+            this.Martes.ReadOnly = true;
+            this.Martes.Width = 60;
+            // 
+            // Miercoles
+            // 
+            this.Miercoles.HeaderText = "Mi";
+            this.Miercoles.Name = "Miercoles";
+            this.Miercoles.ReadOnly = true;
+            this.Miercoles.Width = 60;
+            // 
+            // Jueves
+            // 
+            this.Jueves.HeaderText = "Ju";
+            this.Jueves.Name = "Jueves";
+            this.Jueves.ReadOnly = true;
+            this.Jueves.Width = 60;
+            // 
+            // Viernes
+            // 
+            this.Viernes.HeaderText = "Vi";
+            this.Viernes.Name = "Viernes";
+            this.Viernes.ReadOnly = true;
+            this.Viernes.Width = 60;
+            // 
+            // Sabado
+            // 
+            this.Sabado.HeaderText = "Sab";
+            this.Sabado.Name = "Sabado";
+            this.Sabado.ReadOnly = true;
+            this.Sabado.Width = 60;
+            // 
+            // Profesor
+            // 
+            this.Profesor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Profesor.HeaderText = "Profesor";
+            this.Profesor.Name = "Profesor";
+            this.Profesor.ReadOnly = true;
             // 
             // pnlTrimestres
             // 
@@ -244,6 +366,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.label12.Location = new System.Drawing.Point(20, 20);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(102, 32);
@@ -361,6 +484,16 @@
             this.label8.TabIndex = 3;
             this.label8.Text = "1100462";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Calculadora_Indice_Academico.Properties.Resources.user_in_a_square_150x150;
+            this.pictureBox2.Location = new System.Drawing.Point(415, 20);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -404,7 +537,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.label3.Location = new System.Drawing.Point(20, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(230, 32);
@@ -464,137 +599,6 @@
             this.label15.Text = "Asignaturas aprobadas de 113";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Seccion,
-            this.Asignatura,
-            this.Creditos,
-            this.Aula,
-            this.Lunes,
-            this.Martes,
-            this.Miercoles,
-            this.Jueves,
-            this.Viernes,
-            this.Sabado,
-            this.Profesor});
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.Size = new System.Drawing.Size(1000, 300);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Calculadora_Indice_Academico.Properties.Resources.user_in_a_square_150x150;
-            this.pictureBox2.Location = new System.Drawing.Point(415, 20);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // Seccion
-            // 
-            this.Seccion.HeaderText = "Sección";
-            this.Seccion.Name = "Seccion";
-            this.Seccion.ReadOnly = true;
-            this.Seccion.Width = 70;
-            // 
-            // Asignatura
-            // 
-            this.Asignatura.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Asignatura.HeaderText = "Asignatura";
-            this.Asignatura.Name = "Asignatura";
-            this.Asignatura.ReadOnly = true;
-            // 
-            // Creditos
-            // 
-            this.Creditos.HeaderText = "Cr.";
-            this.Creditos.Name = "Creditos";
-            this.Creditos.ReadOnly = true;
-            this.Creditos.Width = 50;
-            // 
-            // Aula
-            // 
-            this.Aula.HeaderText = "Aula";
-            this.Aula.Name = "Aula";
-            this.Aula.ReadOnly = true;
-            this.Aula.Width = 80;
-            // 
-            // Lunes
-            // 
-            this.Lunes.HeaderText = "Lun";
-            this.Lunes.Name = "Lunes";
-            this.Lunes.ReadOnly = true;
-            this.Lunes.Width = 60;
-            // 
-            // Martes
-            // 
-            this.Martes.HeaderText = "Ma";
-            this.Martes.Name = "Martes";
-            this.Martes.ReadOnly = true;
-            this.Martes.Width = 60;
-            // 
-            // Miercoles
-            // 
-            this.Miercoles.HeaderText = "Mi";
-            this.Miercoles.Name = "Miercoles";
-            this.Miercoles.ReadOnly = true;
-            this.Miercoles.Width = 60;
-            // 
-            // Jueves
-            // 
-            this.Jueves.HeaderText = "Ju";
-            this.Jueves.Name = "Jueves";
-            this.Jueves.ReadOnly = true;
-            this.Jueves.Width = 60;
-            // 
-            // Viernes
-            // 
-            this.Viernes.HeaderText = "Vi";
-            this.Viernes.Name = "Viernes";
-            this.Viernes.ReadOnly = true;
-            this.Viernes.Width = 60;
-            // 
-            // Sabado
-            // 
-            this.Sabado.HeaderText = "Sab";
-            this.Sabado.Name = "Sabado";
-            this.Sabado.ReadOnly = true;
-            this.Sabado.Width = 60;
-            // 
-            // Profesor
-            // 
-            this.Profesor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Profesor.HeaderText = "Profesor";
-            this.Profesor.Name = "Profesor";
-            this.Profesor.ReadOnly = true;
-            // 
             // DashboardEstudianteUc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -611,6 +615,7 @@
             this.pnlCreditos.ResumeLayout(false);
             this.pnlHorario.ResumeLayout(false);
             this.pnlHorario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlTrimestres.ResumeLayout(false);
             this.pnlAvisos.ResumeLayout(false);
             this.pnlAvisos.PerformLayout();
@@ -619,9 +624,8 @@
             this.pnlIndice.ResumeLayout(false);
             this.pnlDatosGenerales.ResumeLayout(false);
             this.pnlDatosGenerales.PerformLayout();
-            this.pnlAprobadas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnlAprobadas.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
