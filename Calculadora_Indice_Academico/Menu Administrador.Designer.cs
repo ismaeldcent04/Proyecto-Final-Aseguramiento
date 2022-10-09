@@ -40,7 +40,7 @@
             this.btn_estudiantes = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.agregarEstudiantes1 = new Calculadora_Indice_Academico.AgregarEstudiantes();
-            this.eliminarEstudiantes1 = new Calculadora_Indice_Academico.EliminarEstudiantes();
+            this.eliminarEstudiantes1 = new Calculadora_Indice_Academico.btn_eliminar();
             this.agregarProfesores1 = new Calculadora_Indice_Academico.AgregarProfesores();
             this.eliminarProfesores1 = new Calculadora_Indice_Academico.EliminarProfesores();
             this.panel1.SuspendLayout();
@@ -108,7 +108,7 @@
             this.btn_EliminarProfesores.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
             this.btn_EliminarProfesores.Size = new System.Drawing.Size(253, 59);
             this.btn_EliminarProfesores.TabIndex = 6;
-            this.btn_EliminarProfesores.Text = "Eliminar Profesores";
+            this.btn_EliminarProfesores.Text = "Editar Profesores";
             this.btn_EliminarProfesores.UseVisualStyleBackColor = false;
             this.btn_EliminarProfesores.Click += new System.EventHandler(this.btn_EliminarProfesores_Click);
             // 
@@ -175,7 +175,7 @@
             this.btn_EliminarEstudiantes.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
             this.btn_EliminarEstudiantes.Size = new System.Drawing.Size(253, 59);
             this.btn_EliminarEstudiantes.TabIndex = 6;
-            this.btn_EliminarEstudiantes.Text = "Eliminar Estudiantes";
+            this.btn_EliminarEstudiantes.Text = "Editar Estudiantes";
             this.btn_EliminarEstudiantes.UseVisualStyleBackColor = false;
             this.btn_EliminarEstudiantes.Click += new System.EventHandler(this.btn_EliminarEstudiantes_Click);
             // 
@@ -295,7 +295,7 @@
         private System.Windows.Forms.Button btn_AgregarProfesores;
         private System.Windows.Forms.Button btn_Logout;
         private AgregarEstudiantes agregarEstudiantes1;
-        private EliminarEstudiantes eliminarEstudiantes1;
+        private btn_eliminar eliminarEstudiantes1;
         private AgregarProfesores agregarProfesores1;
         private EliminarProfesores eliminarProfesores1;
     }

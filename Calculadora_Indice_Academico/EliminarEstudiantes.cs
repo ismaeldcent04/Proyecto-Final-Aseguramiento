@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Calculadora_Indice_Academico
 {
-    public partial class EliminarEstudiantes : UserControl
+    public partial class btn_eliminar : UserControl
     {
-        public EliminarEstudiantes()
+        public btn_eliminar()
         {
             InitializeComponent();
+        }
+
+        private void pnlDatosGenerales_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
