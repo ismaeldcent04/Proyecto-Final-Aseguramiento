@@ -42,34 +42,38 @@
             this.txt_ID = new System.Windows.Forms.TextBox();
             this.txt_Apellido = new System.Windows.Forms.TextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgw_profesores = new System.Windows.Forms.DataGridView();
             this.pnlDatosGenerales = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_d_cedula = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_d_apellido = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_d_nombre = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txt_telefono = new System.Windows.Forms.TextBox();
-            this.txt_contraseña = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.txt_AreaAcademica = new System.Windows.Forms.TextBox();
+            this.txt_d_telefono = new System.Windows.Forms.TextBox();
+            this.txt_d_contraseña = new System.Windows.Forms.TextBox();
+            this.txt_d_correo = new System.Windows.Forms.TextBox();
+            this.txt_d_carrera = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_d_ID = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txt_cedula = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txt_telefono = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgw_profesores)).BeginInit();
             this.pnlDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -121,9 +125,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(272, 170);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Carrera";
+            this.label3.Text = "Area";
             // 
             // txt_Area
             // 
@@ -161,7 +165,7 @@
             // 
             // btn_agregar
             // 
-            this.btn_agregar.Location = new System.Drawing.Point(167, 362);
+            this.btn_agregar.Location = new System.Drawing.Point(167, 397);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(166, 23);
             this.btn_agregar.TabIndex = 18;
@@ -190,36 +194,36 @@
             this.txt_nombre.Size = new System.Drawing.Size(188, 20);
             this.txt_nombre.TabIndex = 15;
             // 
-            // dataGridView1
+            // dgw_profesores
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 445);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1074, 277);
-            this.dataGridView1.TabIndex = 28;
+            this.dgw_profesores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgw_profesores.Location = new System.Drawing.Point(4, 445);
+            this.dgw_profesores.Name = "dgw_profesores";
+            this.dgw_profesores.Size = new System.Drawing.Size(1074, 277);
+            this.dgw_profesores.TabIndex = 28;
             // 
             // pnlDatosGenerales
             // 
             this.pnlDatosGenerales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.pnlDatosGenerales.Controls.Add(this.textBox1);
+            this.pnlDatosGenerales.Controls.Add(this.txt_d_cedula);
             this.pnlDatosGenerales.Controls.Add(this.label6);
             this.pnlDatosGenerales.Controls.Add(this.label7);
-            this.pnlDatosGenerales.Controls.Add(this.textBox2);
+            this.pnlDatosGenerales.Controls.Add(this.txt_d_apellido);
             this.pnlDatosGenerales.Controls.Add(this.label8);
             this.pnlDatosGenerales.Controls.Add(this.label17);
-            this.pnlDatosGenerales.Controls.Add(this.textBox3);
+            this.pnlDatosGenerales.Controls.Add(this.txt_d_nombre);
             this.pnlDatosGenerales.Controls.Add(this.label15);
             this.pnlDatosGenerales.Controls.Add(this.label16);
             this.pnlDatosGenerales.Controls.Add(this.label13);
-            this.pnlDatosGenerales.Controls.Add(this.txt_telefono);
-            this.pnlDatosGenerales.Controls.Add(this.txt_contraseña);
-            this.pnlDatosGenerales.Controls.Add(this.textBox4);
-            this.pnlDatosGenerales.Controls.Add(this.txt_AreaAcademica);
+            this.pnlDatosGenerales.Controls.Add(this.txt_d_telefono);
+            this.pnlDatosGenerales.Controls.Add(this.txt_d_contraseña);
+            this.pnlDatosGenerales.Controls.Add(this.txt_d_correo);
+            this.pnlDatosGenerales.Controls.Add(this.txt_d_carrera);
             this.pnlDatosGenerales.Controls.Add(this.label10);
             this.pnlDatosGenerales.Controls.Add(this.label11);
             this.pnlDatosGenerales.Controls.Add(this.label9);
             this.pnlDatosGenerales.Controls.Add(this.label12);
-            this.pnlDatosGenerales.Controls.Add(this.textBox5);
+            this.pnlDatosGenerales.Controls.Add(this.txt_d_ID);
             this.pnlDatosGenerales.Controls.Add(this.label14);
             this.pnlDatosGenerales.Controls.Add(this.label18);
             this.pnlDatosGenerales.Controls.Add(this.pictureBox2);
@@ -232,15 +236,15 @@
             this.pnlDatosGenerales.TabIndex = 29;
             this.pnlDatosGenerales.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDatosGenerales_Paint);
             // 
-            // textBox1
+            // txt_d_cedula
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(288, 246);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(107, 13);
-            this.textBox1.TabIndex = 35;
-            this.textBox1.Text = "402-3124333-4";
+            this.txt_d_cedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.txt_d_cedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_d_cedula.Location = new System.Drawing.Point(288, 246);
+            this.txt_d_cedula.Name = "txt_d_cedula";
+            this.txt_d_cedula.Size = new System.Drawing.Size(84, 13);
+            this.txt_d_cedula.TabIndex = 35;
+            this.txt_d_cedula.Text = "402-3124333-4";
             // 
             // label6
             // 
@@ -261,15 +265,15 @@
             this.label7.TabIndex = 33;
             this.label7.Text = "Cedula:";
             // 
-            // textBox2
+            // txt_d_apellido
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(87, 242);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(109, 13);
-            this.textBox2.TabIndex = 32;
-            this.textBox2.Text = "Dicent";
+            this.txt_d_apellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.txt_d_apellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_d_apellido.Location = new System.Drawing.Point(87, 242);
+            this.txt_d_apellido.Name = "txt_d_apellido";
+            this.txt_d_apellido.Size = new System.Drawing.Size(109, 13);
+            this.txt_d_apellido.TabIndex = 32;
+            this.txt_d_apellido.Text = "Dicent";
             // 
             // label8
             // 
@@ -290,15 +294,15 @@
             this.label17.TabIndex = 30;
             this.label17.Text = "Apellido:";
             // 
-            // textBox3
+            // txt_d_nombre
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(87, 205);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(85, 13);
-            this.textBox3.TabIndex = 28;
-            this.textBox3.Text = "Ismael";
+            this.txt_d_nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.txt_d_nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_d_nombre.Location = new System.Drawing.Point(87, 205);
+            this.txt_d_nombre.Name = "txt_d_nombre";
+            this.txt_d_nombre.Size = new System.Drawing.Size(85, 13);
+            this.txt_d_nombre.TabIndex = 28;
+            this.txt_d_nombre.Text = "Ismael";
             // 
             // label15
             // 
@@ -328,45 +332,45 @@
             this.label13.Size = new System.Drawing.Size(0, 16);
             this.label13.TabIndex = 24;
             // 
-            // txt_telefono
+            // txt_d_telefono
             // 
-            this.txt_telefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.txt_telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_telefono.Location = new System.Drawing.Point(294, 205);
-            this.txt_telefono.Name = "txt_telefono";
-            this.txt_telefono.Size = new System.Drawing.Size(101, 13);
-            this.txt_telefono.TabIndex = 22;
-            this.txt_telefono.Text = "8098754411";
+            this.txt_d_telefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.txt_d_telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_d_telefono.Location = new System.Drawing.Point(294, 205);
+            this.txt_d_telefono.Name = "txt_d_telefono";
+            this.txt_d_telefono.Size = new System.Drawing.Size(101, 13);
+            this.txt_d_telefono.TabIndex = 22;
+            this.txt_d_telefono.Text = "8098754411";
             // 
-            // txt_contraseña
+            // txt_d_contraseña
             // 
-            this.txt_contraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.txt_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_contraseña.Location = new System.Drawing.Point(320, 166);
-            this.txt_contraseña.Name = "txt_contraseña";
-            this.txt_contraseña.Size = new System.Drawing.Size(104, 13);
-            this.txt_contraseña.TabIndex = 21;
-            this.txt_contraseña.Text = "12345intec";
+            this.txt_d_contraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.txt_d_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_d_contraseña.Location = new System.Drawing.Point(320, 166);
+            this.txt_d_contraseña.Name = "txt_d_contraseña";
+            this.txt_d_contraseña.Size = new System.Drawing.Size(104, 13);
+            this.txt_d_contraseña.TabIndex = 21;
+            this.txt_d_contraseña.Text = "12345intec";
             // 
-            // textBox4
+            // txt_d_correo
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(279, 138);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(158, 13);
-            this.textBox4.TabIndex = 20;
-            this.textBox4.Text = "1100368@est.intec.edu";
+            this.txt_d_correo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.txt_d_correo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_d_correo.Location = new System.Drawing.Point(276, 135);
+            this.txt_d_correo.Name = "txt_d_correo";
+            this.txt_d_correo.Size = new System.Drawing.Size(158, 13);
+            this.txt_d_correo.TabIndex = 20;
+            this.txt_d_correo.Text = "1100368@est.intec.edu";
             // 
-            // txt_AreaAcademica
+            // txt_d_carrera
             // 
-            this.txt_AreaAcademica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.txt_AreaAcademica.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_AreaAcademica.Location = new System.Drawing.Point(64, 166);
-            this.txt_AreaAcademica.Name = "txt_AreaAcademica";
-            this.txt_AreaAcademica.Size = new System.Drawing.Size(158, 13);
-            this.txt_AreaAcademica.TabIndex = 17;
-            this.txt_AreaAcademica.Text = "(IDS 2020) Ing. De Software";
+            this.txt_d_carrera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.txt_d_carrera.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_d_carrera.Location = new System.Drawing.Point(64, 166);
+            this.txt_d_carrera.Name = "txt_d_carrera";
+            this.txt_d_carrera.Size = new System.Drawing.Size(158, 13);
+            this.txt_d_carrera.TabIndex = 17;
+            this.txt_d_carrera.Text = "(IDS 2020) Ing. De Software";
             // 
             // label10
             // 
@@ -406,15 +410,15 @@
             this.label12.TabIndex = 11;
             this.label12.Text = "Contraseña:";
             // 
-            // textBox5
+            // txt_d_ID
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(50, 132);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(158, 13);
-            this.textBox5.TabIndex = 6;
-            this.textBox5.Text = "1100368";
+            this.txt_d_ID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.txt_d_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_d_ID.Location = new System.Drawing.Point(50, 132);
+            this.txt_d_ID.Name = "txt_d_ID";
+            this.txt_d_ID.Size = new System.Drawing.Size(158, 13);
+            this.txt_d_ID.TabIndex = 6;
+            this.txt_d_ID.Text = "1100368";
             // 
             // label14
             // 
@@ -477,12 +481,49 @@
             this.label21.TabIndex = 0;
             this.label21.Text = "Datos Generales";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(272, 335);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(40, 13);
+            this.label22.TabIndex = 33;
+            this.label22.Text = "Cedula";
+            // 
+            // txt_cedula
+            // 
+            this.txt_cedula.Location = new System.Drawing.Point(275, 348);
+            this.txt_cedula.Name = "txt_cedula";
+            this.txt_cedula.Size = new System.Drawing.Size(188, 20);
+            this.txt_cedula.TabIndex = 32;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(46, 332);
+            this.label23.Name = "label23";
+            this.label23.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label23.Size = new System.Drawing.Size(49, 13);
+            this.label23.TabIndex = 31;
+            this.label23.Text = "Telefono";
+            // 
+            // txt_telefono
+            // 
+            this.txt_telefono.Location = new System.Drawing.Point(49, 348);
+            this.txt_telefono.Name = "txt_telefono";
+            this.txt_telefono.Size = new System.Drawing.Size(188, 20);
+            this.txt_telefono.TabIndex = 30;
+            // 
             // AgregarProfesores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.txt_cedula);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.txt_telefono);
             this.Controls.Add(this.pnlDatosGenerales);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgw_profesores);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_Contrasena);
             this.Controls.Add(this.label4);
@@ -499,7 +540,8 @@
             this.Controls.Add(this.label1);
             this.Name = "AgregarProfesores";
             this.Size = new System.Drawing.Size(1082, 725);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.AgregarProfesores_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgw_profesores)).EndInit();
             this.pnlDatosGenerales.ResumeLayout(false);
             this.pnlDatosGenerales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -524,32 +566,36 @@
         private System.Windows.Forms.TextBox txt_ID;
         private System.Windows.Forms.TextBox txt_Apellido;
         private System.Windows.Forms.TextBox txt_nombre;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgw_profesores;
         private System.Windows.Forms.Panel pnlDatosGenerales;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_d_cedula;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_d_apellido;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_d_nombre;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txt_telefono;
-        private System.Windows.Forms.TextBox txt_contraseña;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox txt_AreaAcademica;
+        private System.Windows.Forms.TextBox txt_d_telefono;
+        private System.Windows.Forms.TextBox txt_d_contraseña;
+        private System.Windows.Forms.TextBox txt_d_correo;
+        private System.Windows.Forms.TextBox txt_d_carrera;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_d_ID;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txt_cedula;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox txt_telefono;
     }
 }
