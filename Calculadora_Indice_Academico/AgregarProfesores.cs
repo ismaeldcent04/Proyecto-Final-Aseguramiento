@@ -27,5 +27,10 @@ namespace Calculadora_Indice_Academico
         {
             pnlDatosGenerales.Show();
         }
+
+        private void AgregarProfesores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

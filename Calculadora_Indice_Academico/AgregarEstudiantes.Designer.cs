@@ -537,6 +537,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AgregarEstudiantes";
             this.Size = new System.Drawing.Size(1080, 799);
+            this.Load += new System.EventHandler(this.AgregarEstudiantes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlDatosGenerales.ResumeLayout(false);
             this.pnlDatosGenerales.PerformLayout();

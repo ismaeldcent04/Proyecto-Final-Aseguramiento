@@ -499,6 +499,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AgregarProfesores";
             this.Size = new System.Drawing.Size(1082, 725);
+            this.Load += new System.EventHandler(this.AgregarProfesores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlDatosGenerales.ResumeLayout(false);
             this.pnlDatosGenerales.PerformLayout();

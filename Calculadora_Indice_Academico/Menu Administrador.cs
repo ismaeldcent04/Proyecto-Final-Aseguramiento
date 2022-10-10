@@ -12,6 +12,7 @@ namespace Calculadora_Indice_Academico
 {
     public partial class Menu_Administrador : Form
     {
+        
         public Menu_Administrador()
         {
             InitializeComponent();
@@ -95,6 +96,11 @@ namespace Calculadora_Indice_Academico
         {
             dashboardAdmin1.Show();
             dashboardAdmin1.BringToFront();
+        }
+
+        private void dashboardAdmin1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

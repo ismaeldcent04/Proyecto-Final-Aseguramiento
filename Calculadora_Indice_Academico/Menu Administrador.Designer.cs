@@ -270,6 +270,7 @@
             this.dashboardAdmin1.Name = "dashboardAdmin1";
             this.dashboardAdmin1.Size = new System.Drawing.Size(1080, 799);
             this.dashboardAdmin1.TabIndex = 5;
+            this.dashboardAdmin1.Load += new System.EventHandler(this.dashboardAdmin1_Load);
             // 
             // Menu_Administrador
             // 
