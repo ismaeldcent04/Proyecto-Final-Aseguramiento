@@ -1,0 +1,1066 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="aseguramiento_grupo1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="administrador">
+          <Key>
+            <PropertyRef Name="administrador_id" />
+          </Key>
+          <Property Name="administrador_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="administrador_cedula" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="administrador_nombres" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="administrador_apellidoP" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="administrador_apellidoM" Type="varchar" MaxLength="50" />
+          <Property Name="administrador_telefono" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="administrador_correo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="administrador_contrasena" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="area">
+          <Key>
+            <PropertyRef Name="area_id" />
+          </Key>
+          <Property Name="area_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="area_nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="docente_id" Type="int" />
+        </EntityType>
+        <EntityType Name="aula">
+          <Key>
+            <PropertyRef Name="aula_id" />
+          </Key>
+          <Property Name="aula_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="aula_codigo" Type="varchar" MaxLength="10" />
+          <Property Name="tipo_aula_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="calificacion">
+          <Key>
+            <PropertyRef Name="estudiante_id" />
+            <PropertyRef Name="triMat_id" />
+          </Key>
+          <Property Name="estudiante_id" Type="int" Nullable="false" />
+          <Property Name="triMat_id" Type="int" Nullable="false" />
+          <Property Name="medioTermino" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="calificacionFinal" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="eval1" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="eval2" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="eval3" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="eval4" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="comentario" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="carrera">
+          <Key>
+            <PropertyRef Name="carrera_id" />
+          </Key>
+          <Property Name="carrera_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="carrera_nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="area_id" Type="int" Nullable="false" />
+          <Property Name="docente_id" Type="int" />
+          <Property Name="trimestres_max" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="docente">
+          <Key>
+            <PropertyRef Name="docente_id" />
+          </Key>
+          <Property Name="docente_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="docente_cedula" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="docente_nombres" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="docente_apellidoP" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="docente_apellidoM" Type="varchar" MaxLength="50" />
+          <Property Name="docente_telefono" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="docente_correo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="area_id" Type="int" Nullable="false" />
+          <Property Name="docente_contrasena" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="estudiante">
+          <Key>
+            <PropertyRef Name="estudiante_id" />
+          </Key>
+          <Property Name="estudiante_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="estudiante_cedula" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="estudiante_nombres" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="estudiante_apellidoP" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="estudiante_apellidoM" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="estudiante_telefono" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="estudiante_correo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="trimestre_entrada" Type="int" Nullable="false" />
+          <Property Name="estudiante_contrasena" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="estudianteHistorico">
+          <Key>
+            <PropertyRef Name="estudiante_id" />
+            <PropertyRef Name="carrera_id" />
+          </Key>
+          <Property Name="estudiante_id" Type="int" Nullable="false" />
+          <Property Name="carrera_id" Type="int" Nullable="false" />
+          <Property Name="trimestre_entrada" Type="int" Nullable="false" />
+          <Property Name="trimestres_cursados" Type="int" Nullable="false" />
+          <Property Name="isActive" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="materia">
+          <Key>
+            <PropertyRef Name="materia_id" />
+          </Key>
+          <Property Name="materia_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="materia_nombre" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="materia_codigo" Type="varchar" MaxLength="10" />
+          <Property Name="carrera_id" Type="int" Nullable="false" />
+          <Property Name="materia_creditos" Type="int" Nullable="false" />
+          <Property Name="tipo_aula_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tipo_aula">
+          <Key>
+            <PropertyRef Name="tipo_aula_id" />
+          </Key>
+          <Property Name="tipo_aula_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tipo_aula_nombre" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="trimestre">
+          <Key>
+            <PropertyRef Name="trimestre_id" />
+          </Key>
+          <Property Name="trimestre_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="trimestre_nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="trimestre_fechIN" Type="date" Nullable="false" />
+          <Property Name="trimestre_fechOUT" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="trimestre_materia">
+          <Key>
+            <PropertyRef Name="triMat_id" />
+          </Key>
+          <Property Name="triMat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="trimestre_id" Type="int" Nullable="false" />
+          <Property Name="materia_id" Type="int" Nullable="false" />
+          <Property Name="docente_id" Type="int" Nullable="false" />
+          <Property Name="aula_id" Type="int" Nullable="false" />
+          <Property Name="triMat_lunes" Type="varchar" MaxLength="10" />
+          <Property Name="triMat_martes" Type="varchar" MaxLength="10" />
+          <Property Name="triMat_miercoles" Type="varchar" MaxLength="10" />
+          <Property Name="triMat_jueves" Type="varchar" MaxLength="10" />
+          <Property Name="triMat_viernes" Type="varchar" MaxLength="10" />
+          <Property Name="triMat_sabado" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK__area__docente_id__48CFD27E">
+          <End Role="docente" Type="Self.docente" Multiplicity="0..1" />
+          <End Role="area" Type="Self.area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="docente">
+              <PropertyRef Name="docente_id" />
+            </Principal>
+            <Dependent Role="area">
+              <PropertyRef Name="docente_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aula__tipo_aula___3B75D760">
+          <End Role="tipo_aula" Type="Self.tipo_aula" Multiplicity="1" />
+          <End Role="aula" Type="Self.aula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_aula">
+              <PropertyRef Name="tipo_aula_id" />
+            </Principal>
+            <Dependent Role="aula">
+              <PropertyRef Name="tipo_aula_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__calificac__estud__44FF419A">
+          <End Role="estudiante" Type="Self.estudiante" Multiplicity="1" />
+          <End Role="calificacion" Type="Self.calificacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estudiante">
+              <PropertyRef Name="estudiante_id" />
+            </Principal>
+            <Dependent Role="calificacion">
+              <PropertyRef Name="estudiante_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__calificac__triMa__45F365D3">
+          <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="1" />
+          <End Role="calificacion" Type="Self.calificacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trimestre_materia">
+              <PropertyRef Name="triMat_id" />
+            </Principal>
+            <Dependent Role="calificacion">
+              <PropertyRef Name="triMat_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__carrera__area_id__2A4B4B5E">
+          <End Role="area" Type="Self.area" Multiplicity="1" />
+          <End Role="carrera" Type="Self.carrera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="area">
+              <PropertyRef Name="area_id" />
+            </Principal>
+            <Dependent Role="carrera">
+              <PropertyRef Name="area_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__carrera__docente__49C3F6B7">
+          <End Role="docente" Type="Self.docente" Multiplicity="0..1" />
+          <End Role="carrera" Type="Self.carrera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="docente">
+              <PropertyRef Name="docente_id" />
+            </Principal>
+            <Dependent Role="carrera">
+              <PropertyRef Name="docente_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__docente__area_id__2D27B809">
+          <End Role="area" Type="Self.area" Multiplicity="1" />
+          <End Role="docente" Type="Self.docente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="area">
+              <PropertyRef Name="area_id" />
+            </Principal>
+            <Dependent Role="docente">
+              <PropertyRef Name="area_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__estudiant__carre__33D4B598">
+          <End Role="carrera" Type="Self.carrera" Multiplicity="1" />
+          <End Role="estudianteHistorico" Type="Self.estudianteHistorico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="carrera">
+              <PropertyRef Name="carrera_id" />
+            </Principal>
+            <Dependent Role="estudianteHistorico">
+              <PropertyRef Name="carrera_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__estudiant__estud__32E0915F">
+          <End Role="estudiante" Type="Self.estudiante" Multiplicity="1" />
+          <End Role="estudianteHistorico" Type="Self.estudianteHistorico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estudiante">
+              <PropertyRef Name="estudiante_id" />
+            </Principal>
+            <Dependent Role="estudianteHistorico">
+              <PropertyRef Name="estudiante_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__estudiant__trime__300424B4">
+          <End Role="trimestre" Type="Self.trimestre" Multiplicity="1" />
+          <End Role="estudiante" Type="Self.estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trimestre">
+              <PropertyRef Name="trimestre_id" />
+            </Principal>
+            <Dependent Role="estudiante">
+              <PropertyRef Name="trimestre_entrada" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__estudiant__trime__34C8D9D1">
+          <End Role="trimestre" Type="Self.trimestre" Multiplicity="1" />
+          <End Role="estudianteHistorico" Type="Self.estudianteHistorico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trimestre">
+              <PropertyRef Name="trimestre_id" />
+            </Principal>
+            <Dependent Role="estudianteHistorico">
+              <PropertyRef Name="trimestre_entrada" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__materia__carrera__38996AB5">
+          <End Role="carrera" Type="Self.carrera" Multiplicity="1" />
+          <End Role="materia" Type="Self.materia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="carrera">
+              <PropertyRef Name="carrera_id" />
+            </Principal>
+            <Dependent Role="materia">
+              <PropertyRef Name="carrera_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__materia__tipo_au__37A5467C">
+          <End Role="tipo_aula" Type="Self.tipo_aula" Multiplicity="1" />
+          <End Role="materia" Type="Self.materia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_aula">
+              <PropertyRef Name="tipo_aula_id" />
+            </Principal>
+            <Dependent Role="materia">
+              <PropertyRef Name="tipo_aula_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__trimestre__aula___4222D4EF">
+          <End Role="aula" Type="Self.aula" Multiplicity="1" />
+          <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aula">
+              <PropertyRef Name="aula_id" />
+            </Principal>
+            <Dependent Role="trimestre_materia">
+              <PropertyRef Name="aula_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__trimestre__docen__412EB0B6">
+          <End Role="docente" Type="Self.docente" Multiplicity="1" />
+          <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="docente">
+              <PropertyRef Name="docente_id" />
+            </Principal>
+            <Dependent Role="trimestre_materia">
+              <PropertyRef Name="docente_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__trimestre__mater__403A8C7D">
+          <End Role="materia" Type="Self.materia" Multiplicity="1" />
+          <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="materia">
+              <PropertyRef Name="materia_id" />
+            </Principal>
+            <Dependent Role="trimestre_materia">
+              <PropertyRef Name="materia_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__trimestre__trime__3F466844">
+          <End Role="trimestre" Type="Self.trimestre" Multiplicity="1" />
+          <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trimestre">
+              <PropertyRef Name="trimestre_id" />
+            </Principal>
+            <Dependent Role="trimestre_materia">
+              <PropertyRef Name="trimestre_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="aseguramiento_grupo1ModelStoreContainer">
+          <EntitySet Name="administrador" EntityType="Self.administrador" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="area" EntityType="Self.area" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="aula" EntityType="Self.aula" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="calificacion" EntityType="Self.calificacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="carrera" EntityType="Self.carrera" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="docente" EntityType="Self.docente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estudiante" EntityType="Self.estudiante" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estudianteHistorico" EntityType="Self.estudianteHistorico" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="materia" EntityType="Self.materia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_aula" EntityType="Self.tipo_aula" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="trimestre" EntityType="Self.trimestre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="trimestre_materia" EntityType="Self.trimestre_materia" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__area__docente_id__48CFD27E" Association="Self.FK__area__docente_id__48CFD27E">
+            <End Role="docente" EntitySet="docente" />
+            <End Role="area" EntitySet="area" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aula__tipo_aula___3B75D760" Association="Self.FK__aula__tipo_aula___3B75D760">
+            <End Role="tipo_aula" EntitySet="tipo_aula" />
+            <End Role="aula" EntitySet="aula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__calificac__estud__44FF419A" Association="Self.FK__calificac__estud__44FF419A">
+            <End Role="estudiante" EntitySet="estudiante" />
+            <End Role="calificacion" EntitySet="calificacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__calificac__triMa__45F365D3" Association="Self.FK__calificac__triMa__45F365D3">
+            <End Role="trimestre_materia" EntitySet="trimestre_materia" />
+            <End Role="calificacion" EntitySet="calificacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__carrera__area_id__2A4B4B5E" Association="Self.FK__carrera__area_id__2A4B4B5E">
+            <End Role="area" EntitySet="area" />
+            <End Role="carrera" EntitySet="carrera" />
+          </AssociationSet>
+          <AssociationSet Name="FK__carrera__docente__49C3F6B7" Association="Self.FK__carrera__docente__49C3F6B7">
+            <End Role="docente" EntitySet="docente" />
+            <End Role="carrera" EntitySet="carrera" />
+          </AssociationSet>
+          <AssociationSet Name="FK__docente__area_id__2D27B809" Association="Self.FK__docente__area_id__2D27B809">
+            <End Role="area" EntitySet="area" />
+            <End Role="docente" EntitySet="docente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__estudiant__carre__33D4B598" Association="Self.FK__estudiant__carre__33D4B598">
+            <End Role="carrera" EntitySet="carrera" />
+            <End Role="estudianteHistorico" EntitySet="estudianteHistorico" />
+          </AssociationSet>
+          <AssociationSet Name="FK__estudiant__estud__32E0915F" Association="Self.FK__estudiant__estud__32E0915F">
+            <End Role="estudiante" EntitySet="estudiante" />
+            <End Role="estudianteHistorico" EntitySet="estudianteHistorico" />
+          </AssociationSet>
+          <AssociationSet Name="FK__estudiant__trime__300424B4" Association="Self.FK__estudiant__trime__300424B4">
+            <End Role="trimestre" EntitySet="trimestre" />
+            <End Role="estudiante" EntitySet="estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK__estudiant__trime__34C8D9D1" Association="Self.FK__estudiant__trime__34C8D9D1">
+            <End Role="trimestre" EntitySet="trimestre" />
+            <End Role="estudianteHistorico" EntitySet="estudianteHistorico" />
+          </AssociationSet>
+          <AssociationSet Name="FK__materia__carrera__38996AB5" Association="Self.FK__materia__carrera__38996AB5">
+            <End Role="carrera" EntitySet="carrera" />
+            <End Role="materia" EntitySet="materia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__materia__tipo_au__37A5467C" Association="Self.FK__materia__tipo_au__37A5467C">
+            <End Role="tipo_aula" EntitySet="tipo_aula" />
+            <End Role="materia" EntitySet="materia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__trimestre__aula___4222D4EF" Association="Self.FK__trimestre__aula___4222D4EF">
+            <End Role="aula" EntitySet="aula" />
+            <End Role="trimestre_materia" EntitySet="trimestre_materia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__trimestre__docen__412EB0B6" Association="Self.FK__trimestre__docen__412EB0B6">
+            <End Role="docente" EntitySet="docente" />
+            <End Role="trimestre_materia" EntitySet="trimestre_materia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__trimestre__mater__403A8C7D" Association="Self.FK__trimestre__mater__403A8C7D">
+            <End Role="materia" EntitySet="materia" />
+            <End Role="trimestre_materia" EntitySet="trimestre_materia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__trimestre__trime__3F466844" Association="Self.FK__trimestre__trime__3F466844">
+            <End Role="trimestre" EntitySet="trimestre" />
+            <End Role="trimestre_materia" EntitySet="trimestre_materia" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="aseguramiento_grupo1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="administrador">
+          <Key>
+            <PropertyRef Name="administrador_id" />
+          </Key>
+          <Property Name="administrador_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="administrador_cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="administrador_nombres" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="administrador_apellidoP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="administrador_apellidoM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="administrador_telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="administrador_correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="administrador_contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="area">
+          <Key>
+            <PropertyRef Name="area_id" />
+          </Key>
+          <Property Name="area_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="area_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="docente_id" Type="Int32" />
+          <NavigationProperty Name="docente" Relationship="Self.FK__area__docente_id__48CFD27E" FromRole="area" ToRole="docente" />
+          <NavigationProperty Name="carreras" Relationship="Self.FK__carrera__area_id__2A4B4B5E" FromRole="area" ToRole="carrera" />
+          <NavigationProperty Name="docentes" Relationship="Self.FK__docente__area_id__2D27B809" FromRole="area" ToRole="docente" />
+        </EntityType>
+        <EntityType Name="aula">
+          <Key>
+            <PropertyRef Name="aula_id" />
+          </Key>
+          <Property Name="aula_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="aula_codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="tipo_aula_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tipo_aula" Relationship="Self.FK__aula__tipo_aula___3B75D760" FromRole="aula" ToRole="tipo_aula" />
+          <NavigationProperty Name="trimestre_materia" Relationship="Self.FK__trimestre__aula___4222D4EF" FromRole="aula" ToRole="trimestre_materia" />
+        </EntityType>
+        <EntityType Name="calificacion">
+          <Key>
+            <PropertyRef Name="estudiante_id" />
+            <PropertyRef Name="triMat_id" />
+          </Key>
+          <Property Name="estudiante_id" Type="Int32" Nullable="false" />
+          <Property Name="triMat_id" Type="Int32" Nullable="false" />
+          <Property Name="medioTermino" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="calificacionFinal" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="eval1" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="eval2" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="eval3" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="eval4" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="comentario" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="estudiante" Relationship="Self.FK__calificac__estud__44FF419A" FromRole="calificacion" ToRole="estudiante" />
+          <NavigationProperty Name="trimestre_materia" Relationship="Self.FK__calificac__triMa__45F365D3" FromRole="calificacion" ToRole="trimestre_materia" />
+        </EntityType>
+        <EntityType Name="carrera">
+          <Key>
+            <PropertyRef Name="carrera_id" />
+          </Key>
+          <Property Name="carrera_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="carrera_nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="area_id" Type="Int32" Nullable="false" />
+          <Property Name="docente_id" Type="Int32" />
+          <Property Name="trimestres_max" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="area" Relationship="Self.FK__carrera__area_id__2A4B4B5E" FromRole="carrera" ToRole="area" />
+          <NavigationProperty Name="docente" Relationship="Self.FK__carrera__docente__49C3F6B7" FromRole="carrera" ToRole="docente" />
+          <NavigationProperty Name="estudianteHistoricoes" Relationship="Self.FK__estudiant__carre__33D4B598" FromRole="carrera" ToRole="estudianteHistorico" />
+          <NavigationProperty Name="materias" Relationship="Self.FK__materia__carrera__38996AB5" FromRole="carrera" ToRole="materia" />
+        </EntityType>
+        <EntityType Name="docente">
+          <Key>
+            <PropertyRef Name="docente_id" />
+          </Key>
+          <Property Name="docente_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="docente_cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="docente_nombres" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="docente_apellidoP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="docente_apellidoM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="docente_telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="docente_correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="area_id" Type="Int32" Nullable="false" />
+          <Property Name="docente_contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="areas" Relationship="Self.FK__area__docente_id__48CFD27E" FromRole="docente" ToRole="area" />
+          <NavigationProperty Name="area" Relationship="Self.FK__docente__area_id__2D27B809" FromRole="docente" ToRole="area" />
+          <NavigationProperty Name="carreras" Relationship="Self.FK__carrera__docente__49C3F6B7" FromRole="docente" ToRole="carrera" />
+          <NavigationProperty Name="trimestre_materia" Relationship="Self.FK__trimestre__docen__412EB0B6" FromRole="docente" ToRole="trimestre_materia" />
+        </EntityType>
+        <EntityType Name="estudiante">
+          <Key>
+            <PropertyRef Name="estudiante_id" />
+          </Key>
+          <Property Name="estudiante_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="estudiante_cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="estudiante_nombres" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="estudiante_apellidoP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="estudiante_apellidoM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="estudiante_telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="estudiante_correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="trimestre_entrada" Type="Int32" Nullable="false" />
+          <Property Name="estudiante_contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="calificacions" Relationship="Self.FK__calificac__estud__44FF419A" FromRole="estudiante" ToRole="calificacion" />
+          <NavigationProperty Name="estudianteHistoricoes" Relationship="Self.FK__estudiant__estud__32E0915F" FromRole="estudiante" ToRole="estudianteHistorico" />
+          <NavigationProperty Name="trimestre" Relationship="Self.FK__estudiant__trime__300424B4" FromRole="estudiante" ToRole="trimestre" />
+        </EntityType>
+        <EntityType Name="estudianteHistorico">
+          <Key>
+            <PropertyRef Name="estudiante_id" />
+            <PropertyRef Name="carrera_id" />
+          </Key>
+          <Property Name="estudiante_id" Type="Int32" Nullable="false" />
+          <Property Name="carrera_id" Type="Int32" Nullable="false" />
+          <Property Name="trimestre_entrada" Type="Int32" Nullable="false" />
+          <Property Name="trimestres_cursados" Type="Int32" Nullable="false" />
+          <Property Name="isActive" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="carrera" Relationship="Self.FK__estudiant__carre__33D4B598" FromRole="estudianteHistorico" ToRole="carrera" />
+          <NavigationProperty Name="estudiante" Relationship="Self.FK__estudiant__estud__32E0915F" FromRole="estudianteHistorico" ToRole="estudiante" />
+          <NavigationProperty Name="trimestre" Relationship="Self.FK__estudiant__trime__34C8D9D1" FromRole="estudianteHistorico" ToRole="trimestre" />
+        </EntityType>
+        <EntityType Name="materia">
+          <Key>
+            <PropertyRef Name="materia_id" />
+          </Key>
+          <Property Name="materia_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="materia_nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="materia_codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="carrera_id" Type="Int32" Nullable="false" />
+          <Property Name="materia_creditos" Type="Int32" Nullable="false" />
+          <Property Name="tipo_aula_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="carrera" Relationship="Self.FK__materia__carrera__38996AB5" FromRole="materia" ToRole="carrera" />
+          <NavigationProperty Name="tipo_aula" Relationship="Self.FK__materia__tipo_au__37A5467C" FromRole="materia" ToRole="tipo_aula" />
+          <NavigationProperty Name="trimestre_materia" Relationship="Self.FK__trimestre__mater__403A8C7D" FromRole="materia" ToRole="trimestre_materia" />
+        </EntityType>
+        <EntityType Name="tipo_aula">
+          <Key>
+            <PropertyRef Name="tipo_aula_id" />
+          </Key>
+          <Property Name="tipo_aula_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tipo_aula_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="aulas" Relationship="Self.FK__aula__tipo_aula___3B75D760" FromRole="tipo_aula" ToRole="aula" />
+          <NavigationProperty Name="materias" Relationship="Self.FK__materia__tipo_au__37A5467C" FromRole="tipo_aula" ToRole="materia" />
+        </EntityType>
+        <EntityType Name="trimestre">
+          <Key>
+            <PropertyRef Name="trimestre_id" />
+          </Key>
+          <Property Name="trimestre_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="trimestre_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="trimestre_fechIN" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="trimestre_fechOUT" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="estudiantes" Relationship="Self.FK__estudiant__trime__300424B4" FromRole="trimestre" ToRole="estudiante" />
+          <NavigationProperty Name="estudianteHistoricoes" Relationship="Self.FK__estudiant__trime__34C8D9D1" FromRole="trimestre" ToRole="estudianteHistorico" />
+          <NavigationProperty Name="trimestre_materia" Relationship="Self.FK__trimestre__trime__3F466844" FromRole="trimestre" ToRole="trimestre_materia" />
+        </EntityType>
+        <EntityType Name="trimestre_materia">
+          <Key>
+            <PropertyRef Name="triMat_id" />
+          </Key>
+          <Property Name="triMat_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="trimestre_id" Type="Int32" Nullable="false" />
+          <Property Name="materia_id" Type="Int32" Nullable="false" />
+          <Property Name="docente_id" Type="Int32" Nullable="false" />
+          <Property Name="aula_id" Type="Int32" Nullable="false" />
+          <Property Name="triMat_lunes" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="triMat_martes" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="triMat_miercoles" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="triMat_jueves" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="triMat_viernes" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="triMat_sabado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="aula" Relationship="Self.FK__trimestre__aula___4222D4EF" FromRole="trimestre_materia" ToRole="aula" />
+          <NavigationProperty Name="calificacions" Relationship="Self.FK__calificac__triMa__45F365D3" FromRole="trimestre_materia" ToRole="calificacion" />
+          <NavigationProperty Name="docente" Relationship="Self.FK__trimestre__docen__412EB0B6" FromRole="trimestre_materia" ToRole="docente" />
+          <NavigationProperty Name="materia" Relationship="Self.FK__trimestre__mater__403A8C7D" FromRole="trimestre_materia" ToRole="materia" />
+          <NavigationProperty Name="trimestre" Relationship="Self.FK__trimestre__trime__3F466844" FromRole="trimestre_materia" ToRole="trimestre" />
+        </EntityType>
+        <Association Name="FK__area__docente_id__48CFD27E">
+          <End Role="docente" Type="Self.docente" Multiplicity="0..1" />
+          <End Role="area" Type="Self.area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="docente">
+              <PropertyRef Name="docente_id" />
+            </Principal>
+            <Dependent Role="area">
+              <PropertyRef Name="docente_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__carrera__area_id__2A4B4B5E">
+          <End Role="area" Type="Self.area" Multiplicity="1" />
+          <End Role="carrera" Type="Self.carrera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="area">
+              <PropertyRef Name="area_id" />
+            </Principal>
+            <Dependent Role="carrera">
+              <PropertyRef Name="area_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__docente__area_id__2D27B809">
+          <End Role="area" Type="Self.area" Multiplicity="1" />
+          <End Role="docente" Type="Self.docente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="area">
+              <PropertyRef Name="area_id" />
+            </Principal>
+            <Dependent Role="docente">
+              <PropertyRef Name="area_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aula__tipo_aula___3B75D760">
+          <End Role="tipo_aula" Type="Self.tipo_aula" Multiplicity="1" />
+          <End Role="aula" Type="Self.aula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_aula">
+              <PropertyRef Name="tipo_aula_id" />
+            </Principal>
+            <Dependent Role="aula">
+              <PropertyRef Name="tipo_aula_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__trimestre__aula___4222D4EF">
+          <End Role="aula" Type="Self.aula" Multiplicity="1" />
+          <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aula">
+              <PropertyRef Name="aula_id" />
+            </Principal>
+            <Dependent Role="trimestre_materia">
+              <PropertyRef Name="aula_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__calificac__estud__44FF419A">
+          <End Role="estudiante" Type="Self.estudiante" Multiplicity="1" />
+          <End Role="calificacion" Type="Self.calificacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estudiante">
+              <PropertyRef Name="estudiante_id" />
+            </Principal>
+            <Dependent Role="calificacion">
+              <PropertyRef Name="estudiante_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__calificac__triMa__45F365D3">
+          <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="1" />
+          <End Role="calificacion" Type="Self.calificacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trimestre_materia">
+              <PropertyRef Name="triMat_id" />
+            </Principal>
+            <Dependent Role="calificacion">
+              <PropertyRef Name="triMat_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__carrera__docente__49C3F6B7">
+          <End Role="docente" Type="Self.docente" Multiplicity="0..1" />
+          <End Role="carrera" Type="Self.carrera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="docente">
+              <PropertyRef Name="docente_id" />
+            </Principal>
+            <Dependent Role="carrera">
+              <PropertyRef Name="docente_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__estudiant__carre__33D4B598">
+          <End Role="carrera" Type="Self.carrera" Multiplicity="1" />
+          <End Role="estudianteHistorico" Type="Self.estudianteHistorico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="carrera">
+              <PropertyRef Name="carrera_id" />
+            </Principal>
+            <Dependent Role="estudianteHistorico">
+              <PropertyRef Name="carrera_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__materia__carrera__38996AB5">
+          <End Role="carrera" Type="Self.carrera" Multiplicity="1" />
+          <End Role="materia" Type="Self.materia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="carrera">
+              <PropertyRef Name="carrera_id" />
+            </Principal>
+            <Dependent Role="materia">
+              <PropertyRef Name="carrera_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__trimestre__docen__412EB0B6">
+          <End Role="docente" Type="Self.docente" Multiplicity="1" />
+          <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="docente">
+              <PropertyRef Name="docente_id" />
+            </Principal>
+            <Dependent Role="trimestre_materia">
+              <PropertyRef Name="docente_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__estudiant__estud__32E0915F">
+          <End Role="estudiante" Type="Self.estudiante" Multiplicity="1" />
+          <End Role="estudianteHistorico" Type="Self.estudianteHistorico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estudiante">
+              <PropertyRef Name="estudiante_id" />
+            </Principal>
+            <Dependent Role="estudianteHistorico">
+              <PropertyRef Name="estudiante_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__estudiant__trime__300424B4">
+          <End Role="trimestre" Type="Self.trimestre" Multiplicity="1" />
+          <End Role="estudiante" Type="Self.estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trimestre">
+              <PropertyRef Name="trimestre_id" />
+            </Principal>
+            <Dependent Role="estudiante">
+              <PropertyRef Name="trimestre_entrada" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__estudiant__trime__34C8D9D1">
+          <End Role="trimestre" Type="Self.trimestre" Multiplicity="1" />
+          <End Role="estudianteHistorico" Type="Self.estudianteHistorico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trimestre">
+              <PropertyRef Name="trimestre_id" />
+            </Principal>
+            <Dependent Role="estudianteHistorico">
+              <PropertyRef Name="trimestre_entrada" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__materia__tipo_au__37A5467C">
+          <End Role="tipo_aula" Type="Self.tipo_aula" Multiplicity="1" />
+          <End Role="materia" Type="Self.materia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_aula">
+              <PropertyRef Name="tipo_aula_id" />
+            </Principal>
+            <Dependent Role="materia">
+              <PropertyRef Name="tipo_aula_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__trimestre__mater__403A8C7D">
+          <End Role="materia" Type="Self.materia" Multiplicity="1" />
+          <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="materia">
+              <PropertyRef Name="materia_id" />
+            </Principal>
+            <Dependent Role="trimestre_materia">
+              <PropertyRef Name="materia_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__trimestre__trime__3F466844">
+          <End Role="trimestre" Type="Self.trimestre" Multiplicity="1" />
+          <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trimestre">
+              <PropertyRef Name="trimestre_id" />
+            </Principal>
+            <Dependent Role="trimestre_materia">
+              <PropertyRef Name="trimestre_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="aseguramiento_grupo1Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="administradors" EntityType="Self.administrador" />
+          <EntitySet Name="areas" EntityType="Self.area" />
+          <EntitySet Name="aulas" EntityType="Self.aula" />
+          <EntitySet Name="calificacions" EntityType="Self.calificacion" />
+          <EntitySet Name="carreras" EntityType="Self.carrera" />
+          <EntitySet Name="docentes" EntityType="Self.docente" />
+          <EntitySet Name="estudiantes" EntityType="Self.estudiante" />
+          <EntitySet Name="estudianteHistoricoes" EntityType="Self.estudianteHistorico" />
+          <EntitySet Name="materias" EntityType="Self.materia" />
+          <EntitySet Name="tipo_aula" EntityType="Self.tipo_aula" />
+          <EntitySet Name="trimestres" EntityType="Self.trimestre" />
+          <EntitySet Name="trimestre_materia" EntityType="Self.trimestre_materia" />
+          <AssociationSet Name="FK__area__docente_id__48CFD27E" Association="Self.FK__area__docente_id__48CFD27E">
+            <End Role="docente" EntitySet="docentes" />
+            <End Role="area" EntitySet="areas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__carrera__area_id__2A4B4B5E" Association="Self.FK__carrera__area_id__2A4B4B5E">
+            <End Role="area" EntitySet="areas" />
+            <End Role="carrera" EntitySet="carreras" />
+          </AssociationSet>
+          <AssociationSet Name="FK__docente__area_id__2D27B809" Association="Self.FK__docente__area_id__2D27B809">
+            <End Role="area" EntitySet="areas" />
+            <End Role="docente" EntitySet="docentes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aula__tipo_aula___3B75D760" Association="Self.FK__aula__tipo_aula___3B75D760">
+            <End Role="tipo_aula" EntitySet="tipo_aula" />
+            <End Role="aula" EntitySet="aulas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__trimestre__aula___4222D4EF" Association="Self.FK__trimestre__aula___4222D4EF">
+            <End Role="aula" EntitySet="aulas" />
+            <End Role="trimestre_materia" EntitySet="trimestre_materia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__calificac__estud__44FF419A" Association="Self.FK__calificac__estud__44FF419A">
+            <End Role="estudiante" EntitySet="estudiantes" />
+            <End Role="calificacion" EntitySet="calificacions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__calificac__triMa__45F365D3" Association="Self.FK__calificac__triMa__45F365D3">
+            <End Role="trimestre_materia" EntitySet="trimestre_materia" />
+            <End Role="calificacion" EntitySet="calificacions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__carrera__docente__49C3F6B7" Association="Self.FK__carrera__docente__49C3F6B7">
+            <End Role="docente" EntitySet="docentes" />
+            <End Role="carrera" EntitySet="carreras" />
+          </AssociationSet>
+          <AssociationSet Name="FK__estudiant__carre__33D4B598" Association="Self.FK__estudiant__carre__33D4B598">
+            <End Role="carrera" EntitySet="carreras" />
+            <End Role="estudianteHistorico" EntitySet="estudianteHistoricoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__materia__carrera__38996AB5" Association="Self.FK__materia__carrera__38996AB5">
+            <End Role="carrera" EntitySet="carreras" />
+            <End Role="materia" EntitySet="materias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__trimestre__docen__412EB0B6" Association="Self.FK__trimestre__docen__412EB0B6">
+            <End Role="docente" EntitySet="docentes" />
+            <End Role="trimestre_materia" EntitySet="trimestre_materia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__estudiant__estud__32E0915F" Association="Self.FK__estudiant__estud__32E0915F">
+            <End Role="estudiante" EntitySet="estudiantes" />
+            <End Role="estudianteHistorico" EntitySet="estudianteHistoricoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__estudiant__trime__300424B4" Association="Self.FK__estudiant__trime__300424B4">
+            <End Role="trimestre" EntitySet="trimestres" />
+            <End Role="estudiante" EntitySet="estudiantes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__estudiant__trime__34C8D9D1" Association="Self.FK__estudiant__trime__34C8D9D1">
+            <End Role="trimestre" EntitySet="trimestres" />
+            <End Role="estudianteHistorico" EntitySet="estudianteHistoricoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__materia__tipo_au__37A5467C" Association="Self.FK__materia__tipo_au__37A5467C">
+            <End Role="tipo_aula" EntitySet="tipo_aula" />
+            <End Role="materia" EntitySet="materias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__trimestre__mater__403A8C7D" Association="Self.FK__trimestre__mater__403A8C7D">
+            <End Role="materia" EntitySet="materias" />
+            <End Role="trimestre_materia" EntitySet="trimestre_materia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__trimestre__trime__3F466844" Association="Self.FK__trimestre__trime__3F466844">
+            <End Role="trimestre" EntitySet="trimestres" />
+            <End Role="trimestre_materia" EntitySet="trimestre_materia" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="aseguramiento_grupo1ModelStoreContainer" CdmEntityContainer="aseguramiento_grupo1Entities1">
+          <EntitySetMapping Name="administradors">
+            <EntityTypeMapping TypeName="aseguramiento_grupo1Model.administrador">
+              <MappingFragment StoreEntitySet="administrador">
+                <ScalarProperty Name="administrador_id" ColumnName="administrador_id" />
+                <ScalarProperty Name="administrador_cedula" ColumnName="administrador_cedula" />
+                <ScalarProperty Name="administrador_nombres" ColumnName="administrador_nombres" />
+                <ScalarProperty Name="administrador_apellidoP" ColumnName="administrador_apellidoP" />
+                <ScalarProperty Name="administrador_apellidoM" ColumnName="administrador_apellidoM" />
+                <ScalarProperty Name="administrador_telefono" ColumnName="administrador_telefono" />
+                <ScalarProperty Name="administrador_correo" ColumnName="administrador_correo" />
+                <ScalarProperty Name="administrador_contrasena" ColumnName="administrador_contrasena" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="areas">
+            <EntityTypeMapping TypeName="aseguramiento_grupo1Model.area">
+              <MappingFragment StoreEntitySet="area">
+                <ScalarProperty Name="area_id" ColumnName="area_id" />
+                <ScalarProperty Name="area_nombre" ColumnName="area_nombre" />
+                <ScalarProperty Name="docente_id" ColumnName="docente_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aulas">
+            <EntityTypeMapping TypeName="aseguramiento_grupo1Model.aula">
+              <MappingFragment StoreEntitySet="aula">
+                <ScalarProperty Name="aula_id" ColumnName="aula_id" />
+                <ScalarProperty Name="aula_codigo" ColumnName="aula_codigo" />
+                <ScalarProperty Name="tipo_aula_id" ColumnName="tipo_aula_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="calificacions">
+            <EntityTypeMapping TypeName="aseguramiento_grupo1Model.calificacion">
+              <MappingFragment StoreEntitySet="calificacion">
+                <ScalarProperty Name="estudiante_id" ColumnName="estudiante_id" />
+                <ScalarProperty Name="triMat_id" ColumnName="triMat_id" />
+                <ScalarProperty Name="medioTermino" ColumnName="medioTermino" />
+                <ScalarProperty Name="calificacionFinal" ColumnName="calificacionFinal" />
+                <ScalarProperty Name="eval1" ColumnName="eval1" />
+                <ScalarProperty Name="eval2" ColumnName="eval2" />
+                <ScalarProperty Name="eval3" ColumnName="eval3" />
+                <ScalarProperty Name="eval4" ColumnName="eval4" />
+                <ScalarProperty Name="comentario" ColumnName="comentario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="carreras">
+            <EntityTypeMapping TypeName="aseguramiento_grupo1Model.carrera">
+              <MappingFragment StoreEntitySet="carrera">
+                <ScalarProperty Name="carrera_id" ColumnName="carrera_id" />
+                <ScalarProperty Name="carrera_nombre" ColumnName="carrera_nombre" />
+                <ScalarProperty Name="area_id" ColumnName="area_id" />
+                <ScalarProperty Name="docente_id" ColumnName="docente_id" />
+                <ScalarProperty Name="trimestres_max" ColumnName="trimestres_max" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="docentes">
+            <EntityTypeMapping TypeName="aseguramiento_grupo1Model.docente">
+              <MappingFragment StoreEntitySet="docente">
+                <ScalarProperty Name="docente_id" ColumnName="docente_id" />
+                <ScalarProperty Name="docente_cedula" ColumnName="docente_cedula" />
+                <ScalarProperty Name="docente_nombres" ColumnName="docente_nombres" />
+                <ScalarProperty Name="docente_apellidoP" ColumnName="docente_apellidoP" />
+                <ScalarProperty Name="docente_apellidoM" ColumnName="docente_apellidoM" />
+                <ScalarProperty Name="docente_telefono" ColumnName="docente_telefono" />
+                <ScalarProperty Name="docente_correo" ColumnName="docente_correo" />
+                <ScalarProperty Name="area_id" ColumnName="area_id" />
+                <ScalarProperty Name="docente_contrasena" ColumnName="docente_contrasena" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estudiantes">
+            <EntityTypeMapping TypeName="aseguramiento_grupo1Model.estudiante">
+              <MappingFragment StoreEntitySet="estudiante">
+                <ScalarProperty Name="estudiante_id" ColumnName="estudiante_id" />
+                <ScalarProperty Name="estudiante_cedula" ColumnName="estudiante_cedula" />
+                <ScalarProperty Name="estudiante_nombres" ColumnName="estudiante_nombres" />
+                <ScalarProperty Name="estudiante_apellidoP" ColumnName="estudiante_apellidoP" />
+                <ScalarProperty Name="estudiante_apellidoM" ColumnName="estudiante_apellidoM" />
+                <ScalarProperty Name="estudiante_telefono" ColumnName="estudiante_telefono" />
+                <ScalarProperty Name="estudiante_correo" ColumnName="estudiante_correo" />
+                <ScalarProperty Name="trimestre_entrada" ColumnName="trimestre_entrada" />
+                <ScalarProperty Name="estudiante_contrasena" ColumnName="estudiante_contrasena" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estudianteHistoricoes">
+            <EntityTypeMapping TypeName="aseguramiento_grupo1Model.estudianteHistorico">
+              <MappingFragment StoreEntitySet="estudianteHistorico">
+                <ScalarProperty Name="estudiante_id" ColumnName="estudiante_id" />
+                <ScalarProperty Name="carrera_id" ColumnName="carrera_id" />
+                <ScalarProperty Name="trimestre_entrada" ColumnName="trimestre_entrada" />
+                <ScalarProperty Name="trimestres_cursados" ColumnName="trimestres_cursados" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="materias">
+            <EntityTypeMapping TypeName="aseguramiento_grupo1Model.materia">
+              <MappingFragment StoreEntitySet="materia">
+                <ScalarProperty Name="materia_id" ColumnName="materia_id" />
+                <ScalarProperty Name="materia_nombre" ColumnName="materia_nombre" />
+                <ScalarProperty Name="materia_codigo" ColumnName="materia_codigo" />
+                <ScalarProperty Name="carrera_id" ColumnName="carrera_id" />
+                <ScalarProperty Name="materia_creditos" ColumnName="materia_creditos" />
+                <ScalarProperty Name="tipo_aula_id" ColumnName="tipo_aula_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_aula">
+            <EntityTypeMapping TypeName="aseguramiento_grupo1Model.tipo_aula">
+              <MappingFragment StoreEntitySet="tipo_aula">
+                <ScalarProperty Name="tipo_aula_id" ColumnName="tipo_aula_id" />
+                <ScalarProperty Name="tipo_aula_nombre" ColumnName="tipo_aula_nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="trimestres">
+            <EntityTypeMapping TypeName="aseguramiento_grupo1Model.trimestre">
+              <MappingFragment StoreEntitySet="trimestre">
+                <ScalarProperty Name="trimestre_id" ColumnName="trimestre_id" />
+                <ScalarProperty Name="trimestre_nombre" ColumnName="trimestre_nombre" />
+                <ScalarProperty Name="trimestre_fechIN" ColumnName="trimestre_fechIN" />
+                <ScalarProperty Name="trimestre_fechOUT" ColumnName="trimestre_fechOUT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="trimestre_materia">
+            <EntityTypeMapping TypeName="aseguramiento_grupo1Model.trimestre_materia">
+              <MappingFragment StoreEntitySet="trimestre_materia">
+                <ScalarProperty Name="triMat_id" ColumnName="triMat_id" />
+                <ScalarProperty Name="trimestre_id" ColumnName="trimestre_id" />
+                <ScalarProperty Name="materia_id" ColumnName="materia_id" />
+                <ScalarProperty Name="docente_id" ColumnName="docente_id" />
+                <ScalarProperty Name="aula_id" ColumnName="aula_id" />
+                <ScalarProperty Name="triMat_lunes" ColumnName="triMat_lunes" />
+                <ScalarProperty Name="triMat_martes" ColumnName="triMat_martes" />
+                <ScalarProperty Name="triMat_miercoles" ColumnName="triMat_miercoles" />
+                <ScalarProperty Name="triMat_jueves" ColumnName="triMat_jueves" />
+                <ScalarProperty Name="triMat_viernes" ColumnName="triMat_viernes" />
+                <ScalarProperty Name="triMat_sabado" ColumnName="triMat_sabado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -461,18 +461,18 @@
             // dashboardEstudianteUc
             // 
             this.dashboardEstudianteUc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashboardEstudianteUc.Location = new System.Drawing.Point(0, 0);
+            this.dashboardEstudianteUc.Location = new System.Drawing.Point(250, 0);
             this.dashboardEstudianteUc.Name = "dashboardEstudianteUc";
-            this.dashboardEstudianteUc.Size = new System.Drawing.Size(1350, 850);
+            this.dashboardEstudianteUc.Size = new System.Drawing.Size(1100, 850);
             this.dashboardEstudianteUc.TabIndex = 21;
             // 
             // seleccionUc
             // 
             this.seleccionUc.AutoScroll = true;
             this.seleccionUc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.seleccionUc.Location = new System.Drawing.Point(250, 0);
+            this.seleccionUc.Location = new System.Drawing.Point(0, 0);
             this.seleccionUc.Name = "seleccionUc";
-            this.seleccionUc.Size = new System.Drawing.Size(1100, 850);
+            this.seleccionUc.Size = new System.Drawing.Size(1350, 850);
             this.seleccionUc.TabIndex = 23;
             // 
             // DashboardEstudiante
@@ -480,12 +480,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 850);
-            this.Controls.Add(this.seleccionUc);
-            this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.dashboardEstudianteUc);
+            this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.historialUc);
             this.Controls.Add(this.medioTerminoUc);
             this.Controls.Add(this.finalesUc);
+            this.Controls.Add(this.seleccionUc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DashboardEstudiante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
