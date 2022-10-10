@@ -68,6 +68,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="administrador.cs">
+      <DependentUpon>Aseguramiento_BD.tt</DependentUpon>
+    </Compile>
     <Compile Include="AgregarEstudiantes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,6 +83,34 @@
     <Compile Include="AgregarProfesores.Designer.cs">
       <DependentUpon>AgregarProfesores.cs</DependentUpon>
     </Compile>
+    <Compile Include="area.cs">
+      <DependentUpon>Aseguramiento_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Aseguramiento_BD.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Aseguramiento_BD.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Aseguramiento_BD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Aseguramiento_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Aseguramiento_BD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Aseguramiento_BD.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="aula.cs">
+      <DependentUpon>Aseguramiento_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="calificacion.cs">
+      <DependentUpon>Aseguramiento_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="carrera.cs">
+      <DependentUpon>Aseguramiento_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos.cs" />
     <Compile Include="DashboardAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,6 +129,9 @@
     <Compile Include="DashboardEstudianteUc.Designer.cs">
       <DependentUpon>DashboardEstudianteUc.cs</DependentUpon>
     </Compile>
+    <Compile Include="docente.cs">
+      <DependentUpon>Aseguramiento_BD.tt</DependentUpon>
+    </Compile>
     <Compile Include="EliminarEstudiantes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,6 +144,12 @@
     <Compile Include="EliminarProfesores.Designer.cs">
       <DependentUpon>EliminarProfesores.cs</DependentUpon>
     </Compile>
+    <Compile Include="estudiante.cs">
+      <DependentUpon>Aseguramiento_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="estudianteHistorico.cs">
+      <DependentUpon>Aseguramiento_BD.tt</DependentUpon>
+    </Compile>
     <Compile Include="HistorialUc.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,6 +161,9 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="materia.cs">
+      <DependentUpon>Aseguramiento_BD.tt</DependentUpon>
     </Compile>
     <Compile Include="MedioTerminoUc.cs">
       <SubType>UserControl</SubType>
@@ -165,6 +208,18 @@
     </Compile>
     <Compile Include="SeleccionUc.Designer.cs">
       <DependentUpon>SeleccionUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Aseguramiento_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_aula.cs">
+      <DependentUpon>Aseguramiento_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="trimestre.cs">
+      <DependentUpon>Aseguramiento_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="trimestre_materia.cs">
+      <DependentUpon>Aseguramiento_BD.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AgregarEstudiantes.resx">
       <DependentUpon>AgregarEstudiantes.cs</DependentUpon>
@@ -224,6 +279,13 @@
     <EmbeddedResource Include="SeleccionUc.resx">
       <DependentUpon>SeleccionUc.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="Aseguramiento_BD.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Aseguramiento_BD.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Aseguramiento_BD.edmx.diagram">
+      <DependentUpon>Aseguramiento_BD.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -276,6 +338,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Aseguramiento_BD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Aseguramiento_BD.edmx</DependentUpon>
+      <LastGenOutput>Aseguramiento_BD.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Aseguramiento_BD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Aseguramiento_BD.edmx</DependentUpon>
+      <LastGenOutput>Aseguramiento_BD.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
