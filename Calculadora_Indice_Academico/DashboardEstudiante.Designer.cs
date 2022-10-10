@@ -53,11 +53,12 @@
             this.proAprobadas = new CircularProgressBar.CircularProgressBar();
             this.label15 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.historialUc = new Calculadora_Indice_Academico.HistorialUc();
             this.medioTerminoUc = new Calculadora_Indice_Academico.MedioTerminoUc();
             this.finalesUc = new Calculadora_Indice_Academico.FinalesUc();
-            this.seleccionUc = new Calculadora_Indice_Academico.SeleccionUc();
             this.dashboardEstudianteUc = new Calculadora_Indice_Academico.DashboardEstudianteUc();
-            this.historialUc = new Calculadora_Indice_Academico.HistorialUc();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.seleccionUc = new Calculadora_Indice_Academico.SeleccionUc();
             this.pnlMenu.SuspendLayout();
             this.subMenuRpts.SuspendLayout();
             this.pnlUsuario.SuspendLayout();
@@ -432,6 +433,15 @@
             this.label15.Size = new System.Drawing.Size(100, 23);
             this.label15.TabIndex = 0;
             // 
+            // historialUc
+            // 
+            this.historialUc.AutoScroll = true;
+            this.historialUc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.historialUc.Location = new System.Drawing.Point(0, 0);
+            this.historialUc.Name = "historialUc";
+            this.historialUc.Size = new System.Drawing.Size(1350, 850);
+            this.historialUc.TabIndex = 22;
+            // 
             // medioTerminoUc
             // 
             this.medioTerminoUc.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -448,14 +458,6 @@
             this.finalesUc.Size = new System.Drawing.Size(1350, 850);
             this.finalesUc.TabIndex = 18;
             // 
-            // seleccionUc
-            // 
-            this.seleccionUc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.seleccionUc.Location = new System.Drawing.Point(0, 0);
-            this.seleccionUc.Name = "seleccionUc";
-            this.seleccionUc.Size = new System.Drawing.Size(1350, 850);
-            this.seleccionUc.TabIndex = 20;
-            // 
             // dashboardEstudianteUc
             // 
             this.dashboardEstudianteUc.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -464,26 +466,26 @@
             this.dashboardEstudianteUc.Size = new System.Drawing.Size(1350, 850);
             this.dashboardEstudianteUc.TabIndex = 21;
             // 
-            // historialUc
+            // seleccionUc
             // 
-            this.historialUc.AutoScroll = true;
-            this.historialUc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.historialUc.Location = new System.Drawing.Point(250, 0);
-            this.historialUc.Name = "historialUc";
-            this.historialUc.Size = new System.Drawing.Size(1100, 850);
-            this.historialUc.TabIndex = 22;
+            this.seleccionUc.AutoScroll = true;
+            this.seleccionUc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.seleccionUc.Location = new System.Drawing.Point(250, 0);
+            this.seleccionUc.Name = "seleccionUc";
+            this.seleccionUc.Size = new System.Drawing.Size(1100, 850);
+            this.seleccionUc.TabIndex = 23;
             // 
             // DashboardEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 850);
-            this.Controls.Add(this.historialUc);
+            this.Controls.Add(this.seleccionUc);
             this.Controls.Add(this.pnlMenu);
+            this.Controls.Add(this.dashboardEstudianteUc);
+            this.Controls.Add(this.historialUc);
             this.Controls.Add(this.medioTerminoUc);
             this.Controls.Add(this.finalesUc);
-            this.Controls.Add(this.seleccionUc);
-            this.Controls.Add(this.dashboardEstudianteUc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DashboardEstudiante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -524,9 +526,10 @@
         private System.Windows.Forms.Button btnFinales;
         private MedioTerminoUc medioTerminoUc;
         private FinalesUc finalesUc;
-        private SeleccionUc seleccionUc;
         private System.Windows.Forms.Button btnSeleccion;
         private DashboardEstudianteUc dashboardEstudianteUc;
         private HistorialUc historialUc;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private SeleccionUc seleccionUc;
     }
 }
