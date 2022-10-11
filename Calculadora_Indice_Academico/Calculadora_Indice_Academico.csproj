@@ -92,13 +92,13 @@
       <DependentUpon>Aseguramiento_db.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Aseguramiento_db.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>Aseguramiento_db.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Aseguramiento_db.Designer.cs">
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
       <DependentUpon>Aseguramiento_db.edmx</DependentUpon>
     </Compile>
     <Compile Include="aula.cs">
@@ -201,6 +201,9 @@
     </Compile>
     <Compile Include="FinalesUc.Designer.cs">
       <DependentUpon>FinalesUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="search_estudiante_Result.cs">
+      <DependentUpon>Aseguramiento_db.tt</DependentUpon>
     </Compile>
     <Compile Include="SeleccionUc.cs">
       <SubType>UserControl</SubType>
@@ -355,8 +358,8 @@
     </Content>
     <Content Include="Aseguramiento_db.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Aseguramiento_db.edmx</DependentUpon>
       <LastGenOutput>Aseguramiento_db.cs</LastGenOutput>
+      <DependentUpon>Aseguramiento_db.edmx</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -18,7 +18,7 @@ namespace Calculadora_Indice_Academico
         public carrera()
         {
             this.estudiante_historico = new HashSet<estudiante_historico>();
-            this.materia = new HashSet<materia>();
+            this.materias = new HashSet<materia>();
         }
     
         public int carrera_id { get; set; }
@@ -32,6 +32,6 @@ namespace Calculadora_Indice_Academico
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<estudiante_historico> estudiante_historico { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<materia> materia { get; set; }
+        public virtual ICollection<materia> materias { get; set; }
     }
 }

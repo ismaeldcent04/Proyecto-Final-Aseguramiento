@@ -17,7 +17,7 @@ namespace Calculadora_Indice_Academico
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public estudiante()
         {
-            this.calificacion = new HashSet<calificacion>();
+            this.calificacions = new HashSet<calificacion>();
             this.estudiante_historico = new HashSet<estudiante_historico>();
         }
     
@@ -31,7 +31,7 @@ namespace Calculadora_Indice_Academico
         public int trimestre_entrada { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<calificacion> calificacion { get; set; }
+        public virtual ICollection<calificacion> calificacions { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<estudiante_historico> estudiante_historico { get; set; }
         public virtual trimestre trimestre { get; set; }

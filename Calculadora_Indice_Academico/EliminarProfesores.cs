@@ -15,6 +15,7 @@ namespace Calculadora_Indice_Academico
         public EliminarProfesores()
         {
             InitializeComponent();
+            btn_actualizar.Visible = false; 
         }
 
         private void EliminarProfesores_Load(object sender, EventArgs e)
@@ -22,6 +23,16 @@ namespace Calculadora_Indice_Academico
 
         }
 
-     
+        private void pnlDatosGenerales_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+            btn_actualizar.Visible = true;
+            txt_id.Enabled = false;
+
+        }
     }
 }

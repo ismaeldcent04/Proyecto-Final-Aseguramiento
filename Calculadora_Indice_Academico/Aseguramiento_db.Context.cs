@@ -27,17 +27,17 @@ namespace Calculadora_Indice_Academico
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<administrador> administrador { get; set; }
-        public virtual DbSet<area> area { get; set; }
-        public virtual DbSet<aula> aula { get; set; }
-        public virtual DbSet<calificacion> calificacion { get; set; }
-        public virtual DbSet<carrera> carrera { get; set; }
-        public virtual DbSet<docente> docente { get; set; }
-        public virtual DbSet<estudiante> estudiante { get; set; }
+        public virtual DbSet<administrador> administradors { get; set; }
+        public virtual DbSet<area> areas { get; set; }
+        public virtual DbSet<aula> aulas { get; set; }
+        public virtual DbSet<calificacion> calificacions { get; set; }
+        public virtual DbSet<carrera> carreras { get; set; }
+        public virtual DbSet<docente> docentes { get; set; }
+        public virtual DbSet<estudiante> estudiantes { get; set; }
         public virtual DbSet<estudiante_historico> estudiante_historico { get; set; }
-        public virtual DbSet<materia> materia { get; set; }
+        public virtual DbSet<materia> materias { get; set; }
         public virtual DbSet<tipo_aula> tipo_aula { get; set; }
-        public virtual DbSet<trimestre> trimestre { get; set; }
+        public virtual DbSet<trimestre> trimestres { get; set; }
         public virtual DbSet<trimestre_materia> trimestre_materia { get; set; }
         public virtual DbSet<user_login> user_login { get; set; }
     
@@ -128,6 +128,81 @@ namespace Calculadora_Indice_Academico
         public virtual ObjectResult<show_students_Result> show_students()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<show_students_Result>("show_students");
+        }
+    
+        public virtual ObjectResult<search_estudiante_Result> search_estudiante(string estudiante_id)
+        {
+            var estudiante_idParameter = estudiante_id != null ?
+                new ObjectParameter("estudiante_id", estudiante_id) :
+                new ObjectParameter("estudiante_id", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<search_estudiante_Result>("search_estudiante", estudiante_idParameter);
+        }
+    
+        public virtual int update_estudiante(string estudiante_id, string estudiante_cedula, string estudiante_nombres, string estudiante_apellidoP, string estudiante_apellidoM, string estudiante_telefono, string estudiante_correo)
+        {
+            var estudiante_idParameter = estudiante_id != null ?
+                new ObjectParameter("estudiante_id", estudiante_id) :
+                new ObjectParameter("estudiante_id", typeof(string));
+    
+            var estudiante_cedulaParameter = estudiante_cedula != null ?
+                new ObjectParameter("estudiante_cedula", estudiante_cedula) :
+                new ObjectParameter("estudiante_cedula", typeof(string));
+    
+            var estudiante_nombresParameter = estudiante_nombres != null ?
+                new ObjectParameter("estudiante_nombres", estudiante_nombres) :
+                new ObjectParameter("estudiante_nombres", typeof(string));
+    
+            var estudiante_apellidoPParameter = estudiante_apellidoP != null ?
+                new ObjectParameter("estudiante_apellidoP", estudiante_apellidoP) :
+                new ObjectParameter("estudiante_apellidoP", typeof(string));
+    
+            var estudiante_apellidoMParameter = estudiante_apellidoM != null ?
+                new ObjectParameter("estudiante_apellidoM", estudiante_apellidoM) :
+                new ObjectParameter("estudiante_apellidoM", typeof(string));
+    
+            var estudiante_telefonoParameter = estudiante_telefono != null ?
+                new ObjectParameter("estudiante_telefono", estudiante_telefono) :
+                new ObjectParameter("estudiante_telefono", typeof(string));
+    
+            var estudiante_correoParameter = estudiante_correo != null ?
+                new ObjectParameter("estudiante_correo", estudiante_correo) :
+                new ObjectParameter("estudiante_correo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("update_estudiante", estudiante_idParameter, estudiante_cedulaParameter, estudiante_nombresParameter, estudiante_apellidoPParameter, estudiante_apellidoMParameter, estudiante_telefonoParameter, estudiante_correoParameter);
+        }
+    
+        public virtual int upt_estudiante(string estudiante_id, string estudiante_cedula, string estudiante_nombres, string estudiante_apellidoP, string estudiante_apellidoM, string estudiante_telefono, string estudiante_correo)
+        {
+            var estudiante_idParameter = estudiante_id != null ?
+                new ObjectParameter("estudiante_id", estudiante_id) :
+                new ObjectParameter("estudiante_id", typeof(string));
+    
+            var estudiante_cedulaParameter = estudiante_cedula != null ?
+                new ObjectParameter("estudiante_cedula", estudiante_cedula) :
+                new ObjectParameter("estudiante_cedula", typeof(string));
+    
+            var estudiante_nombresParameter = estudiante_nombres != null ?
+                new ObjectParameter("estudiante_nombres", estudiante_nombres) :
+                new ObjectParameter("estudiante_nombres", typeof(string));
+    
+            var estudiante_apellidoPParameter = estudiante_apellidoP != null ?
+                new ObjectParameter("estudiante_apellidoP", estudiante_apellidoP) :
+                new ObjectParameter("estudiante_apellidoP", typeof(string));
+    
+            var estudiante_apellidoMParameter = estudiante_apellidoM != null ?
+                new ObjectParameter("estudiante_apellidoM", estudiante_apellidoM) :
+                new ObjectParameter("estudiante_apellidoM", typeof(string));
+    
+            var estudiante_telefonoParameter = estudiante_telefono != null ?
+                new ObjectParameter("estudiante_telefono", estudiante_telefono) :
+                new ObjectParameter("estudiante_telefono", typeof(string));
+    
+            var estudiante_correoParameter = estudiante_correo != null ?
+                new ObjectParameter("estudiante_correo", estudiante_correo) :
+                new ObjectParameter("estudiante_correo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("upt_estudiante", estudiante_idParameter, estudiante_cedulaParameter, estudiante_nombresParameter, estudiante_apellidoPParameter, estudiante_apellidoMParameter, estudiante_telefonoParameter, estudiante_correoParameter);
         }
     }
 }
