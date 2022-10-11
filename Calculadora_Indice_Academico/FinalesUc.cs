@@ -33,5 +33,10 @@ namespace Calculadora_Indice_Academico
                 lblPrograma.Text = a.Carrera;
             }
         }
+
+        private void FinalesUc_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

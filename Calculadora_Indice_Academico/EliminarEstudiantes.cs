@@ -21,5 +21,10 @@ namespace Calculadora_Indice_Academico
         {
 
         }
+
+        private void btn_eliminar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

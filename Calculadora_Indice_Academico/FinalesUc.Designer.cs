@@ -576,6 +576,7 @@
             this.Controls.Add(this.label3);
             this.Name = "FinalesUc";
             this.Size = new System.Drawing.Size(1100, 850);
+            this.Load += new System.EventHandler(this.FinalesUc_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

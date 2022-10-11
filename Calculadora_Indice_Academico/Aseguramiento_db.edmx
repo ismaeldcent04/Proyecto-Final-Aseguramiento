@@ -160,7 +160,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aula__tipo_aula___3B75D760">
+        <Association Name="FK__aula__tipo_aula___3A81B327">
           <End Role="tipo_aula" Type="Self.tipo_aula" Multiplicity="1" />
           <End Role="aula" Type="Self.aula" Multiplicity="*" />
           <ReferentialConstraint>
@@ -172,7 +172,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__calificac__estud__44FF419A">
+        <Association Name="FK__calificac__estud__440B1D61">
           <End Role="estudiante" Type="Self.estudiante" Multiplicity="1" />
           <End Role="calificacion" Type="Self.calificacion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -184,7 +184,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__calificac__triMa__45F365D3">
+        <Association Name="FK__calificac__triMa__44FF419A">
           <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="1" />
           <End Role="calificacion" Type="Self.calificacion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -196,7 +196,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__carrera__area_id__2A4B4B5E">
+        <Association Name="FK__carrera__area_id__29572725">
           <End Role="area" Type="Self.area" Multiplicity="1" />
           <End Role="carrera" Type="Self.carrera" Multiplicity="*" />
           <ReferentialConstraint>
@@ -220,7 +220,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__docente__area_id__2D27B809">
+        <Association Name="FK__docente__area_id__2C3393D0">
           <End Role="area" Type="Self.area" Multiplicity="1" />
           <End Role="docente" Type="Self.docente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -232,7 +232,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__estudiant__carre__33D4B598">
+        <Association Name="FK__estudiant__carre__32E0915F">
           <End Role="carrera" Type="Self.carrera" Multiplicity="1" />
           <End Role="estudiante_historico" Type="Self.estudiante_historico" Multiplicity="*" />
           <ReferentialConstraint>
@@ -244,7 +244,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__estudiant__estud__32E0915F">
+        <Association Name="FK__estudiant__estud__31EC6D26">
           <End Role="estudiante" Type="Self.estudiante" Multiplicity="1" />
           <End Role="estudiante_historico" Type="Self.estudiante_historico" Multiplicity="*" />
           <ReferentialConstraint>
@@ -256,7 +256,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__estudiant__trime__300424B4">
+        <Association Name="FK__estudiant__trime__2F10007B">
           <End Role="trimestre" Type="Self.trimestre" Multiplicity="1" />
           <End Role="estudiante" Type="Self.estudiante" Multiplicity="*" />
           <ReferentialConstraint>
@@ -268,7 +268,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__estudiant__trime__34C8D9D1">
+        <Association Name="FK__estudiant__trime__33D4B598">
           <End Role="trimestre" Type="Self.trimestre" Multiplicity="1" />
           <End Role="estudiante_historico" Type="Self.estudiante_historico" Multiplicity="*" />
           <ReferentialConstraint>
@@ -280,7 +280,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__materia__carrera__38996AB5">
+        <Association Name="FK__materia__carrera__37A5467C">
           <End Role="carrera" Type="Self.carrera" Multiplicity="1" />
           <End Role="materia" Type="Self.materia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -292,7 +292,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__materia__tipo_au__37A5467C">
+        <Association Name="FK__materia__tipo_au__36B12243">
           <End Role="tipo_aula" Type="Self.tipo_aula" Multiplicity="1" />
           <End Role="materia" Type="Self.materia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -304,7 +304,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__trimestre__aula___4222D4EF">
+        <Association Name="FK__trimestre__aula___412EB0B6">
           <End Role="aula" Type="Self.aula" Multiplicity="1" />
           <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -316,7 +316,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__trimestre__docen__412EB0B6">
+        <Association Name="FK__trimestre__docen__403A8C7D">
           <End Role="docente" Type="Self.docente" Multiplicity="1" />
           <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -328,7 +328,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__trimestre__mater__403A8C7D">
+        <Association Name="FK__trimestre__mater__3F466844">
           <End Role="materia" Type="Self.materia" Multiplicity="1" />
           <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -340,7 +340,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__trimestre__trime__3F466844">
+        <Association Name="FK__trimestre__trime__3E52440B">
           <End Role="trimestre" Type="Self.trimestre" Multiplicity="1" />
           <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -370,19 +370,19 @@
             <End Role="docente" EntitySet="docente" />
             <End Role="area" EntitySet="area" />
           </AssociationSet>
-          <AssociationSet Name="FK__aula__tipo_aula___3B75D760" Association="Self.FK__aula__tipo_aula___3B75D760">
+          <AssociationSet Name="FK__aula__tipo_aula___3A81B327" Association="Self.FK__aula__tipo_aula___3A81B327">
             <End Role="tipo_aula" EntitySet="tipo_aula" />
             <End Role="aula" EntitySet="aula" />
           </AssociationSet>
-          <AssociationSet Name="FK__calificac__estud__44FF419A" Association="Self.FK__calificac__estud__44FF419A">
+          <AssociationSet Name="FK__calificac__estud__440B1D61" Association="Self.FK__calificac__estud__440B1D61">
             <End Role="estudiante" EntitySet="estudiante" />
             <End Role="calificacion" EntitySet="calificacion" />
           </AssociationSet>
-          <AssociationSet Name="FK__calificac__triMa__45F365D3" Association="Self.FK__calificac__triMa__45F365D3">
+          <AssociationSet Name="FK__calificac__triMa__44FF419A" Association="Self.FK__calificac__triMa__44FF419A">
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
             <End Role="calificacion" EntitySet="calificacion" />
           </AssociationSet>
-          <AssociationSet Name="FK__carrera__area_id__2A4B4B5E" Association="Self.FK__carrera__area_id__2A4B4B5E">
+          <AssociationSet Name="FK__carrera__area_id__29572725" Association="Self.FK__carrera__area_id__29572725">
             <End Role="area" EntitySet="area" />
             <End Role="carrera" EntitySet="carrera" />
           </AssociationSet>
@@ -390,53 +390,52 @@
             <End Role="docente" EntitySet="docente" />
             <End Role="carrera" EntitySet="carrera" />
           </AssociationSet>
-          <AssociationSet Name="FK__docente__area_id__2D27B809" Association="Self.FK__docente__area_id__2D27B809">
+          <AssociationSet Name="FK__docente__area_id__2C3393D0" Association="Self.FK__docente__area_id__2C3393D0">
             <End Role="area" EntitySet="area" />
             <End Role="docente" EntitySet="docente" />
           </AssociationSet>
-          <AssociationSet Name="FK__estudiant__carre__33D4B598" Association="Self.FK__estudiant__carre__33D4B598">
+          <AssociationSet Name="FK__estudiant__carre__32E0915F" Association="Self.FK__estudiant__carre__32E0915F">
             <End Role="carrera" EntitySet="carrera" />
             <End Role="estudiante_historico" EntitySet="estudiante_historico" />
           </AssociationSet>
-          <AssociationSet Name="FK__estudiant__estud__32E0915F" Association="Self.FK__estudiant__estud__32E0915F">
+          <AssociationSet Name="FK__estudiant__estud__31EC6D26" Association="Self.FK__estudiant__estud__31EC6D26">
             <End Role="estudiante" EntitySet="estudiante" />
             <End Role="estudiante_historico" EntitySet="estudiante_historico" />
           </AssociationSet>
-          <AssociationSet Name="FK__estudiant__trime__300424B4" Association="Self.FK__estudiant__trime__300424B4">
+          <AssociationSet Name="FK__estudiant__trime__2F10007B" Association="Self.FK__estudiant__trime__2F10007B">
             <End Role="trimestre" EntitySet="trimestre" />
             <End Role="estudiante" EntitySet="estudiante" />
           </AssociationSet>
-          <AssociationSet Name="FK__estudiant__trime__34C8D9D1" Association="Self.FK__estudiant__trime__34C8D9D1">
+          <AssociationSet Name="FK__estudiant__trime__33D4B598" Association="Self.FK__estudiant__trime__33D4B598">
             <End Role="trimestre" EntitySet="trimestre" />
             <End Role="estudiante_historico" EntitySet="estudiante_historico" />
           </AssociationSet>
-          <AssociationSet Name="FK__materia__carrera__38996AB5" Association="Self.FK__materia__carrera__38996AB5">
+          <AssociationSet Name="FK__materia__carrera__37A5467C" Association="Self.FK__materia__carrera__37A5467C">
             <End Role="carrera" EntitySet="carrera" />
             <End Role="materia" EntitySet="materia" />
           </AssociationSet>
-          <AssociationSet Name="FK__materia__tipo_au__37A5467C" Association="Self.FK__materia__tipo_au__37A5467C">
+          <AssociationSet Name="FK__materia__tipo_au__36B12243" Association="Self.FK__materia__tipo_au__36B12243">
             <End Role="tipo_aula" EntitySet="tipo_aula" />
             <End Role="materia" EntitySet="materia" />
           </AssociationSet>
-          <AssociationSet Name="FK__trimestre__aula___4222D4EF" Association="Self.FK__trimestre__aula___4222D4EF">
+          <AssociationSet Name="FK__trimestre__aula___412EB0B6" Association="Self.FK__trimestre__aula___412EB0B6">
             <End Role="aula" EntitySet="aula" />
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
           </AssociationSet>
-          <AssociationSet Name="FK__trimestre__docen__412EB0B6" Association="Self.FK__trimestre__docen__412EB0B6">
+          <AssociationSet Name="FK__trimestre__docen__403A8C7D" Association="Self.FK__trimestre__docen__403A8C7D">
             <End Role="docente" EntitySet="docente" />
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
           </AssociationSet>
-          <AssociationSet Name="FK__trimestre__mater__403A8C7D" Association="Self.FK__trimestre__mater__403A8C7D">
+          <AssociationSet Name="FK__trimestre__mater__3F466844" Association="Self.FK__trimestre__mater__3F466844">
             <End Role="materia" EntitySet="materia" />
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
           </AssociationSet>
-          <AssociationSet Name="FK__trimestre__trime__3F466844" Association="Self.FK__trimestre__trime__3F466844">
+          <AssociationSet Name="FK__trimestre__trime__3E52440B" Association="Self.FK__trimestre__trime__3E52440B">
             <End Role="trimestre" EntitySet="trimestre" />
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AseguramientoDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -470,8 +469,8 @@
           <Property Name="aula_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="aula_codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="tipo_aula_id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="tipo_aula" Relationship="Self.FK__aula__tipo_aula___3B75D760" FromRole="aula" ToRole="tipo_aula" />
-          <NavigationProperty Name="trimestre_materia" Relationship="Self.FK__trimestre__aula___4222D4EF" FromRole="aula" ToRole="trimestre_materia" />
+          <NavigationProperty Name="tipo_aula" Relationship="Self.FK__aula__tipo_aula___3A81B327" FromRole="aula" ToRole="tipo_aula" />
+          <NavigationProperty Name="trimestre_materia" Relationship="Self.FK__trimestre__aula___412EB0B6" FromRole="aula" ToRole="trimestre_materia" />
         </EntityType>
         <EntityType Name="calificacion">
           <Key>
@@ -487,8 +486,8 @@
           <Property Name="eval3" Type="Decimal" Precision="3" Scale="2" />
           <Property Name="eval4" Type="Decimal" Precision="3" Scale="2" />
           <Property Name="comentario" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="estudiante" Relationship="Self.FK__calificac__estud__44FF419A" FromRole="calificacion" ToRole="estudiante" />
-          <NavigationProperty Name="trimestre_materia" Relationship="Self.FK__calificac__triMa__45F365D3" FromRole="calificacion" ToRole="trimestre_materia" />
+          <NavigationProperty Name="estudiante" Relationship="Self.FK__calificac__estud__440B1D61" FromRole="calificacion" ToRole="estudiante" />
+          <NavigationProperty Name="trimestre_materia" Relationship="Self.FK__calificac__triMa__44FF419A" FromRole="calificacion" ToRole="trimestre_materia" />
         </EntityType>
         <EntityType Name="carrera">
           <Key>
@@ -561,9 +560,9 @@
           <Property Name="carrera_id" Type="Int32" Nullable="false" />
           <Property Name="materia_creditos" Type="Int32" Nullable="false" />
           <Property Name="tipo_aula_id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="carrera" Relationship="Self.FK__materia__carrera__38996AB5" FromRole="materia" ToRole="carrera" />
-          <NavigationProperty Name="tipo_aula" Relationship="Self.FK__materia__tipo_au__37A5467C" FromRole="materia" ToRole="tipo_aula" />
-          <NavigationProperty Name="trimestre_materia" Relationship="Self.FK__trimestre__mater__403A8C7D" FromRole="materia" ToRole="trimestre_materia" />
+          <NavigationProperty Name="carrera" Relationship="Self.FK__materia__carrera__37A5467C" FromRole="materia" ToRole="carrera" />
+          <NavigationProperty Name="tipo_aula" Relationship="Self.FK__materia__tipo_au__36B12243" FromRole="materia" ToRole="tipo_aula" />
+          <NavigationProperty Name="trimestre_materia" Relationship="Self.FK__trimestre__mater__3F466844" FromRole="materia" ToRole="trimestre_materia" />
         </EntityType>
         <EntityType Name="tipo_aula">
           <Key>
@@ -571,8 +570,8 @@
           </Key>
           <Property Name="tipo_aula_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="tipo_aula_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="aulas" Relationship="Self.FK__aula__tipo_aula___3B75D760" FromRole="tipo_aula" ToRole="aula" />
-          <NavigationProperty Name="materias" Relationship="Self.FK__materia__tipo_au__37A5467C" FromRole="tipo_aula" ToRole="materia" />
+          <NavigationProperty Name="aulas" Relationship="Self.FK__aula__tipo_aula___3A81B327" FromRole="tipo_aula" ToRole="aula" />
+          <NavigationProperty Name="materias" Relationship="Self.FK__materia__tipo_au__36B12243" FromRole="tipo_aula" ToRole="materia" />
         </EntityType>
         <EntityType Name="trimestre">
           <Key>
@@ -602,11 +601,11 @@
           <Property Name="triMat_jueves" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="triMat_viernes" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="triMat_sabado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="aula" Relationship="Self.FK__trimestre__aula___4222D4EF" FromRole="trimestre_materia" ToRole="aula" />
-          <NavigationProperty Name="calificacions" Relationship="Self.FK__calificac__triMa__45F365D3" FromRole="trimestre_materia" ToRole="calificacion" />
-          <NavigationProperty Name="docente" Relationship="Self.FK__trimestre__docen__412EB0B6" FromRole="trimestre_materia" ToRole="docente" />
-          <NavigationProperty Name="materia" Relationship="Self.FK__trimestre__mater__403A8C7D" FromRole="trimestre_materia" ToRole="materia" />
-          <NavigationProperty Name="trimestre" Relationship="Self.FK__trimestre__trime__3F466844" FromRole="trimestre_materia" ToRole="trimestre" />
+          <NavigationProperty Name="aula" Relationship="Self.FK__trimestre__aula___412EB0B6" FromRole="trimestre_materia" ToRole="aula" />
+          <NavigationProperty Name="calificacions" Relationship="Self.FK__calificac__triMa__44FF419A" FromRole="trimestre_materia" ToRole="calificacion" />
+          <NavigationProperty Name="docente" Relationship="Self.FK__trimestre__docen__403A8C7D" FromRole="trimestre_materia" ToRole="docente" />
+          <NavigationProperty Name="materia" Relationship="Self.FK__trimestre__mater__3F466844" FromRole="trimestre_materia" ToRole="materia" />
+          <NavigationProperty Name="trimestre" Relationship="Self.FK__trimestre__trime__3E52440B" FromRole="trimestre_materia" ToRole="trimestre" />
         </EntityType>
         <EntityType Name="user_login">
           <Key>
@@ -629,7 +628,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__carrera__area_id__2A4B4B5E">
+        <Association Name="FK__carrera__area_id__29572725">
           <End Role="area" Type="Self.area" Multiplicity="1" />
           <End Role="carrera" Type="Self.carrera" Multiplicity="*" />
           <ReferentialConstraint>
@@ -641,7 +640,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__docente__area_id__2D27B809">
+        <Association Name="FK__docente__area_id__2C3393D0">
           <End Role="area" Type="Self.area" Multiplicity="1" />
           <End Role="docente" Type="Self.docente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -653,7 +652,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aula__tipo_aula___3B75D760">
+        <Association Name="FK__aula__tipo_aula___3A81B327">
           <End Role="tipo_aula" Type="Self.tipo_aula" Multiplicity="1" />
           <End Role="aula" Type="Self.aula" Multiplicity="*" />
           <ReferentialConstraint>
@@ -665,7 +664,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__trimestre__aula___4222D4EF">
+        <Association Name="FK__trimestre__aula___412EB0B6">
           <End Role="aula" Type="Self.aula" Multiplicity="1" />
           <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -677,7 +676,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__calificac__estud__44FF419A">
+        <Association Name="FK__calificac__estud__440B1D61">
           <End Role="estudiante" Type="Self.estudiante" Multiplicity="1" />
           <End Role="calificacion" Type="Self.calificacion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -689,7 +688,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__calificac__triMa__45F365D3">
+        <Association Name="FK__calificac__triMa__44FF419A">
           <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="1" />
           <End Role="calificacion" Type="Self.calificacion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -713,7 +712,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__estudiant__carre__33D4B598">
+        <Association Name="FK__estudiant__carre__32E0915F">
           <End Role="carrera" Type="Self.carrera" Multiplicity="1" />
           <End Role="estudiante_historico" Type="Self.estudiante_historico" Multiplicity="*" />
           <ReferentialConstraint>
@@ -725,7 +724,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__materia__carrera__38996AB5">
+        <Association Name="FK__materia__carrera__37A5467C">
           <End Role="carrera" Type="Self.carrera" Multiplicity="1" />
           <End Role="materia" Type="Self.materia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -737,7 +736,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__trimestre__docen__412EB0B6">
+        <Association Name="FK__trimestre__docen__403A8C7D">
           <End Role="docente" Type="Self.docente" Multiplicity="1" />
           <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -749,7 +748,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__estudiant__estud__32E0915F">
+        <Association Name="FK__estudiant__estud__31EC6D26">
           <End Role="estudiante" Type="Self.estudiante" Multiplicity="1" />
           <End Role="estudiante_historico" Type="Self.estudiante_historico" Multiplicity="*" />
           <ReferentialConstraint>
@@ -761,7 +760,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__estudiant__trime__300424B4">
+        <Association Name="FK__estudiant__trime__2F10007B">
           <End Role="trimestre" Type="Self.trimestre" Multiplicity="1" />
           <End Role="estudiante" Type="Self.estudiante" Multiplicity="*" />
           <ReferentialConstraint>
@@ -773,7 +772,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__estudiant__trime__34C8D9D1">
+        <Association Name="FK__estudiant__trime__33D4B598">
           <End Role="trimestre" Type="Self.trimestre" Multiplicity="1" />
           <End Role="estudiante_historico" Type="Self.estudiante_historico" Multiplicity="*" />
           <ReferentialConstraint>
@@ -785,7 +784,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__materia__tipo_au__37A5467C">
+        <Association Name="FK__materia__tipo_au__36B12243">
           <End Role="tipo_aula" Type="Self.tipo_aula" Multiplicity="1" />
           <End Role="materia" Type="Self.materia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -797,7 +796,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__trimestre__mater__403A8C7D">
+        <Association Name="FK__trimestre__mater__3F466844">
           <End Role="materia" Type="Self.materia" Multiplicity="1" />
           <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -809,7 +808,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__trimestre__trime__3F466844">
+        <Association Name="FK__trimestre__trime__3E52440B">
           <End Role="trimestre" Type="Self.trimestre" Multiplicity="1" />
           <End Role="trimestre_materia" Type="Self.trimestre_materia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -839,27 +838,27 @@
             <End Role="docente" EntitySet="docentes" />
             <End Role="area" EntitySet="areas" />
           </AssociationSet>
-          <AssociationSet Name="FK__carrera__area_id__2A4B4B5E" Association="Self.FK__carrera__area_id__2A4B4B5E">
+          <AssociationSet Name="FK__carrera__area_id__29572725" Association="Self.FK__carrera__area_id__29572725">
             <End Role="area" EntitySet="areas" />
             <End Role="carrera" EntitySet="carreras" />
           </AssociationSet>
-          <AssociationSet Name="FK__docente__area_id__2D27B809" Association="Self.FK__docente__area_id__2D27B809">
+          <AssociationSet Name="FK__docente__area_id__2C3393D0" Association="Self.FK__docente__area_id__2C3393D0">
             <End Role="area" EntitySet="areas" />
             <End Role="docente" EntitySet="docentes" />
           </AssociationSet>
-          <AssociationSet Name="FK__aula__tipo_aula___3B75D760" Association="Self.FK__aula__tipo_aula___3B75D760">
+          <AssociationSet Name="FK__aula__tipo_aula___3A81B327" Association="Self.FK__aula__tipo_aula___3A81B327">
             <End Role="tipo_aula" EntitySet="tipo_aula" />
             <End Role="aula" EntitySet="aulas" />
           </AssociationSet>
-          <AssociationSet Name="FK__trimestre__aula___4222D4EF" Association="Self.FK__trimestre__aula___4222D4EF">
+          <AssociationSet Name="FK__trimestre__aula___412EB0B6" Association="Self.FK__trimestre__aula___412EB0B6">
             <End Role="aula" EntitySet="aulas" />
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
           </AssociationSet>
-          <AssociationSet Name="FK__calificac__estud__44FF419A" Association="Self.FK__calificac__estud__44FF419A">
+          <AssociationSet Name="FK__calificac__estud__440B1D61" Association="Self.FK__calificac__estud__440B1D61">
             <End Role="estudiante" EntitySet="estudiantes" />
             <End Role="calificacion" EntitySet="calificacions" />
           </AssociationSet>
-          <AssociationSet Name="FK__calificac__triMa__45F365D3" Association="Self.FK__calificac__triMa__45F365D3">
+          <AssociationSet Name="FK__calificac__triMa__44FF419A" Association="Self.FK__calificac__triMa__44FF419A">
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
             <End Role="calificacion" EntitySet="calificacions" />
           </AssociationSet>
@@ -867,43 +866,90 @@
             <End Role="docente" EntitySet="docentes" />
             <End Role="carrera" EntitySet="carreras" />
           </AssociationSet>
-          <AssociationSet Name="FK__estudiant__carre__33D4B598" Association="Self.FK__estudiant__carre__33D4B598">
+          <AssociationSet Name="FK__estudiant__carre__32E0915F" Association="Self.FK__estudiant__carre__32E0915F">
             <End Role="carrera" EntitySet="carreras" />
             <End Role="estudiante_historico" EntitySet="estudiante_historico" />
           </AssociationSet>
-          <AssociationSet Name="FK__materia__carrera__38996AB5" Association="Self.FK__materia__carrera__38996AB5">
+          <AssociationSet Name="FK__materia__carrera__37A5467C" Association="Self.FK__materia__carrera__37A5467C">
             <End Role="carrera" EntitySet="carreras" />
             <End Role="materia" EntitySet="materias" />
           </AssociationSet>
-          <AssociationSet Name="FK__trimestre__docen__412EB0B6" Association="Self.FK__trimestre__docen__412EB0B6">
+          <AssociationSet Name="FK__trimestre__docen__403A8C7D" Association="Self.FK__trimestre__docen__403A8C7D">
             <End Role="docente" EntitySet="docentes" />
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
           </AssociationSet>
-          <AssociationSet Name="FK__estudiant__estud__32E0915F" Association="Self.FK__estudiant__estud__32E0915F">
+          <AssociationSet Name="FK__estudiant__estud__31EC6D26" Association="Self.FK__estudiant__estud__31EC6D26">
             <End Role="estudiante" EntitySet="estudiantes" />
             <End Role="estudiante_historico" EntitySet="estudiante_historico" />
           </AssociationSet>
-          <AssociationSet Name="FK__estudiant__trime__300424B4" Association="Self.FK__estudiant__trime__300424B4">
+          <AssociationSet Name="FK__estudiant__trime__2F10007B" Association="Self.FK__estudiant__trime__2F10007B">
             <End Role="trimestre" EntitySet="trimestres" />
             <End Role="estudiante" EntitySet="estudiantes" />
           </AssociationSet>
-          <AssociationSet Name="FK__estudiant__trime__34C8D9D1" Association="Self.FK__estudiant__trime__34C8D9D1">
+          <AssociationSet Name="FK__estudiant__trime__33D4B598" Association="Self.FK__estudiant__trime__33D4B598">
             <End Role="trimestre" EntitySet="trimestres" />
             <End Role="estudiante_historico" EntitySet="estudiante_historico" />
           </AssociationSet>
-          <AssociationSet Name="FK__materia__tipo_au__37A5467C" Association="Self.FK__materia__tipo_au__37A5467C">
+          <AssociationSet Name="FK__materia__tipo_au__36B12243" Association="Self.FK__materia__tipo_au__36B12243">
             <End Role="tipo_aula" EntitySet="tipo_aula" />
             <End Role="materia" EntitySet="materias" />
           </AssociationSet>
-          <AssociationSet Name="FK__trimestre__mater__403A8C7D" Association="Self.FK__trimestre__mater__403A8C7D">
+          <AssociationSet Name="FK__trimestre__mater__3F466844" Association="Self.FK__trimestre__mater__3F466844">
             <End Role="materia" EntitySet="materias" />
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
           </AssociationSet>
-          <AssociationSet Name="FK__trimestre__trime__3F466844" Association="Self.FK__trimestre__trime__3F466844">
+          <AssociationSet Name="FK__trimestre__trime__3E52440B" Association="Self.FK__trimestre__trime__3E52440B">
             <End Role="trimestre" EntitySet="trimestres" />
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
           </AssociationSet>
+          <FunctionImport Name="show_students" ReturnType="Collection(Aseguramiento_dbModel.show_students_Result)" />
+          <FunctionImport Name="show_carreras" ReturnType="Collection(Aseguramiento_dbModel.show_carreras_Result)" />
+          <FunctionImport Name="insert_student">
+            <Parameter Name="estudiante_cedula" Mode="In" Type="String" />
+            <Parameter Name="estudiante_nombres" Mode="In" Type="String" />
+            <Parameter Name="estudiante_apellidoP" Mode="In" Type="String" />
+            <Parameter Name="estudiante_apellidoM" Mode="In" Type="String" />
+            <Parameter Name="estudiante_telefono" Mode="In" Type="String" />
+            <Parameter Name="estudiante_correo" Mode="In" Type="String" />
+            <Parameter Name="carrera_id" Mode="In" Type="Int32" />
+            <Parameter Name="user_password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="insert_docente">
+            <Parameter Name="docente_cedula" Mode="In" Type="String" />
+            <Parameter Name="docente_nombres" Mode="In" Type="String" />
+            <Parameter Name="docente_apellidoP" Mode="In" Type="String" />
+            <Parameter Name="docente_apellidoM" Mode="In" Type="String" />
+            <Parameter Name="docente_telefono" Mode="In" Type="String" />
+            <Parameter Name="docente_correo" Mode="In" Type="String" />
+            <Parameter Name="area_id" Mode="In" Type="Int32" />
+            <Parameter Name="user_password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="show_docente" ReturnType="Collection(Aseguramiento_dbModel.show_docente_Result)" />
         </EntityContainer>
+        <ComplexType Name="show_students_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Primer_apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Segundo_apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Carrera" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Correo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="show_carreras_Result">
+          <Property Type="Int32" Name="carrera_id" Nullable="false" />
+          <Property Type="String" Name="carrera_nombre" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="show_docente_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Primer_apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Segundo_apellido" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Area" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Correo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
