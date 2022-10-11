@@ -27,28 +27,55 @@ namespace Calculadora_Indice_Academico
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<administrador> administradors { get; set; }
-        public virtual DbSet<area> areas { get; set; }
-        public virtual DbSet<aula> aulas { get; set; }
-        public virtual DbSet<calificacion> calificacions { get; set; }
-        public virtual DbSet<carrera> carreras { get; set; }
-        public virtual DbSet<docente> docentes { get; set; }
-        public virtual DbSet<estudiante> estudiantes { get; set; }
+        public virtual DbSet<administrador> administrador { get; set; }
+        public virtual DbSet<area> area { get; set; }
+        public virtual DbSet<aula> aula { get; set; }
+        public virtual DbSet<calificacion> calificacion { get; set; }
+        public virtual DbSet<carrera> carrera { get; set; }
+        public virtual DbSet<docente> docente { get; set; }
+        public virtual DbSet<estudiante> estudiante { get; set; }
         public virtual DbSet<estudiante_historico> estudiante_historico { get; set; }
-        public virtual DbSet<materia> materias { get; set; }
+        public virtual DbSet<materia> materia { get; set; }
         public virtual DbSet<tipo_aula> tipo_aula { get; set; }
-        public virtual DbSet<trimestre> trimestres { get; set; }
+        public virtual DbSet<trimestre> trimestre { get; set; }
         public virtual DbSet<trimestre_materia> trimestre_materia { get; set; }
         public virtual DbSet<user_login> user_login { get; set; }
     
-        public virtual ObjectResult<show_students_Result> show_students()
+        public virtual int insert_docente(string docente_cedula, string docente_nombres, string docente_apellidoP, string docente_apellidoM, string docente_telefono, string docente_correo, Nullable<int> area_id, string user_password)
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<show_students_Result>("show_students");
-        }
+            var docente_cedulaParameter = docente_cedula != null ?
+                new ObjectParameter("docente_cedula", docente_cedula) :
+                new ObjectParameter("docente_cedula", typeof(string));
     
-        public virtual ObjectResult<show_carreras_Result> show_carreras()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<show_carreras_Result>("show_carreras");
+            var docente_nombresParameter = docente_nombres != null ?
+                new ObjectParameter("docente_nombres", docente_nombres) :
+                new ObjectParameter("docente_nombres", typeof(string));
+    
+            var docente_apellidoPParameter = docente_apellidoP != null ?
+                new ObjectParameter("docente_apellidoP", docente_apellidoP) :
+                new ObjectParameter("docente_apellidoP", typeof(string));
+    
+            var docente_apellidoMParameter = docente_apellidoM != null ?
+                new ObjectParameter("docente_apellidoM", docente_apellidoM) :
+                new ObjectParameter("docente_apellidoM", typeof(string));
+    
+            var docente_telefonoParameter = docente_telefono != null ?
+                new ObjectParameter("docente_telefono", docente_telefono) :
+                new ObjectParameter("docente_telefono", typeof(string));
+    
+            var docente_correoParameter = docente_correo != null ?
+                new ObjectParameter("docente_correo", docente_correo) :
+                new ObjectParameter("docente_correo", typeof(string));
+    
+            var area_idParameter = area_id.HasValue ?
+                new ObjectParameter("area_id", area_id) :
+                new ObjectParameter("area_id", typeof(int));
+    
+            var user_passwordParameter = user_password != null ?
+                new ObjectParameter("user_password", user_password) :
+                new ObjectParameter("user_password", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insert_docente", docente_cedulaParameter, docente_nombresParameter, docente_apellidoPParameter, docente_apellidoMParameter, docente_telefonoParameter, docente_correoParameter, area_idParameter, user_passwordParameter);
         }
     
         public virtual int insert_student(string estudiante_cedula, string estudiante_nombres, string estudiante_apellidoP, string estudiante_apellidoM, string estudiante_telefono, string estudiante_correo, Nullable<int> carrera_id, string user_password)
@@ -88,46 +115,19 @@ namespace Calculadora_Indice_Academico
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insert_student", estudiante_cedulaParameter, estudiante_nombresParameter, estudiante_apellidoPParameter, estudiante_apellidoMParameter, estudiante_telefonoParameter, estudiante_correoParameter, carrera_idParameter, user_passwordParameter);
         }
     
-        public virtual int insert_docente(string docente_cedula, string docente_nombres, string docente_apellidoP, string docente_apellidoM, string docente_telefono, string docente_correo, Nullable<int> area_id, string user_password)
+        public virtual ObjectResult<show_carreras_Result> show_carreras()
         {
-            var docente_cedulaParameter = docente_cedula != null ?
-                new ObjectParameter("docente_cedula", docente_cedula) :
-                new ObjectParameter("docente_cedula", typeof(string));
-    
-            var docente_nombresParameter = docente_nombres != null ?
-                new ObjectParameter("docente_nombres", docente_nombres) :
-                new ObjectParameter("docente_nombres", typeof(string));
-    
-            var docente_apellidoPParameter = docente_apellidoP != null ?
-                new ObjectParameter("docente_apellidoP", docente_apellidoP) :
-                new ObjectParameter("docente_apellidoP", typeof(string));
-    
-            var docente_apellidoMParameter = docente_apellidoM != null ?
-                new ObjectParameter("docente_apellidoM", docente_apellidoM) :
-                new ObjectParameter("docente_apellidoM", typeof(string));
-    
-            var docente_telefonoParameter = docente_telefono != null ?
-                new ObjectParameter("docente_telefono", docente_telefono) :
-                new ObjectParameter("docente_telefono", typeof(string));
-    
-            var docente_correoParameter = docente_correo != null ?
-                new ObjectParameter("docente_correo", docente_correo) :
-                new ObjectParameter("docente_correo", typeof(string));
-    
-            var area_idParameter = area_id.HasValue ?
-                new ObjectParameter("area_id", area_id) :
-                new ObjectParameter("area_id", typeof(int));
-    
-            var user_passwordParameter = user_password != null ?
-                new ObjectParameter("user_password", user_password) :
-                new ObjectParameter("user_password", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insert_docente", docente_cedulaParameter, docente_nombresParameter, docente_apellidoPParameter, docente_apellidoMParameter, docente_telefonoParameter, docente_correoParameter, area_idParameter, user_passwordParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<show_carreras_Result>("show_carreras");
         }
     
         public virtual ObjectResult<show_docente_Result> show_docente()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<show_docente_Result>("show_docente");
+        }
+    
+        public virtual ObjectResult<show_students_Result> show_students()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<show_students_Result>("show_students");
         }
     }
 }

@@ -147,7 +147,7 @@
       <DependentUpon>Aseguramiento_db.tt</DependentUpon>
     </Compile>
     <Compile Include="estudiante_historico.cs">
-      <DependentUpon>AseguramientoDb.tt</DependentUpon>
+      <DependentUpon>Aseguramiento_db.tt</DependentUpon>
     </Compile>
     <Compile Include="HistorialUc.cs">
       <SubType>UserControl</SubType>
@@ -227,7 +227,7 @@
       <DependentUpon>Aseguramiento_db.tt</DependentUpon>
     </Compile>
     <Compile Include="user_login.cs">
-      <DependentUpon>AseguramientoDb.tt</DependentUpon>
+      <DependentUpon>Aseguramiento_db.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AgregarEstudiantes.resx">
       <DependentUpon>AgregarEstudiantes.cs</DependentUpon>

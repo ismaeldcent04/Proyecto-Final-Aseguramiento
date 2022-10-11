@@ -17,8 +17,8 @@ namespace Calculadora_Indice_Academico
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public docente()
         {
-            this.areas = new HashSet<area>();
-            this.carreras = new HashSet<carrera>();
+            this.area = new HashSet<area>();
+            this.carrera = new HashSet<carrera>();
             this.trimestre_materia = new HashSet<trimestre_materia>();
         }
     
@@ -32,10 +32,10 @@ namespace Calculadora_Indice_Academico
         public int area_id { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<area> areas { get; set; }
-        public virtual area area { get; set; }
+        public virtual ICollection<area> area { get; set; }
+        public virtual area area1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<carrera> carreras { get; set; }
+        public virtual ICollection<carrera> carrera { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<trimestre_materia> trimestre_materia { get; set; }
     }

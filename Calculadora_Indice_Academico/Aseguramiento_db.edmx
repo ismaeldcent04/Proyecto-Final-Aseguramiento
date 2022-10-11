@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="AseguramientoDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Aseguramiento_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="administrador">
           <Key>
             <PropertyRef Name="administrador_id" />
@@ -148,7 +148,7 @@
           <Property Name="user_password" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="acc_type" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__area__docente_id__4AB81AF0">
+        <Association Name="FK__area__docente_id__49C3F6B7">
           <End Role="docente" Type="Self.docente" Multiplicity="0..1" />
           <End Role="area" Type="Self.area" Multiplicity="*" />
           <ReferentialConstraint>
@@ -208,7 +208,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__carrera__docente__4BAC3F29">
+        <Association Name="FK__carrera__docente__4AB81AF0">
           <End Role="docente" Type="Self.docente" Multiplicity="0..1" />
           <End Role="carrera" Type="Self.carrera" Multiplicity="*" />
           <ReferentialConstraint>
@@ -352,7 +352,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="AseguramientoDbModelStoreContainer">
+        <Function Name="insert_docente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="docente_cedula" Type="varchar" Mode="In" />
+          <Parameter Name="docente_nombres" Type="varchar" Mode="In" />
+          <Parameter Name="docente_apellidoP" Type="varchar" Mode="In" />
+          <Parameter Name="docente_apellidoM" Type="varchar" Mode="In" />
+          <Parameter Name="docente_telefono" Type="varchar" Mode="In" />
+          <Parameter Name="docente_correo" Type="varchar" Mode="In" />
+          <Parameter Name="area_id" Type="int" Mode="In" />
+          <Parameter Name="user_password" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="insert_student" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="estudiante_cedula" Type="varchar" Mode="In" />
+          <Parameter Name="estudiante_nombres" Type="varchar" Mode="In" />
+          <Parameter Name="estudiante_apellidoP" Type="varchar" Mode="In" />
+          <Parameter Name="estudiante_apellidoM" Type="varchar" Mode="In" />
+          <Parameter Name="estudiante_telefono" Type="varchar" Mode="In" />
+          <Parameter Name="estudiante_correo" Type="varchar" Mode="In" />
+          <Parameter Name="carrera_id" Type="int" Mode="In" />
+          <Parameter Name="user_password" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="show_carreras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="show_docente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="show_students" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="Aseguramiento_dbModelStoreContainer">
           <EntitySet Name="administrador" EntityType="Self.administrador" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="area" EntityType="Self.area" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="aula" EntityType="Self.aula" Schema="dbo" store:Type="Tables" />
@@ -366,7 +389,7 @@
           <EntitySet Name="trimestre" EntityType="Self.trimestre" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trimestre_materia" EntityType="Self.trimestre_materia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="user_login" EntityType="Self.user_login" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__area__docente_id__4AB81AF0" Association="Self.FK__area__docente_id__4AB81AF0">
+          <AssociationSet Name="FK__area__docente_id__49C3F6B7" Association="Self.FK__area__docente_id__49C3F6B7">
             <End Role="docente" EntitySet="docente" />
             <End Role="area" EntitySet="area" />
           </AssociationSet>
@@ -386,7 +409,7 @@
             <End Role="area" EntitySet="area" />
             <End Role="carrera" EntitySet="carrera" />
           </AssociationSet>
-          <AssociationSet Name="FK__carrera__docente__4BAC3F29" Association="Self.FK__carrera__docente__4BAC3F29">
+          <AssociationSet Name="FK__carrera__docente__4AB81AF0" Association="Self.FK__carrera__docente__4AB81AF0">
             <End Role="docente" EntitySet="docente" />
             <End Role="carrera" EntitySet="carrera" />
           </AssociationSet>
@@ -435,10 +458,11 @@
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="AseguramientoDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="Aseguramiento_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="administrador">
           <Key>
             <PropertyRef Name="administrador_id" />
@@ -458,9 +482,9 @@
           <Property Name="area_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="area_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="docente_id" Type="Int32" />
-          <NavigationProperty Name="docente" Relationship="Self.FK__area__docente_id__4AB81AF0" FromRole="area" ToRole="docente" />
-          <NavigationProperty Name="carreras" Relationship="Self.FK__carrera__area_id__2A4B4B5E" FromRole="area" ToRole="carrera" />
-          <NavigationProperty Name="docentes" Relationship="Self.FK__docente__area_id__2D27B809" FromRole="area" ToRole="docente" />
+          <NavigationProperty Name="docente" Relationship="Self.FK__area__docente_id__49C3F6B7" FromRole="area" ToRole="docente" />
+          <NavigationProperty Name="carrera" Relationship="Self.FK__carrera__area_id__29572725" FromRole="area" ToRole="carrera" />
+          <NavigationProperty Name="docente1" Relationship="Self.FK__docente__area_id__2C3393D0" FromRole="area" ToRole="docente" />
         </EntityType>
         <EntityType Name="aula">
           <Key>
@@ -498,10 +522,10 @@
           <Property Name="area_id" Type="Int32" Nullable="false" />
           <Property Name="docente_id" Type="Int32" />
           <Property Name="trimestres_max" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="area" Relationship="Self.FK__carrera__area_id__2A4B4B5E" FromRole="carrera" ToRole="area" />
-          <NavigationProperty Name="docente" Relationship="Self.FK__carrera__docente__4BAC3F29" FromRole="carrera" ToRole="docente" />
-          <NavigationProperty Name="estudiante_historico" Relationship="Self.FK__estudiant__carre__33D4B598" FromRole="carrera" ToRole="estudiante_historico" />
-          <NavigationProperty Name="materias" Relationship="Self.FK__materia__carrera__38996AB5" FromRole="carrera" ToRole="materia" />
+          <NavigationProperty Name="area" Relationship="Self.FK__carrera__area_id__29572725" FromRole="carrera" ToRole="area" />
+          <NavigationProperty Name="docente" Relationship="Self.FK__carrera__docente__4AB81AF0" FromRole="carrera" ToRole="docente" />
+          <NavigationProperty Name="estudiante_historico" Relationship="Self.FK__estudiant__carre__32E0915F" FromRole="carrera" ToRole="estudiante_historico" />
+          <NavigationProperty Name="materia" Relationship="Self.FK__materia__carrera__37A5467C" FromRole="carrera" ToRole="materia" />
         </EntityType>
         <EntityType Name="docente">
           <Key>
@@ -515,10 +539,10 @@
           <Property Name="docente_telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="docente_correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="area_id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="areas" Relationship="Self.FK__area__docente_id__4AB81AF0" FromRole="docente" ToRole="area" />
-          <NavigationProperty Name="area" Relationship="Self.FK__docente__area_id__2D27B809" FromRole="docente" ToRole="area" />
-          <NavigationProperty Name="carreras" Relationship="Self.FK__carrera__docente__4BAC3F29" FromRole="docente" ToRole="carrera" />
-          <NavigationProperty Name="trimestre_materia" Relationship="Self.FK__trimestre__docen__412EB0B6" FromRole="docente" ToRole="trimestre_materia" />
+          <NavigationProperty Name="area" Relationship="Self.FK__area__docente_id__49C3F6B7" FromRole="docente" ToRole="area" />
+          <NavigationProperty Name="area1" Relationship="Self.FK__docente__area_id__2C3393D0" FromRole="docente" ToRole="area" />
+          <NavigationProperty Name="carrera" Relationship="Self.FK__carrera__docente__4AB81AF0" FromRole="docente" ToRole="carrera" />
+          <NavigationProperty Name="trimestre_materia" Relationship="Self.FK__trimestre__docen__403A8C7D" FromRole="docente" ToRole="trimestre_materia" />
         </EntityType>
         <EntityType Name="estudiante">
           <Key>
@@ -532,9 +556,9 @@
           <Property Name="estudiante_telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="estudiante_correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="trimestre_entrada" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="calificacions" Relationship="Self.FK__calificac__estud__44FF419A" FromRole="estudiante" ToRole="calificacion" />
-          <NavigationProperty Name="estudiante_historico" Relationship="Self.FK__estudiant__estud__32E0915F" FromRole="estudiante" ToRole="estudiante_historico" />
-          <NavigationProperty Name="trimestre" Relationship="Self.FK__estudiant__trime__300424B4" FromRole="estudiante" ToRole="trimestre" />
+          <NavigationProperty Name="calificacion" Relationship="Self.FK__calificac__estud__440B1D61" FromRole="estudiante" ToRole="calificacion" />
+          <NavigationProperty Name="estudiante_historico" Relationship="Self.FK__estudiant__estud__31EC6D26" FromRole="estudiante" ToRole="estudiante_historico" />
+          <NavigationProperty Name="trimestre" Relationship="Self.FK__estudiant__trime__2F10007B" FromRole="estudiante" ToRole="trimestre" />
         </EntityType>
         <EntityType Name="estudiante_historico">
           <Key>
@@ -546,9 +570,9 @@
           <Property Name="trimestre_entrada" Type="Int32" Nullable="false" />
           <Property Name="trimestres_cursados" Type="Int32" Nullable="false" />
           <Property Name="isActive" Type="Int16" Nullable="false" />
-          <NavigationProperty Name="carrera" Relationship="Self.FK__estudiant__carre__33D4B598" FromRole="estudiante_historico" ToRole="carrera" />
-          <NavigationProperty Name="estudiante" Relationship="Self.FK__estudiant__estud__32E0915F" FromRole="estudiante_historico" ToRole="estudiante" />
-          <NavigationProperty Name="trimestre" Relationship="Self.FK__estudiant__trime__34C8D9D1" FromRole="estudiante_historico" ToRole="trimestre" />
+          <NavigationProperty Name="carrera" Relationship="Self.FK__estudiant__carre__32E0915F" FromRole="estudiante_historico" ToRole="carrera" />
+          <NavigationProperty Name="estudiante" Relationship="Self.FK__estudiant__estud__31EC6D26" FromRole="estudiante_historico" ToRole="estudiante" />
+          <NavigationProperty Name="trimestre" Relationship="Self.FK__estudiant__trime__33D4B598" FromRole="estudiante_historico" ToRole="trimestre" />
         </EntityType>
         <EntityType Name="materia">
           <Key>
@@ -570,8 +594,8 @@
           </Key>
           <Property Name="tipo_aula_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="tipo_aula_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="aulas" Relationship="Self.FK__aula__tipo_aula___3A81B327" FromRole="tipo_aula" ToRole="aula" />
-          <NavigationProperty Name="materias" Relationship="Self.FK__materia__tipo_au__36B12243" FromRole="tipo_aula" ToRole="materia" />
+          <NavigationProperty Name="aula" Relationship="Self.FK__aula__tipo_aula___3A81B327" FromRole="tipo_aula" ToRole="aula" />
+          <NavigationProperty Name="materia" Relationship="Self.FK__materia__tipo_au__36B12243" FromRole="tipo_aula" ToRole="materia" />
         </EntityType>
         <EntityType Name="trimestre">
           <Key>
@@ -581,9 +605,9 @@
           <Property Name="trimestre_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="trimestre_fechIN" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="trimestre_fechOUT" Type="DateTime" Nullable="false" Precision="0" />
-          <NavigationProperty Name="estudiantes" Relationship="Self.FK__estudiant__trime__300424B4" FromRole="trimestre" ToRole="estudiante" />
-          <NavigationProperty Name="estudiante_historico" Relationship="Self.FK__estudiant__trime__34C8D9D1" FromRole="trimestre" ToRole="estudiante_historico" />
-          <NavigationProperty Name="trimestre_materia" Relationship="Self.FK__trimestre__trime__3F466844" FromRole="trimestre" ToRole="trimestre_materia" />
+          <NavigationProperty Name="estudiante" Relationship="Self.FK__estudiant__trime__2F10007B" FromRole="trimestre" ToRole="estudiante" />
+          <NavigationProperty Name="estudiante_historico" Relationship="Self.FK__estudiant__trime__33D4B598" FromRole="trimestre" ToRole="estudiante_historico" />
+          <NavigationProperty Name="trimestre_materia" Relationship="Self.FK__trimestre__trime__3E52440B" FromRole="trimestre" ToRole="trimestre_materia" />
         </EntityType>
         <EntityType Name="trimestre_materia">
           <Key>
@@ -602,7 +626,7 @@
           <Property Name="triMat_viernes" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="triMat_sabado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="aula" Relationship="Self.FK__trimestre__aula___412EB0B6" FromRole="trimestre_materia" ToRole="aula" />
-          <NavigationProperty Name="calificacions" Relationship="Self.FK__calificac__triMa__44FF419A" FromRole="trimestre_materia" ToRole="calificacion" />
+          <NavigationProperty Name="calificacion" Relationship="Self.FK__calificac__triMa__44FF419A" FromRole="trimestre_materia" ToRole="calificacion" />
           <NavigationProperty Name="docente" Relationship="Self.FK__trimestre__docen__403A8C7D" FromRole="trimestre_materia" ToRole="docente" />
           <NavigationProperty Name="materia" Relationship="Self.FK__trimestre__mater__3F466844" FromRole="trimestre_materia" ToRole="materia" />
           <NavigationProperty Name="trimestre" Relationship="Self.FK__trimestre__trime__3E52440B" FromRole="trimestre_materia" ToRole="trimestre" />
@@ -616,7 +640,7 @@
           <Property Name="user_password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="acc_type" Type="Int32" Nullable="false" />
         </EntityType>
-        <Association Name="FK__area__docente_id__4AB81AF0">
+        <Association Name="FK__area__docente_id__49C3F6B7">
           <End Role="docente" Type="Self.docente" Multiplicity="0..1" />
           <End Role="area" Type="Self.area" Multiplicity="*" />
           <ReferentialConstraint>
@@ -700,7 +724,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__carrera__docente__4BAC3F29">
+        <Association Name="FK__carrera__docente__4AB81AF0">
           <End Role="docente" Type="Self.docente" Multiplicity="0..1" />
           <End Role="carrera" Type="Self.carrera" Multiplicity="*" />
           <ReferentialConstraint>
@@ -820,100 +844,88 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="AseguramientoDbEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="administradors" EntityType="Self.administrador" />
-          <EntitySet Name="areas" EntityType="Self.area" />
-          <EntitySet Name="aulas" EntityType="Self.aula" />
-          <EntitySet Name="calificacions" EntityType="Self.calificacion" />
-          <EntitySet Name="carreras" EntityType="Self.carrera" />
-          <EntitySet Name="docentes" EntityType="Self.docente" />
-          <EntitySet Name="estudiantes" EntityType="Self.estudiante" />
+        <EntityContainer Name="Aseguramiento_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="administrador" EntityType="Self.administrador" />
+          <EntitySet Name="area" EntityType="Self.area" />
+          <EntitySet Name="aula" EntityType="Self.aula" />
+          <EntitySet Name="calificacion" EntityType="Self.calificacion" />
+          <EntitySet Name="carrera" EntityType="Self.carrera" />
+          <EntitySet Name="docente" EntityType="Self.docente" />
+          <EntitySet Name="estudiante" EntityType="Self.estudiante" />
           <EntitySet Name="estudiante_historico" EntityType="Self.estudiante_historico" />
-          <EntitySet Name="materias" EntityType="Self.materia" />
+          <EntitySet Name="materia" EntityType="Self.materia" />
           <EntitySet Name="tipo_aula" EntityType="Self.tipo_aula" />
-          <EntitySet Name="trimestres" EntityType="Self.trimestre" />
+          <EntitySet Name="trimestre" EntityType="Self.trimestre" />
           <EntitySet Name="trimestre_materia" EntityType="Self.trimestre_materia" />
           <EntitySet Name="user_login" EntityType="Self.user_login" />
-          <AssociationSet Name="FK__area__docente_id__4AB81AF0" Association="Self.FK__area__docente_id__4AB81AF0">
-            <End Role="docente" EntitySet="docentes" />
-            <End Role="area" EntitySet="areas" />
+          <AssociationSet Name="FK__area__docente_id__49C3F6B7" Association="Self.FK__area__docente_id__49C3F6B7">
+            <End Role="docente" EntitySet="docente" />
+            <End Role="area" EntitySet="area" />
           </AssociationSet>
           <AssociationSet Name="FK__carrera__area_id__29572725" Association="Self.FK__carrera__area_id__29572725">
-            <End Role="area" EntitySet="areas" />
-            <End Role="carrera" EntitySet="carreras" />
+            <End Role="area" EntitySet="area" />
+            <End Role="carrera" EntitySet="carrera" />
           </AssociationSet>
           <AssociationSet Name="FK__docente__area_id__2C3393D0" Association="Self.FK__docente__area_id__2C3393D0">
-            <End Role="area" EntitySet="areas" />
-            <End Role="docente" EntitySet="docentes" />
+            <End Role="area" EntitySet="area" />
+            <End Role="docente" EntitySet="docente" />
           </AssociationSet>
           <AssociationSet Name="FK__aula__tipo_aula___3A81B327" Association="Self.FK__aula__tipo_aula___3A81B327">
             <End Role="tipo_aula" EntitySet="tipo_aula" />
-            <End Role="aula" EntitySet="aulas" />
+            <End Role="aula" EntitySet="aula" />
           </AssociationSet>
           <AssociationSet Name="FK__trimestre__aula___412EB0B6" Association="Self.FK__trimestre__aula___412EB0B6">
-            <End Role="aula" EntitySet="aulas" />
+            <End Role="aula" EntitySet="aula" />
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
           </AssociationSet>
           <AssociationSet Name="FK__calificac__estud__440B1D61" Association="Self.FK__calificac__estud__440B1D61">
-            <End Role="estudiante" EntitySet="estudiantes" />
-            <End Role="calificacion" EntitySet="calificacions" />
+            <End Role="estudiante" EntitySet="estudiante" />
+            <End Role="calificacion" EntitySet="calificacion" />
           </AssociationSet>
           <AssociationSet Name="FK__calificac__triMa__44FF419A" Association="Self.FK__calificac__triMa__44FF419A">
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
-            <End Role="calificacion" EntitySet="calificacions" />
+            <End Role="calificacion" EntitySet="calificacion" />
           </AssociationSet>
-          <AssociationSet Name="FK__carrera__docente__4BAC3F29" Association="Self.FK__carrera__docente__4BAC3F29">
-            <End Role="docente" EntitySet="docentes" />
-            <End Role="carrera" EntitySet="carreras" />
+          <AssociationSet Name="FK__carrera__docente__4AB81AF0" Association="Self.FK__carrera__docente__4AB81AF0">
+            <End Role="docente" EntitySet="docente" />
+            <End Role="carrera" EntitySet="carrera" />
           </AssociationSet>
           <AssociationSet Name="FK__estudiant__carre__32E0915F" Association="Self.FK__estudiant__carre__32E0915F">
-            <End Role="carrera" EntitySet="carreras" />
+            <End Role="carrera" EntitySet="carrera" />
             <End Role="estudiante_historico" EntitySet="estudiante_historico" />
           </AssociationSet>
           <AssociationSet Name="FK__materia__carrera__37A5467C" Association="Self.FK__materia__carrera__37A5467C">
-            <End Role="carrera" EntitySet="carreras" />
-            <End Role="materia" EntitySet="materias" />
+            <End Role="carrera" EntitySet="carrera" />
+            <End Role="materia" EntitySet="materia" />
           </AssociationSet>
           <AssociationSet Name="FK__trimestre__docen__403A8C7D" Association="Self.FK__trimestre__docen__403A8C7D">
-            <End Role="docente" EntitySet="docentes" />
+            <End Role="docente" EntitySet="docente" />
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
           </AssociationSet>
           <AssociationSet Name="FK__estudiant__estud__31EC6D26" Association="Self.FK__estudiant__estud__31EC6D26">
-            <End Role="estudiante" EntitySet="estudiantes" />
+            <End Role="estudiante" EntitySet="estudiante" />
             <End Role="estudiante_historico" EntitySet="estudiante_historico" />
           </AssociationSet>
           <AssociationSet Name="FK__estudiant__trime__2F10007B" Association="Self.FK__estudiant__trime__2F10007B">
-            <End Role="trimestre" EntitySet="trimestres" />
-            <End Role="estudiante" EntitySet="estudiantes" />
+            <End Role="trimestre" EntitySet="trimestre" />
+            <End Role="estudiante" EntitySet="estudiante" />
           </AssociationSet>
           <AssociationSet Name="FK__estudiant__trime__33D4B598" Association="Self.FK__estudiant__trime__33D4B598">
-            <End Role="trimestre" EntitySet="trimestres" />
+            <End Role="trimestre" EntitySet="trimestre" />
             <End Role="estudiante_historico" EntitySet="estudiante_historico" />
           </AssociationSet>
           <AssociationSet Name="FK__materia__tipo_au__36B12243" Association="Self.FK__materia__tipo_au__36B12243">
             <End Role="tipo_aula" EntitySet="tipo_aula" />
-            <End Role="materia" EntitySet="materias" />
+            <End Role="materia" EntitySet="materia" />
           </AssociationSet>
           <AssociationSet Name="FK__trimestre__mater__3F466844" Association="Self.FK__trimestre__mater__3F466844">
-            <End Role="materia" EntitySet="materias" />
+            <End Role="materia" EntitySet="materia" />
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
           </AssociationSet>
           <AssociationSet Name="FK__trimestre__trime__3E52440B" Association="Self.FK__trimestre__trime__3E52440B">
-            <End Role="trimestre" EntitySet="trimestres" />
+            <End Role="trimestre" EntitySet="trimestre" />
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
           </AssociationSet>
-          <FunctionImport Name="show_students" ReturnType="Collection(Aseguramiento_dbModel.show_students_Result)" />
-          <FunctionImport Name="show_carreras" ReturnType="Collection(Aseguramiento_dbModel.show_carreras_Result)" />
-          <FunctionImport Name="insert_student">
-            <Parameter Name="estudiante_cedula" Mode="In" Type="String" />
-            <Parameter Name="estudiante_nombres" Mode="In" Type="String" />
-            <Parameter Name="estudiante_apellidoP" Mode="In" Type="String" />
-            <Parameter Name="estudiante_apellidoM" Mode="In" Type="String" />
-            <Parameter Name="estudiante_telefono" Mode="In" Type="String" />
-            <Parameter Name="estudiante_correo" Mode="In" Type="String" />
-            <Parameter Name="carrera_id" Mode="In" Type="Int32" />
-            <Parameter Name="user_password" Mode="In" Type="String" />
-          </FunctionImport>
           <FunctionImport Name="insert_docente">
             <Parameter Name="docente_cedula" Mode="In" Type="String" />
             <Parameter Name="docente_nombres" Mode="In" Type="String" />
@@ -924,18 +936,20 @@
             <Parameter Name="area_id" Mode="In" Type="Int32" />
             <Parameter Name="user_password" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="insert_student">
+            <Parameter Name="estudiante_cedula" Mode="In" Type="String" />
+            <Parameter Name="estudiante_nombres" Mode="In" Type="String" />
+            <Parameter Name="estudiante_apellidoP" Mode="In" Type="String" />
+            <Parameter Name="estudiante_apellidoM" Mode="In" Type="String" />
+            <Parameter Name="estudiante_telefono" Mode="In" Type="String" />
+            <Parameter Name="estudiante_correo" Mode="In" Type="String" />
+            <Parameter Name="carrera_id" Mode="In" Type="Int32" />
+            <Parameter Name="user_password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="show_carreras" ReturnType="Collection(Aseguramiento_dbModel.show_carreras_Result)" />
           <FunctionImport Name="show_docente" ReturnType="Collection(Aseguramiento_dbModel.show_docente_Result)" />
+          <FunctionImport Name="show_students" ReturnType="Collection(Aseguramiento_dbModel.show_students_Result)" />
         </EntityContainer>
-        <ComplexType Name="show_students_Result">
-          <Property Type="Int32" Name="ID" Nullable="false" />
-          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="Primer_apellido" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Segundo_apellido" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Carrera" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="Correo" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
-        </ComplexType>
         <ComplexType Name="show_carreras_Result">
           <Property Type="Int32" Name="carrera_id" Nullable="false" />
           <Property Type="String" Name="carrera_nombre" Nullable="false" MaxLength="100" />
@@ -950,14 +964,24 @@
           <Property Type="String" Name="Correo" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
         </ComplexType>
+        <ComplexType Name="show_students_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Primer_apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Segundo_apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Carrera" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Correo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="AseguramientoDbModelStoreContainer" CdmEntityContainer="AseguramientoDbEntities">
-          <EntitySetMapping Name="administradors">
-            <EntityTypeMapping TypeName="AseguramientoDbModel.administrador">
+        <EntityContainerMapping StorageEntityContainer="Aseguramiento_dbModelStoreContainer" CdmEntityContainer="Aseguramiento_dbEntities">
+          <EntitySetMapping Name="administrador">
+            <EntityTypeMapping TypeName="Aseguramiento_dbModel.administrador">
               <MappingFragment StoreEntitySet="administrador">
                 <ScalarProperty Name="administrador_id" ColumnName="administrador_id" />
                 <ScalarProperty Name="administrador_cedula" ColumnName="administrador_cedula" />
@@ -969,8 +993,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="areas">
-            <EntityTypeMapping TypeName="AseguramientoDbModel.area">
+          <EntitySetMapping Name="area">
+            <EntityTypeMapping TypeName="Aseguramiento_dbModel.area">
               <MappingFragment StoreEntitySet="area">
                 <ScalarProperty Name="area_id" ColumnName="area_id" />
                 <ScalarProperty Name="area_nombre" ColumnName="area_nombre" />
@@ -978,8 +1002,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="aulas">
-            <EntityTypeMapping TypeName="AseguramientoDbModel.aula">
+          <EntitySetMapping Name="aula">
+            <EntityTypeMapping TypeName="Aseguramiento_dbModel.aula">
               <MappingFragment StoreEntitySet="aula">
                 <ScalarProperty Name="aula_id" ColumnName="aula_id" />
                 <ScalarProperty Name="aula_codigo" ColumnName="aula_codigo" />
@@ -987,8 +1011,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="calificacions">
-            <EntityTypeMapping TypeName="AseguramientoDbModel.calificacion">
+          <EntitySetMapping Name="calificacion">
+            <EntityTypeMapping TypeName="Aseguramiento_dbModel.calificacion">
               <MappingFragment StoreEntitySet="calificacion">
                 <ScalarProperty Name="estudiante_id" ColumnName="estudiante_id" />
                 <ScalarProperty Name="triMat_id" ColumnName="triMat_id" />
@@ -1002,8 +1026,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="carreras">
-            <EntityTypeMapping TypeName="AseguramientoDbModel.carrera">
+          <EntitySetMapping Name="carrera">
+            <EntityTypeMapping TypeName="Aseguramiento_dbModel.carrera">
               <MappingFragment StoreEntitySet="carrera">
                 <ScalarProperty Name="carrera_id" ColumnName="carrera_id" />
                 <ScalarProperty Name="carrera_nombre" ColumnName="carrera_nombre" />
@@ -1013,8 +1037,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="docentes">
-            <EntityTypeMapping TypeName="AseguramientoDbModel.docente">
+          <EntitySetMapping Name="docente">
+            <EntityTypeMapping TypeName="Aseguramiento_dbModel.docente">
               <MappingFragment StoreEntitySet="docente">
                 <ScalarProperty Name="docente_id" ColumnName="docente_id" />
                 <ScalarProperty Name="docente_cedula" ColumnName="docente_cedula" />
@@ -1027,8 +1051,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="estudiantes">
-            <EntityTypeMapping TypeName="AseguramientoDbModel.estudiante">
+          <EntitySetMapping Name="estudiante">
+            <EntityTypeMapping TypeName="Aseguramiento_dbModel.estudiante">
               <MappingFragment StoreEntitySet="estudiante">
                 <ScalarProperty Name="estudiante_id" ColumnName="estudiante_id" />
                 <ScalarProperty Name="estudiante_cedula" ColumnName="estudiante_cedula" />
@@ -1042,7 +1066,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="estudiante_historico">
-            <EntityTypeMapping TypeName="AseguramientoDbModel.estudiante_historico">
+            <EntityTypeMapping TypeName="Aseguramiento_dbModel.estudiante_historico">
               <MappingFragment StoreEntitySet="estudiante_historico">
                 <ScalarProperty Name="estudiante_id" ColumnName="estudiante_id" />
                 <ScalarProperty Name="carrera_id" ColumnName="carrera_id" />
@@ -1052,8 +1076,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="materias">
-            <EntityTypeMapping TypeName="AseguramientoDbModel.materia">
+          <EntitySetMapping Name="materia">
+            <EntityTypeMapping TypeName="Aseguramiento_dbModel.materia">
               <MappingFragment StoreEntitySet="materia">
                 <ScalarProperty Name="materia_id" ColumnName="materia_id" />
                 <ScalarProperty Name="materia_nombre" ColumnName="materia_nombre" />
@@ -1065,15 +1089,15 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tipo_aula">
-            <EntityTypeMapping TypeName="AseguramientoDbModel.tipo_aula">
+            <EntityTypeMapping TypeName="Aseguramiento_dbModel.tipo_aula">
               <MappingFragment StoreEntitySet="tipo_aula">
                 <ScalarProperty Name="tipo_aula_id" ColumnName="tipo_aula_id" />
                 <ScalarProperty Name="tipo_aula_nombre" ColumnName="tipo_aula_nombre" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="trimestres">
-            <EntityTypeMapping TypeName="AseguramientoDbModel.trimestre">
+          <EntitySetMapping Name="trimestre">
+            <EntityTypeMapping TypeName="Aseguramiento_dbModel.trimestre">
               <MappingFragment StoreEntitySet="trimestre">
                 <ScalarProperty Name="trimestre_id" ColumnName="trimestre_id" />
                 <ScalarProperty Name="trimestre_nombre" ColumnName="trimestre_nombre" />
@@ -1083,7 +1107,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="trimestre_materia">
-            <EntityTypeMapping TypeName="AseguramientoDbModel.trimestre_materia">
+            <EntityTypeMapping TypeName="Aseguramiento_dbModel.trimestre_materia">
               <MappingFragment StoreEntitySet="trimestre_materia">
                 <ScalarProperty Name="triMat_id" ColumnName="triMat_id" />
                 <ScalarProperty Name="trimestre_id" ColumnName="trimestre_id" />
@@ -1101,7 +1125,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="user_login">
-            <EntityTypeMapping TypeName="AseguramientoDbModel.user_login">
+            <EntityTypeMapping TypeName="Aseguramiento_dbModel.user_login">
               <MappingFragment StoreEntitySet="user_login">
                 <ScalarProperty Name="login_id" ColumnName="login_id" />
                 <ScalarProperty Name="user_id" ColumnName="user_id" />
@@ -1110,6 +1134,44 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="insert_docente" FunctionName="Aseguramiento_dbModel.Store.insert_docente" />
+          <FunctionImportMapping FunctionImportName="insert_student" FunctionName="Aseguramiento_dbModel.Store.insert_student" />
+          <FunctionImportMapping FunctionImportName="show_carreras" FunctionName="Aseguramiento_dbModel.Store.show_carreras">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Aseguramiento_dbModel.show_carreras_Result">
+                <ScalarProperty Name="carrera_id" ColumnName="carrera_id" />
+                <ScalarProperty Name="carrera_nombre" ColumnName="carrera_nombre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="show_docente" FunctionName="Aseguramiento_dbModel.Store.show_docente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Aseguramiento_dbModel.show_docente_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Primer_apellido" ColumnName="Primer apellido" />
+                <ScalarProperty Name="Segundo_apellido" ColumnName="Segundo apellido" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="show_students" FunctionName="Aseguramiento_dbModel.Store.show_students">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Aseguramiento_dbModel.show_students_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Primer_apellido" ColumnName="Primer apellido" />
+                <ScalarProperty Name="Segundo_apellido" ColumnName="Segundo apellido" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -1124,7 +1186,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

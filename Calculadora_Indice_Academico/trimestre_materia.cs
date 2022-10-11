@@ -17,7 +17,7 @@ namespace Calculadora_Indice_Academico
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public trimestre_materia()
         {
-            this.calificacions = new HashSet<calificacion>();
+            this.calificacion = new HashSet<calificacion>();
         }
     
         public int triMat_id { get; set; }
@@ -35,7 +35,7 @@ namespace Calculadora_Indice_Academico
     
         public virtual aula aula { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<calificacion> calificacions { get; set; }
+        public virtual ICollection<calificacion> calificacion { get; set; }
         public virtual docente docente { get; set; }
         public virtual materia materia { get; set; }
         public virtual trimestre trimestre { get; set; }

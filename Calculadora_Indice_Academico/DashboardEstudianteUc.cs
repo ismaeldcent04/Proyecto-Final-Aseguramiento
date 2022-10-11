@@ -14,7 +14,7 @@ namespace Calculadora_Indice_Academico
 {
     public partial class DashboardEstudianteUc : UserControl
     {
-        AseguramientoDbEntities Db = new AseguramientoDbEntities();
+       Aseguramiento_dbEntities Db = new Aseguramiento_dbEntities();
         public DashboardEstudianteUc()
         {
             InitializeComponent();

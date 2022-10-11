@@ -17,16 +17,16 @@ namespace Calculadora_Indice_Academico
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tipo_aula()
         {
-            this.aulas = new HashSet<aula>();
-            this.materias = new HashSet<materia>();
+            this.aula = new HashSet<aula>();
+            this.materia = new HashSet<materia>();
         }
     
         public int tipo_aula_id { get; set; }
         public string tipo_aula_nombre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<aula> aulas { get; set; }
+        public virtual ICollection<aula> aula { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<materia> materias { get; set; }
+        public virtual ICollection<materia> materia { get; set; }
     }
 }
