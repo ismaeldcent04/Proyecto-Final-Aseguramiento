@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
+using Common.Cache;
 
 namespace Calculadora_Indice_Academico
 {
@@ -22,7 +23,7 @@ namespace Calculadora_Indice_Academico
             var fullEntries = (from e in Db.estudiantes
                                join eh in Db.estudiante_historico on e.estudiante_id equals eh.estudiante_id
                                join c in Db.carreras on eh.carrera_id equals c.carrera_id
-                               where e.estudiante_id == 100000
+                               where e.estudiante_id == UserLoginCache.idUser
                                select new
                                {
                                    ID = e.estudiante_id, 
@@ -34,23 +35,6 @@ namespace Calculadora_Indice_Academico
                                    TrimestreMax = c.trimestres_max,
                                    TrimestreCursado = eh.trimestres_cursados
                                }).Take(1).ToList();
-
-            var z = (from es in Db.estudiantes
-                               from ad in Db.administradors
-                               join u in Db.user_login on es.estudiante_id equals u.user_id
-                               join v in Db.user_login on ad.administrador_id equals v.user_id
-                               where es.estudiante_id == 123 && ad.administrador_id == 123
-                               select new
-                               {
-                                   ID = es.estudiante_id,
-                                   Clave = u.user_password,
-                                   type = u.acc_type,
-                                   IDad = v.user_id,
-                                   Clavead = v.user_password,
-                                   typead = v.acc_type
-                               }).Take(100).ToList();
-
-            dataAsignatura.DataSource = z;
 
             foreach (var a in fullEntries)
             {

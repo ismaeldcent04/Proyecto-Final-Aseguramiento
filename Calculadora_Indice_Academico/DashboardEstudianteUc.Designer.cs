@@ -660,7 +660,6 @@
             this.Controls.Add(this.pnlAprobadas);
             this.Name = "DashboardEstudianteUc";
             this.Size = new System.Drawing.Size(1100, 850);
-            this.Load += new System.EventHandler(this.DashboardEstudianteUc_Load);
             this.pnlCreditos.ResumeLayout(false);
             this.pnlHorario.ResumeLayout(false);
             this.pnlHorario.PerformLayout();

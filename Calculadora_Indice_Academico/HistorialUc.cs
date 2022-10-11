@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Cache;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,7 +23,7 @@ namespace Calculadora_Indice_Academico
             var fullEntries = (from e in Db.estudiantes
                                join eh in Db.estudiante_historico on e.estudiante_id equals eh.estudiante_id
                                join c in Db.carreras on eh.carrera_id equals c.carrera_id
-                               where e.estudiante_id == 100000
+                               where e.estudiante_id == UserLoginCache.idUser
                                select new
                                {
                                    ID = e.estudiante_id,

@@ -99,6 +99,7 @@
             this.txt_contraseñaUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_contraseñaUsuario.Location = new System.Drawing.Point(709, 313);
             this.txt_contraseñaUsuario.Name = "txt_contraseñaUsuario";
+            this.txt_contraseñaUsuario.PasswordChar = '*';
             this.txt_contraseñaUsuario.Size = new System.Drawing.Size(326, 13);
             this.txt_contraseñaUsuario.TabIndex = 9;
             // 

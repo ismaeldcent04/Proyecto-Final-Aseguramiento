@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Common.Cache;
 
 namespace Calculadora_Indice_Academico
 {
@@ -41,7 +42,7 @@ namespace Calculadora_Indice_Academico
             var fullEntries = (from e in Db.estudiantes
                                join eh in Db.estudiante_historico on e.estudiante_id equals eh.estudiante_id
                                join c in Db.carreras on eh.carrera_id equals c.carrera_id
-                               where e.estudiante_id == 100000
+                               where e.estudiante_id == UserLoginCache.idUser
                                select new
                                {
                                    Nombre = e.estudiante_nombres,

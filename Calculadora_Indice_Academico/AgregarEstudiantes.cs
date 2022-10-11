@@ -13,7 +13,7 @@ namespace Calculadora_Indice_Academico
 {
     public partial class AgregarEstudiantes : UserControl
     {
-        Aseguramiento_dbEntities db  = new Aseguramiento_dbEntities();
+        AseguramientoDbEntities db  = new AseguramientoDbEntities();
         public AgregarEstudiantes()
         {
             InitializeComponent();
