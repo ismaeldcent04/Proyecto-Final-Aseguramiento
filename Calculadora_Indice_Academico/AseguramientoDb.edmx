@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="AseguramientoDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="AseguramientoDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="administrador">
           <Key>
             <PropertyRef Name="administrador_id" />
@@ -384,6 +384,7 @@
         </Function>
         <Function Name="show_carreras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="show_docente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="show_seleccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="show_students" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="AseguramientoDbModelStoreContainer">
           <EntitySet Name="administrador" EntityType="Self.administrador" Schema="dbo" store:Type="Tables" />
@@ -469,8 +470,7 @@
             <End Role="trimestre_materia" EntitySet="trimestre_materia" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AseguramientoDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -971,6 +971,7 @@
           <FunctionImport Name="show_carreras" ReturnType="Collection(AseguramientoDbModel.show_carreras_Result)" />
           <FunctionImport Name="show_docente" ReturnType="Collection(AseguramientoDbModel.show_docente_Result)" />
           <FunctionImport Name="show_students" ReturnType="Collection(AseguramientoDbModel.show_students_Result)" />
+          <FunctionImport Name="show_seleccion" ReturnType="Collection(AseguramientoDbModel.show_seleccion_Result)" />
         </EntityContainer>
         <ComplexType Name="show_carreras_Result">
           <Property Type="Int32" Name="carrera_id" Nullable="false" />
@@ -995,6 +996,20 @@
           <Property Type="String" Name="Carrera" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="Correo" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="show_seleccion_Result">
+          <Property Type="Int32" Name="Seccion" Nullable="false" />
+          <Property Type="String" Name="Codigo" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Asignatura" Nullable="false" MaxLength="150" />
+          <Property Type="Int32" Name="Cr_" Nullable="false" />
+          <Property Type="String" Name="Aula" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Lun" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Ma" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Mi" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Ju" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Vi" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Sab" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Profesor" Nullable="false" MaxLength="100" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1202,6 +1217,24 @@
                 <ScalarProperty Name="Carrera" ColumnName="Carrera" />
                 <ScalarProperty Name="Correo" ColumnName="Correo" />
                 <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="show_seleccion" FunctionName="AseguramientoDbModel.Store.show_seleccion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AseguramientoDbModel.show_seleccion_Result">
+                <ScalarProperty Name="Seccion" ColumnName="Seccion" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Asignatura" ColumnName="Asignatura" />
+                <ScalarProperty Name="Cr_" ColumnName="Cr." />
+                <ScalarProperty Name="Aula" ColumnName="Aula" />
+                <ScalarProperty Name="Lun" ColumnName="Lun" />
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="Mi" ColumnName="Mi" />
+                <ScalarProperty Name="Ju" ColumnName="Ju" />
+                <ScalarProperty Name="Vi" ColumnName="Vi" />
+                <ScalarProperty Name="Sab" ColumnName="Sab" />
+                <ScalarProperty Name="Profesor" ColumnName="Profesor" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

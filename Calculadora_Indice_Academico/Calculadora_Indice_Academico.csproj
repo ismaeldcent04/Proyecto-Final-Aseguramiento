@@ -214,6 +214,9 @@
     <Compile Include="show_docente_Result.cs">
       <DependentUpon>AseguramientoDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="show_seleccion_Result.cs">
+      <DependentUpon>AseguramientoDb.tt</DependentUpon>
+    </Compile>
     <Compile Include="show_students_Result.cs">
       <DependentUpon>AseguramientoDb.tt</DependentUpon>
     </Compile>

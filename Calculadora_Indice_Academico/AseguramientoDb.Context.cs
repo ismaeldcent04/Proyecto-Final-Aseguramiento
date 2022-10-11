@@ -130,5 +130,10 @@ namespace Calculadora_Indice_Academico
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<show_students_Result>("show_students");
         }
+    
+        public virtual ObjectResult<show_seleccion_Result> show_seleccion()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<show_seleccion_Result>("show_seleccion");
+        }
     }
 }
