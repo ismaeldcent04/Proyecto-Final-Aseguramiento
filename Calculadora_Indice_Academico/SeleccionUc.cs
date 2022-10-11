@@ -70,5 +70,10 @@ namespace Calculadora_Indice_Academico
         {
             showMenu(pnlNG);
         }
+
+        private void SeleccionUc_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

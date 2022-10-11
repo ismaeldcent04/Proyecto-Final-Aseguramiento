@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Cache;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace Calculadora_Indice_Academico
 {
     public partial class MedioTerminoUc : UserControl
     {
-        Aseguramiento_dbEntities Db = new Aseguramiento_dbEntities();
+        Aseguramiento_dbEntities1 Db = new Aseguramiento_dbEntities1();
         public MedioTerminoUc()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace Calculadora_Indice_Academico
             var fullEntries = (from e in Db.estudiantes
                                join eh in Db.estudiante_historico on e.estudiante_id equals eh.estudiante_id
                                join c in Db.carreras on eh.carrera_id equals c.carrera_id
-                               where e.estudiante_id == 100000
+                               where e.estudiante_id == userloginCache.id_user
                                select new
                                {
                                    ID = e.estudiante_id,
@@ -32,6 +33,11 @@ namespace Calculadora_Indice_Academico
                 lblID.Text = a.ID.ToString();
                 lblPrograma.Text = a.Carrera;
             }
+        }
+
+        private void MedioTerminoUc_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Common.Cache;
 
 namespace Calculadora_Indice_Academico
 {
@@ -24,7 +25,7 @@ namespace Calculadora_Indice_Academico
           int nWidthEllipse, // height of ellipse
           int nHeightEllipse // width of ellipse
       );
-        Aseguramiento_dbEntities Db = new Aseguramiento_dbEntities();
+        Aseguramiento_dbEntities1 Db = new Aseguramiento_dbEntities1();
         public Login()
         {
             InitializeComponent();
@@ -61,53 +62,64 @@ namespace Calculadora_Indice_Academico
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            int ID = int.Parse(txt_nombreUsuario.Text);
-            string contrasena = (txt_contraseñaUsuario.Text);
-
-            var fullEntries = (from es in Db.estudiantes
-                               from ad in Db.administradors
-                               join u in Db.user_login on es.estudiante_id equals u.user_id
-                               join v in Db.user_login on ad.administrador_id equals v.user_id
-                               where es.estudiante_id == ID || ad.administrador_id == ID
-                               select new
-                               {
-                                   ID = es.estudiante_id,
-                                   Clave = u.user_password,
-                                   type = u.acc_type,
-                                   IDad = v.user_id,
-                                   Clavead = v.user_password,
-                                   typead = v.acc_type
-                               }).Take(1).ToList();
-            if(fullEntries.Count > 0)
+            if (txt_nombreUsuario.Text == "" || txt_contraseñaUsuario.Text == "")
             {
-                foreach (var a in fullEntries)
-                {
-                    if (a.ID == ID && a.Clave == contrasena && a.type == 3)
-                    {
-                        DashboardEstudiante dashboardEstudiante = new DashboardEstudiante();
-                        dashboardEstudiante.Show();
-                        this.Hide();
-                    }
-                    else if (a.ID == ID && a.Clave == contrasena && a.type == 2)
-                    {
-
-                    }
-                    else if (a.IDad == ID && a.Clavead == contrasena && a.typead == 1)
-                    {
-                        Menu_Administrador menu_Administrador = new Menu_Administrador();
-                        menu_Administrador.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Credenciales incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
+                MessageBox.Show("No se permiten campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("No existe la cuenta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                int ID = int.Parse(txt_nombreUsuario.Text);
+                string contrasena = (txt_contraseñaUsuario.Text);
+
+                var fullEntries = (from es in Db.estudiantes
+                                   from ad in Db.administradors
+                                   join u in Db.user_login on es.estudiante_id equals u.user_id
+                                   join v in Db.user_login on ad.administrador_id equals v.user_id
+                                   where es.estudiante_id == ID || ad.administrador_id == ID
+                                   select new
+                                   {
+                                       ID = es.estudiante_id,
+                                       Clave = u.user_password,
+                                       type = u.acc_type,
+                                       IDad = v.user_id,
+                                       Clavead = v.user_password,
+                                       typead = v.acc_type
+                                   }).Take(1).ToList();
+                if (fullEntries.Count > 0)
+                {
+                    foreach (var a in fullEntries)
+                    {
+                        if (a.ID == ID && a.Clave == contrasena && a.type == 3)
+                        {
+                            userloginCache.id_user = a.ID;
+                            DashboardEstudiante dashboardEstudiante = new DashboardEstudiante();
+                            dashboardEstudiante.Show();
+                            this.Hide();
+                        }
+                        else if (a.ID == ID && a.Clave == contrasena && a.type == 2)
+                        {
+
+                        }
+                        else if (a.IDad == ID && a.Clavead == contrasena && a.typead == 1)
+                        {
+                            userloginCache.id_user = a.IDad;
+                            Menu_Administrador menu_Administrador = new Menu_Administrador();
+                            menu_Administrador.Show();
+                            this.Hide();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Credenciales incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No existe la cuenta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+         
 
         }
     }

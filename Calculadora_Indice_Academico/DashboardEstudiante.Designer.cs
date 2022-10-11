@@ -380,7 +380,7 @@
             this.dashboardEstudianteUc.Name = "dashboardEstudianteUc";
             this.dashboardEstudianteUc.Size = new System.Drawing.Size(1100, 850);
             this.dashboardEstudianteUc.TabIndex = 21;
-           
+     
             // 
             // seleccionUc
             // 

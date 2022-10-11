@@ -1106,7 +1106,8 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Name = "SeleccionUc";
-            this.Size = new System.Drawing.Size(1100, 850);
+            this.Size = new System.Drawing.Size(1083, 850);
+            this.Load += new System.EventHandler(this.SeleccionUc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlSelDisp.ResumeLayout(false);
             this.pnlNG.ResumeLayout(false);

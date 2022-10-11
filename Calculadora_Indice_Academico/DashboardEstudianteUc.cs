@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Cache;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace Calculadora_Indice_Academico
 {
     public partial class DashboardEstudianteUc : UserControl
     {
-       Aseguramiento_dbEntities Db = new Aseguramiento_dbEntities();
+       Aseguramiento_dbEntities1 Db = new Aseguramiento_dbEntities1();
         public DashboardEstudianteUc()
         {
             InitializeComponent();
@@ -22,8 +23,8 @@ namespace Calculadora_Indice_Academico
             var fullEntries = (from e in Db.estudiantes
                                join eh in Db.estudiante_historico on e.estudiante_id equals eh.estudiante_id
                                join c in Db.carreras on eh.carrera_id equals c.carrera_id
-                               where e.estudiante_id == 100000
-                               select new
+                               where e.estudiante_id == userloginCache.id_user
+            select new
                                {
                                    ID = e.estudiante_id, 
                                    Correo = e.estudiante_correo,
@@ -35,22 +36,7 @@ namespace Calculadora_Indice_Academico
                                    TrimestreCursado = eh.trimestres_cursados
                                }).Take(1).ToList();
 
-            var z = (from es in Db.estudiantes
-                               from ad in Db.administradors
-                               join u in Db.user_login on es.estudiante_id equals u.user_id
-                               join v in Db.user_login on ad.administrador_id equals v.user_id
-                               where es.estudiante_id == 123 && ad.administrador_id == 123
-                               select new
-                               {
-                                   ID = es.estudiante_id,
-                                   Clave = u.user_password,
-                                   type = u.acc_type,
-                                   IDad = v.user_id,
-                                   Clavead = v.user_password,
-                                   typead = v.acc_type
-                               }).Take(100).ToList();
-
-            dataAsignatura.DataSource = z;
+          
 
             foreach (var a in fullEntries)
             {
@@ -65,5 +51,10 @@ namespace Calculadora_Indice_Academico
                 lblTriCur2.Text = "Trimestres cursado de " + a.TrimestreMax.ToString();
             }
        }
+
+        private void DashboardEstudianteUc_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -382,6 +382,7 @@
             this.Controls.Add(this.label3);
             this.Name = "MedioTerminoUc";
             this.Size = new System.Drawing.Size(1100, 850);
+            this.Load += new System.EventHandler(this.MedioTerminoUc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
