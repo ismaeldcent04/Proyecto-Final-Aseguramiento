@@ -13,13 +13,17 @@ namespace Calculadora_Indice_Academico
 {
     public partial class DashboardEstudianteUc : UserControl
     {
-        aseguramiento_grupo1Entities1 Db = new aseguramiento_grupo1Entities1();
-        public DashboardEstudianteUc()
+        private void DashboardEstudianteUc_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
-            lblID.Text = Db.estudiantes.Where(u => u.estudiante_id == 2).Select(u => u.estudiante_id).SingleOrDefault().ToString();
-            lblCorreo.Text = Db.estudiantes.Where(u => u.estudiante_id == 2).Select(u => u.estudiante_correo).SingleOrDefault().ToString();
-            lblTel.Text = Db.estudiantes.Where(u => u.estudiante_id == 2).Select(u => u.estudiante_correo).SingleOrDefault().ToString();
+
         }
+        //aseguramiento_grupo1Entities1 Db = new aseguramiento_grupo1Entities1();
+        //public DashboardEstudianteUc()
+        //{
+        //    InitializeComponent();
+        //    lblID.Text = Db.estudiantes.Where(u => u.estudiante_id == 2).Select(u => u.estudiante_id).SingleOrDefault().ToString();
+        //    lblCorreo.Text = Db.estudiantes.Where(u => u.estudiante_id == 2).Select(u => u.estudiante_correo).SingleOrDefault().ToString();
+        //    lblTel.Text = Db.estudiantes.Where(u => u.estudiante_id == 2).Select(u => u.estudiante_correo).SingleOrDefault().ToString();
+        //}
     }
 }

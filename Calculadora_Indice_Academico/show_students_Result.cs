@@ -10,18 +10,16 @@
 namespace Calculadora_Indice_Academico
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class estudianteHistorico
+    public partial class show_students_Result
     {
-        public int estudiante_id { get; set; }
-        public int carrera_id { get; set; }
-        public int trimestre_entrada { get; set; }
-        public int trimestres_cursados { get; set; }
-        public short isActive { get; set; }
-    
-        public virtual carrera carrera { get; set; }
-        public virtual estudiante estudiante { get; set; }
-        public virtual trimestre trimestre { get; set; }
+        public int ID { get; set; }
+        public string Nombre { get; set; }
+        public string Primer_apellido { get; set; }
+        public string Segundo_apellido { get; set; }
+        public string Telefono { get; set; }
+        public string Carrera { get; set; }
+        public string Correo { get; set; }
+        public string Cedula { get; set; }
     }
 }

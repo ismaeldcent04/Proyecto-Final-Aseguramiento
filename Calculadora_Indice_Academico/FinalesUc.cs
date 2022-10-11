@@ -16,5 +16,10 @@ namespace Calculadora_Indice_Academico
         {
             InitializeComponent();
         }
+
+        private void FinalesUc_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -163,5 +163,10 @@ namespace Calculadora_Indice_Academico
             btnNoSeleccionado(btnMedio);
             hideSubMenu();
         }
+
+        private void dashboardEstudianteUc_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

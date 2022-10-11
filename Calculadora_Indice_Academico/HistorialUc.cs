@@ -328,5 +328,10 @@ namespace Calculadora_Indice_Academico
                     break;
             }
         }
+
+        private void HistorialUc_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

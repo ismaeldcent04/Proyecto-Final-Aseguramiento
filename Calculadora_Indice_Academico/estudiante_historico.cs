@@ -12,12 +12,16 @@ namespace Calculadora_Indice_Academico
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagram
+    public partial class estudiante_historico
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int estudiante_id { get; set; }
+        public int carrera_id { get; set; }
+        public int trimestre_entrada { get; set; }
+        public int trimestres_cursados { get; set; }
+        public short isActive { get; set; }
+    
+        public virtual carrera carrera { get; set; }
+        public virtual estudiante estudiante { get; set; }
+        public virtual trimestre trimestre { get; set; }
     }
 }

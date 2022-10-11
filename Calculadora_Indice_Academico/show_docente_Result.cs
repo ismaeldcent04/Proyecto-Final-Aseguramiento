@@ -10,16 +10,16 @@
 namespace Calculadora_Indice_Academico
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class administrador
+    public partial class show_docente_Result
     {
-        public int administrador_id { get; set; }
-        public string administrador_cedula { get; set; }
-        public string administrador_nombres { get; set; }
-        public string administrador_apellidoP { get; set; }
-        public string administrador_apellidoM { get; set; }
-        public string administrador_telefono { get; set; }
-        public string administrador_correo { get; set; }
+        public int ID { get; set; }
+        public string Nombre { get; set; }
+        public string Primer_apellido { get; set; }
+        public string Segundo_apellido { get; set; }
+        public string Telefono { get; set; }
+        public string Area { get; set; }
+        public string Correo { get; set; }
+        public string Cedula { get; set; }
     }
 }

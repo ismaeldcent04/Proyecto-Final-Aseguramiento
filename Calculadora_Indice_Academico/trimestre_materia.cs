@@ -25,6 +25,7 @@ namespace Calculadora_Indice_Academico
         public int materia_id { get; set; }
         public int docente_id { get; set; }
         public int aula_id { get; set; }
+        public int seccion { get; set; }
         public string triMat_lunes { get; set; }
         public string triMat_martes { get; set; }
         public string triMat_miercoles { get; set; }

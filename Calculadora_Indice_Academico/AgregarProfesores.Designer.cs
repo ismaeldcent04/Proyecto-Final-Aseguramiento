@@ -34,13 +34,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_Correo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_Area = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.lbl_apellido = new System.Windows.Forms.Label();
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.btn_agregar = new System.Windows.Forms.Button();
-            this.txt_ID = new System.Windows.Forms.TextBox();
-            this.txt_Apellido = new System.Windows.Forms.TextBox();
+            this.txt_ApellidoP = new System.Windows.Forms.TextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.dgw_profesores = new System.Windows.Forms.DataGridView();
             this.pnlDatosGenerales = new System.Windows.Forms.Panel();
@@ -73,6 +70,10 @@
             this.txt_cedula = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txt_telefono = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_ApellidoS = new System.Windows.Forms.TextBox();
+            this.cbx_Area = new System.Windows.Forms.ComboBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_profesores)).BeginInit();
             this.pnlDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -129,30 +130,14 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "Area";
             // 
-            // txt_Area
-            // 
-            this.txt_Area.Location = new System.Drawing.Point(275, 186);
-            this.txt_Area.Name = "txt_Area";
-            this.txt_Area.Size = new System.Drawing.Size(188, 20);
-            this.txt_Area.TabIndex = 22;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 278);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 13);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "ID";
-            // 
             // lbl_apellido
             // 
             this.lbl_apellido.AutoSize = true;
             this.lbl_apellido.Location = new System.Drawing.Point(46, 225);
             this.lbl_apellido.Name = "lbl_apellido";
-            this.lbl_apellido.Size = new System.Drawing.Size(44, 13);
+            this.lbl_apellido.Size = new System.Drawing.Size(76, 13);
             this.lbl_apellido.TabIndex = 20;
-            this.lbl_apellido.Text = "Apellido";
+            this.lbl_apellido.Text = "Primer Apellido";
             // 
             // lbl_nombre
             // 
@@ -173,19 +158,12 @@
             this.btn_agregar.UseVisualStyleBackColor = true;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
-            // txt_ID
+            // txt_ApellidoP
             // 
-            this.txt_ID.Location = new System.Drawing.Point(49, 294);
-            this.txt_ID.Name = "txt_ID";
-            this.txt_ID.Size = new System.Drawing.Size(188, 20);
-            this.txt_ID.TabIndex = 17;
-            // 
-            // txt_Apellido
-            // 
-            this.txt_Apellido.Location = new System.Drawing.Point(49, 241);
-            this.txt_Apellido.Name = "txt_Apellido";
-            this.txt_Apellido.Size = new System.Drawing.Size(188, 20);
-            this.txt_Apellido.TabIndex = 16;
+            this.txt_ApellidoP.Location = new System.Drawing.Point(49, 241);
+            this.txt_ApellidoP.Name = "txt_ApellidoP";
+            this.txt_ApellidoP.Size = new System.Drawing.Size(188, 20);
+            this.txt_ApellidoP.TabIndex = 16;
             // 
             // txt_nombre
             // 
@@ -514,10 +492,37 @@
             this.txt_telefono.Size = new System.Drawing.Size(188, 20);
             this.txt_telefono.TabIndex = 30;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(46, 278);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Segundo Apellido";
+            // 
+            // txt_ApellidoS
+            // 
+            this.txt_ApellidoS.Location = new System.Drawing.Point(49, 294);
+            this.txt_ApellidoS.Name = "txt_ApellidoS";
+            this.txt_ApellidoS.Size = new System.Drawing.Size(188, 20);
+            this.txt_ApellidoS.TabIndex = 34;
+            // 
+            // cbx_Area
+            // 
+            this.cbx_Area.FormattingEnabled = true;
+            this.cbx_Area.Location = new System.Drawing.Point(275, 186);
+            this.cbx_Area.Name = "cbx_Area";
+            this.cbx_Area.Size = new System.Drawing.Size(188, 21);
+            this.cbx_Area.TabIndex = 36;
+            // 
             // AgregarProfesores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cbx_Area);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txt_ApellidoS);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.txt_cedula);
             this.Controls.Add(this.label23);
@@ -529,13 +534,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_Correo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_Area);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_apellido);
             this.Controls.Add(this.lbl_nombre);
             this.Controls.Add(this.btn_agregar);
-            this.Controls.Add(this.txt_ID);
-            this.Controls.Add(this.txt_Apellido);
+            this.Controls.Add(this.txt_ApellidoP);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.label1);
             this.Name = "AgregarProfesores";
@@ -558,13 +560,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_Correo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_Area;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_apellido;
         private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.Button btn_agregar;
-        private System.Windows.Forms.TextBox txt_ID;
-        private System.Windows.Forms.TextBox txt_Apellido;
+        private System.Windows.Forms.TextBox txt_ApellidoP;
         private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.DataGridView dgw_profesores;
         private System.Windows.Forms.Panel pnlDatosGenerales;
@@ -597,5 +596,9 @@
         private System.Windows.Forms.TextBox txt_cedula;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txt_telefono;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_ApellidoS;
+        private System.Windows.Forms.ComboBox cbx_Area;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }

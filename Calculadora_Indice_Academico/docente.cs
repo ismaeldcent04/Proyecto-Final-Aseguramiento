@@ -30,7 +30,6 @@ namespace Calculadora_Indice_Academico
         public string docente_telefono { get; set; }
         public string docente_correo { get; set; }
         public int area_id { get; set; }
-        public string docente_contrasena { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<area> areas { get; set; }
