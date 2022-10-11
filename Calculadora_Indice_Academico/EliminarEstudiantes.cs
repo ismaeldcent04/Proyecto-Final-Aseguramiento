@@ -26,7 +26,7 @@ namespace Calculadora_Indice_Academico
             txt_Carrera.Enabled = false;
             txt_correo.Enabled = false;
             txt_telefono.Enabled = false;
-            txt_cedula.Enabled = false;
+            textBox1.Enabled = false;
         }
 
         private void pnlDatosGenerales_Paint(object sender, PaintEventArgs e)
@@ -54,7 +54,7 @@ namespace Calculadora_Indice_Academico
             txt_Carrera.Enabled = true;
             txt_correo.Enabled = true;
             txt_telefono.Enabled = true;
-            txt_cedula.Enabled = true;
+            textBox1.Enabled = true;
         }
 
         private void btn_buscarEstudiante_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace Calculadora_Indice_Academico
             txt_Carrera.Text = carrera;
             txt_correo.Text = correo;
             txt_telefono.Text = telefono;
-            txt_cedula.Text = cedula;
+            textBox1.Text = cedula;
             //txt_condicion.Text = condicion;
 
         }
@@ -101,7 +101,7 @@ namespace Calculadora_Indice_Academico
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            db.upt_estudiante(txt_buscarEstudiante.Text, txt_cedula.Text, txt_Nombre.Text, txt_apellidoP.Text, txt_ApellidoS.Text, txt_telefono.Text,txt_correo.Text);
+            db.upt_estudiante(txt_buscarEstudiante.Text, textBox1.Text, txt_Nombre.Text, txt_apellidoP.Text, txt_ApellidoS.Text, txt_telefono.Text,txt_correo.Text);
 
         }
     }

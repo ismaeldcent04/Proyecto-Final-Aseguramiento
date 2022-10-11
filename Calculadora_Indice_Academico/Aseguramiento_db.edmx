@@ -372,6 +372,9 @@
           <Parameter Name="carrera_id" Type="int" Mode="In" />
           <Parameter Name="user_password" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="search_docen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="docente_id" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="search_estudiante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="estudiante_id" Type="varchar" Mode="In" />
         </Function>
@@ -981,6 +984,21 @@
             <Parameter Name="estudiante_telefono" Mode="In" Type="String" />
             <Parameter Name="estudiante_correo" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="search_docente" ReturnType="Collection(Aseguramiento_dbModel.search_docente_Result)">
+            <Parameter Name="docente_id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="search_docentes" ReturnType="Collection(Aseguramiento_dbModel.search_docentes_Result)">
+            <Parameter Name="docente_id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="search_docente1" ReturnType="Collection(Aseguramiento_dbModel.search_docente1_Result)">
+          <Parameter Name="docente_id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="search_docentes1" ReturnType="Collection(Aseguramiento_dbModel.search_docentes1_Result)">
+            <Parameter Name="docente_id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="search_docen" ReturnType="Collection(Aseguramiento_dbModel.search_docen_Result)">
+            <Parameter Name="docente_id" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="show_carreras_Result">
           <Property Type="Int32" Name="carrera_id" Nullable="false" />
@@ -1016,6 +1034,56 @@
           <Property Type="String" Name="Telefono" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Correo" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="search_docente_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Nombres" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Primer_Apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Segundo_apellido" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Correo" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Area" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="search_docentes_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Nombres" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Primer_Apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Segundo_apellido" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Correo" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Area" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="search_docente1_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Nombres" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Primer_Apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Segundo_apellido" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Correo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Area" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="search_docentes1_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Nombres" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Primer_Apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Segundo_apellido" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Correo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Area" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="search_docen_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Nombres" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Primer_Apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Segundo_apellido" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Correo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Area" Nullable="true" MaxLength="50" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1231,6 +1299,20 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="upt_estudiante" FunctionName="Aseguramiento_dbModel.Store.upt_estudiante" />
+          <FunctionImportMapping FunctionImportName="search_docen" FunctionName="Aseguramiento_dbModel.Store.search_docen">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Aseguramiento_dbModel.search_docen_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="Primer_Apellido" ColumnName="Primer Apellido" />
+                <ScalarProperty Name="Segundo_apellido" ColumnName="Segundo apellido" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

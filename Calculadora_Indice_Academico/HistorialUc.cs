@@ -351,6 +351,9 @@ namespace Calculadora_Indice_Academico
             }
         }
 
+        private void pnlTri1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

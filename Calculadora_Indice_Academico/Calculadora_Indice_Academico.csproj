@@ -202,6 +202,21 @@
     <Compile Include="FinalesUc.Designer.cs">
       <DependentUpon>FinalesUc.cs</DependentUpon>
     </Compile>
+    <Compile Include="search_docente1_Result.cs">
+      <DependentUpon>Aseguramiento_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="search_docentes1_Result.cs">
+      <DependentUpon>Aseguramiento_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="search_docentes_Result.cs">
+      <DependentUpon>Aseguramiento_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="search_docente_Result.cs">
+      <DependentUpon>Aseguramiento_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="search_docen_Result.cs">
+      <DependentUpon>Aseguramiento_db.tt</DependentUpon>
+    </Compile>
     <Compile Include="search_estudiante_Result.cs">
       <DependentUpon>Aseguramiento_db.tt</DependentUpon>
     </Compile>

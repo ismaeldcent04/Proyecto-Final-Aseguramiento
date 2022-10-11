@@ -204,5 +204,50 @@ namespace Calculadora_Indice_Academico
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("upt_estudiante", estudiante_idParameter, estudiante_cedulaParameter, estudiante_nombresParameter, estudiante_apellidoPParameter, estudiante_apellidoMParameter, estudiante_telefonoParameter, estudiante_correoParameter);
         }
+    
+        public virtual ObjectResult<search_docente_Result> search_docente(string docente_id)
+        {
+            var docente_idParameter = docente_id != null ?
+                new ObjectParameter("docente_id", docente_id) :
+                new ObjectParameter("docente_id", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<search_docente_Result>("search_docente", docente_idParameter);
+        }
+    
+        public virtual ObjectResult<search_docentes_Result> search_docentes(string docente_id)
+        {
+            var docente_idParameter = docente_id != null ?
+                new ObjectParameter("docente_id", docente_id) :
+                new ObjectParameter("docente_id", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<search_docentes_Result>("search_docentes", docente_idParameter);
+        }
+    
+        public virtual ObjectResult<search_docente1_Result> search_docente1(string docente_id)
+        {
+            var docente_idParameter = docente_id != null ?
+                new ObjectParameter("docente_id", docente_id) :
+                new ObjectParameter("docente_id", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<search_docente1_Result>("search_docente1", docente_idParameter);
+        }
+    
+        public virtual ObjectResult<search_docentes1_Result> search_docentes1(string docente_id)
+        {
+            var docente_idParameter = docente_id != null ?
+                new ObjectParameter("docente_id", docente_id) :
+                new ObjectParameter("docente_id", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<search_docentes1_Result>("search_docentes1", docente_idParameter);
+        }
+    
+        public virtual ObjectResult<search_docen_Result> search_docen(string docente_id)
+        {
+            var docente_idParameter = docente_id != null ?
+                new ObjectParameter("docente_id", docente_id) :
+                new ObjectParameter("docente_id", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<search_docen_Result>("search_docen", docente_idParameter);
+        }
     }
 }
