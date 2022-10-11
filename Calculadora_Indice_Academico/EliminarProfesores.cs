@@ -81,7 +81,7 @@ namespace Calculadora_Indice_Academico
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-
+            db.upt_docente(txt_id.Text,txt_cedula.Text,txt_Nombre.Text,txt_apellidoP.Text,txt_ApellidoS.Text,txt_telefono.Text,txt_correo.Text);
         }
     }
 }

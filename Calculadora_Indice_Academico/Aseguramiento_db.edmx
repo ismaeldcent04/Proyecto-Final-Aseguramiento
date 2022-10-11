@@ -381,6 +381,15 @@
         <Function Name="show_carreras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="show_docente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="show_students" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="upt_docente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="docente_id" Type="varchar" Mode="In" />
+          <Parameter Name="docente_cedula" Type="varchar" Mode="In" />
+          <Parameter Name="docente_nombres" Type="varchar" Mode="In" />
+          <Parameter Name="docente_apellidoP" Type="varchar" Mode="In" />
+          <Parameter Name="docente_apellidoM" Type="varchar" Mode="In" />
+          <Parameter Name="docente_telefono" Type="varchar" Mode="In" />
+          <Parameter Name="docente_correo" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="upt_estudiante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="estudiante_id" Type="varchar" Mode="In" />
           <Parameter Name="estudiante_cedula" Type="varchar" Mode="In" />
@@ -997,7 +1006,16 @@
             <Parameter Name="docente_id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="search_docen" ReturnType="Collection(Aseguramiento_dbModel.search_docen_Result)">
+          <Parameter Name="docente_id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="upt_docente">
             <Parameter Name="docente_id" Mode="In" Type="String" />
+            <Parameter Name="docente_cedula" Mode="In" Type="String" />
+            <Parameter Name="docente_nombres" Mode="In" Type="String" />
+            <Parameter Name="docente_apellidoP" Mode="In" Type="String" />
+            <Parameter Name="docente_apellidoM" Mode="In" Type="String" />
+            <Parameter Name="docente_telefono" Mode="In" Type="String" />
+            <Parameter Name="docente_correo" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="show_carreras_Result">
@@ -1313,6 +1331,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="upt_docente" FunctionName="Aseguramiento_dbModel.Store.upt_docente" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

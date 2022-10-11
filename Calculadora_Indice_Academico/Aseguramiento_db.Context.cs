@@ -249,5 +249,38 @@ namespace Calculadora_Indice_Academico
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<search_docen_Result>("search_docen", docente_idParameter);
         }
+    
+        public virtual int upt_docente(string docente_id, string docente_cedula, string docente_nombres, string docente_apellidoP, string docente_apellidoM, string docente_telefono, string docente_correo)
+        {
+            var docente_idParameter = docente_id != null ?
+                new ObjectParameter("docente_id", docente_id) :
+                new ObjectParameter("docente_id", typeof(string));
+    
+            var docente_cedulaParameter = docente_cedula != null ?
+                new ObjectParameter("docente_cedula", docente_cedula) :
+                new ObjectParameter("docente_cedula", typeof(string));
+    
+            var docente_nombresParameter = docente_nombres != null ?
+                new ObjectParameter("docente_nombres", docente_nombres) :
+                new ObjectParameter("docente_nombres", typeof(string));
+    
+            var docente_apellidoPParameter = docente_apellidoP != null ?
+                new ObjectParameter("docente_apellidoP", docente_apellidoP) :
+                new ObjectParameter("docente_apellidoP", typeof(string));
+    
+            var docente_apellidoMParameter = docente_apellidoM != null ?
+                new ObjectParameter("docente_apellidoM", docente_apellidoM) :
+                new ObjectParameter("docente_apellidoM", typeof(string));
+    
+            var docente_telefonoParameter = docente_telefono != null ?
+                new ObjectParameter("docente_telefono", docente_telefono) :
+                new ObjectParameter("docente_telefono", typeof(string));
+    
+            var docente_correoParameter = docente_correo != null ?
+                new ObjectParameter("docente_correo", docente_correo) :
+                new ObjectParameter("docente_correo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("upt_docente", docente_idParameter, docente_cedulaParameter, docente_nombresParameter, docente_apellidoPParameter, docente_apellidoMParameter, docente_telefonoParameter, docente_correoParameter);
+        }
     }
 }
