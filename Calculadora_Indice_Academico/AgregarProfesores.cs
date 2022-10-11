@@ -12,7 +12,7 @@ namespace Calculadora_Indice_Academico
 {
     public partial class AgregarProfesores : UserControl
     {
-        Aseguramiento_bdEntities db = new Aseguramiento_bdEntities();   
+        AseguramientoDbEntities db = new AseguramientoDbEntities();   
         public AgregarProfesores()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace Calculadora_Indice_Academico
                 docente_cedula = txt_cedula.Text,
                 docente_nombres = txt_nombre.Text,
                 docente_apellidoP = txt_Apellido.Text,
-                docente_contrasena = txt_Contrasena.Text,
+                //docente_contrasena = txt_Contrasena.Text,
                 docente_telefono = txt_telefono.Text,
                 docente_correo = txt_Correo.Text,
                 area_id = 1

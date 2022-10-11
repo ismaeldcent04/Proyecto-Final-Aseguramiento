@@ -38,8 +38,8 @@ namespace Calculadora_Indice_Academico
         private void btn_back_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login login = new Login();
-            login.Show();
+            DashboardEstudiante dashboardEstudiante = new DashboardEstudiante();
+            dashboardEstudiante.Show();
         }
 
         private void btn_recuperarContraseña_Click(object sender, EventArgs e)

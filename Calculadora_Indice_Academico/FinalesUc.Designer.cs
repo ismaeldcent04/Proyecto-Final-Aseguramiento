@@ -61,13 +61,13 @@
             this.btnGenerar = new System.Windows.Forms.Button();
             this.boxTrimestre = new System.Windows.Forms.ComboBox();
             this.boxYear = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblPrograma = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -196,7 +196,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel1.Controls.Add(this.label12, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label7, 1, 0);
@@ -277,7 +277,7 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(379, 4);
+            this.label11.Location = new System.Drawing.Point(380, 4);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 19);
             this.label11.TabIndex = 2;
@@ -321,7 +321,7 @@
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(398, 30);
+            this.label16.Location = new System.Drawing.Point(399, 30);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(17, 18);
             this.label16.TabIndex = 10;
@@ -332,7 +332,7 @@
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(398, 57);
+            this.label17.Location = new System.Drawing.Point(399, 57);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(17, 18);
             this.label17.TabIndex = 10;
@@ -486,15 +486,15 @@
             this.boxYear.Size = new System.Drawing.Size(87, 26);
             this.boxYear.TabIndex = 19;
             // 
-            // label9
+            // lblPrograma
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(115, 130);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(294, 18);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "(IDS 2020) INGENIERIA DE SOFTWARE";
+            this.lblPrograma.AutoSize = true;
+            this.lblPrograma.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrograma.Location = new System.Drawing.Point(115, 130);
+            this.lblPrograma.Name = "lblPrograma";
+            this.lblPrograma.Size = new System.Drawing.Size(294, 18);
+            this.lblPrograma.TabIndex = 17;
+            this.lblPrograma.Text = "(IDS 2020) INGENIERIA DE SOFTWARE";
             // 
             // label5
             // 
@@ -547,28 +547,28 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Calificaciones Finales";
             // 
-            // label26
+            // lblID
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(60, 100);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(70, 18);
-            this.label26.TabIndex = 24;
-            this.label26.Text = "1100234";
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(60, 100);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(70, 18);
+            this.lblID.TabIndex = 24;
+            this.lblID.Text = "1100234";
             // 
             // FinalesUc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label26);
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.boxTrimestre);
             this.Controls.Add(this.boxYear);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblPrograma);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -619,12 +619,12 @@
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.ComboBox boxTrimestre;
         private System.Windows.Forms.ComboBox boxYear;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblPrograma;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label lblID;
     }
 }

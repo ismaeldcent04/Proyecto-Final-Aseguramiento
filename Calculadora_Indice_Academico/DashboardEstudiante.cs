@@ -15,6 +15,7 @@ namespace Calculadora_Indice_Academico
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
+
         private static extern IntPtr CreateRoundRectRgn
         (
           int nLeftRect,     // x-coordinate of upper-left corner
@@ -24,6 +25,7 @@ namespace Calculadora_Indice_Academico
           int nWidthEllipse, // height of ellipse
           int nHeightEllipse // width of ellipse
         );
+        AseguramientoDbEntities Db = new AseguramientoDbEntities();
         public DashboardEstudiante()
         {
             InitializeComponent();
@@ -35,6 +37,22 @@ namespace Calculadora_Indice_Academico
             seleccionUc.Hide();
             dashboardEstudianteUc.Show();
             dashboardEstudianteUc.BringToFront();
+
+            var fullEntries = (from e in Db.estudiantes
+                               join eh in Db.estudiante_historico on e.estudiante_id equals eh.estudiante_id
+                               join c in Db.carreras on eh.carrera_id equals c.carrera_id
+                               where e.estudiante_id == 100000
+                               select new
+                               {
+                                   Nombre = e.estudiante_nombres,
+                                   ApellidoP = e.estudiante_apellidoP,
+                                   ApellidoM = e.estudiante_apellidoM
+                               }).Take(1).ToList();
+
+            foreach(var a in fullEntries)
+            {
+                lblUser.Text = $"{a.Nombre} {a.ApellidoP} {a.ApellidoM}";
+            }
         }
 
         private void customizeDesign()
@@ -75,17 +93,15 @@ namespace Calculadora_Indice_Academico
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            this.Close();
             Login login = new Login();
             login.Show();
-            this.Close();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
             showSubMenu();
         }
-
-
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
@@ -162,6 +178,13 @@ namespace Calculadora_Indice_Academico
             btnNoSeleccionado(btnHistorial);
             btnNoSeleccionado(btnMedio);
             hideSubMenu();
+        }
+
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Recuperar_ContraseñaHome cambiarClave = new Recuperar_ContraseñaHome();
+            cambiarClave.Show();
         }
     }
 }

@@ -12,14 +12,11 @@ namespace Calculadora_Indice_Academico
     using System;
     using System.Collections.Generic;
     
-    public partial class administrador
+    public partial class user_login
     {
-        public int administrador_id { get; set; }
-        public string administrador_cedula { get; set; }
-        public string administrador_nombres { get; set; }
-        public string administrador_apellidoP { get; set; }
-        public string administrador_apellidoM { get; set; }
-        public string administrador_telefono { get; set; }
-        public string administrador_correo { get; set; }
+        public int login_id { get; set; }
+        public int user_id { get; set; }
+        public string user_password { get; set; }
+        public int acc_type { get; set; }
     }
 }

@@ -13,10 +13,10 @@ namespace Calculadora_Indice_Academico
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class aseguramiento_grupo1Entities1 : DbContext
+    public partial class AseguramientoDbEntities : DbContext
     {
-        public aseguramiento_grupo1Entities1()
-            : base("name=aseguramiento_grupo1Entities1")
+        public AseguramientoDbEntities()
+            : base("name=AseguramientoDbEntities")
         {
         }
     
@@ -32,10 +32,11 @@ namespace Calculadora_Indice_Academico
         public virtual DbSet<carrera> carreras { get; set; }
         public virtual DbSet<docente> docentes { get; set; }
         public virtual DbSet<estudiante> estudiantes { get; set; }
-        public virtual DbSet<estudianteHistorico> estudianteHistoricoes { get; set; }
+        public virtual DbSet<estudiante_historico> estudiante_historico { get; set; }
         public virtual DbSet<materia> materias { get; set; }
         public virtual DbSet<tipo_aula> tipo_aula { get; set; }
         public virtual DbSet<trimestre> trimestres { get; set; }
         public virtual DbSet<trimestre_materia> trimestre_materia { get; set; }
+        public virtual DbSet<user_login> user_login { get; set; }
     }
 }

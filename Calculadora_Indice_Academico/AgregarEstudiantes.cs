@@ -12,7 +12,7 @@ namespace Calculadora_Indice_Academico
 {
     public partial class AgregarEstudiantes : UserControl
     {
-        Aseguramiento_bdEntities db  = new Aseguramiento_bdEntities();
+        AseguramientoDbEntities db  = new AseguramientoDbEntities();
         public AgregarEstudiantes()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace Calculadora_Indice_Academico
                 estudiante_nombres = txt_nombre.Text,
                 estudiante_apellidoP = txt_apellido.Text,
                 estudiante_cedula = txt_cedula.Text,
-                estudiante_contrasena = txt_contrasena.Text,
+                //estudiante_contrasena = txt_contrasena.Text,
                 estudiante_correo = txt_correo.Text,
                 estudiante_telefono = txt_telefono.Text
             };
@@ -40,7 +40,7 @@ namespace Calculadora_Indice_Academico
             db.SaveChanges();
             dgw_estudiantes.DataSource = db.estudiantes.ToList();
             dgw_estudiantes.Columns["calificacions"].Visible = false;
-            dgw_estudiantes.Columns["estudianteHistoricoes"].Visible = false;
+            dgw_estudiantes.Columns["estudiante_historico"].Visible = false;
             dgw_estudiantes.Columns["trimestre"].Visible = false;
 
 
@@ -59,10 +59,8 @@ namespace Calculadora_Indice_Academico
             dgw_estudiantes.DataSource = db.estudiantes.ToList();
             dgw_estudiantes.Columns["estudiante_id"].HeaderText = "ID";
             dgw_estudiantes.Columns["calificacions"].Visible = false;
-            dgw_estudiantes.Columns["estudianteHistoricoes"].Visible = false;
+            dgw_estudiantes.Columns["estudiante_historico"].Visible = false;
             dgw_estudiantes.Columns["trimestre"].Visible = false;
-           
-
         }
     }
 }

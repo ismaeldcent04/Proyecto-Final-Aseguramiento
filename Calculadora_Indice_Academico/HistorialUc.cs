@@ -14,11 +14,33 @@ namespace Calculadora_Indice_Academico
 {
     public partial class HistorialUc : UserControl
     {
+        AseguramientoDbEntities Db = new AseguramientoDbEntities();
         public HistorialUc()
         {
             InitializeComponent();
             hideAll();
-            showTri(2);
+            var fullEntries = (from e in Db.estudiantes
+                               join eh in Db.estudiante_historico on e.estudiante_id equals eh.estudiante_id
+                               join c in Db.carreras on eh.carrera_id equals c.carrera_id
+                               where e.estudiante_id == 100000
+                               select new
+                               {
+                                   ID = e.estudiante_id,
+                                   Nombre = e.estudiante_nombres,
+                                   ApellidoP = e.estudiante_apellidoP,
+                                   ApellidoM = e.estudiante_apellidoM,
+                                   Carrera = c.carrera_nombre,
+                                   TriCur = eh.trimestres_cursados
+                               }).Take(1).ToList();
+
+            foreach (var a in fullEntries)
+            {
+                lblID.Text = a.ID.ToString();
+                lblNombre.Text = $"{a.Nombre} {a.ApellidoP} {a.ApellidoM}";
+                lblPrograma.Text = a.Carrera;
+                showTri(a.TriCur);
+            }
+            
         }
         private void hideAll()
         {
@@ -328,5 +350,7 @@ namespace Calculadora_Indice_Academico
                     break;
             }
         }
+
+
     }
 }

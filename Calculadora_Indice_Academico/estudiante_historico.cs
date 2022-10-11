@@ -12,7 +12,7 @@ namespace Calculadora_Indice_Academico
     using System;
     using System.Collections.Generic;
     
-    public partial class estudianteHistorico
+    public partial class estudiante_historico
     {
         public int estudiante_id { get; set; }
         public int carrera_id { get; set; }

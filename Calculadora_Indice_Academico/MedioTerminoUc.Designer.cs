@@ -45,7 +45,7 @@
             this.btnGenerar = new System.Windows.Forms.Button();
             this.boxTrimestre = new System.Windows.Forms.ComboBox();
             this.boxYear = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblPrograma = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -257,15 +257,15 @@
             this.boxYear.Size = new System.Drawing.Size(87, 26);
             this.boxYear.TabIndex = 18;
             // 
-            // label9
+            // lblPrograma
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(115, 130);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(294, 18);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "(IDS 2020) INGENIERIA DE SOFTWARE";
+            this.lblPrograma.AutoSize = true;
+            this.lblPrograma.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrograma.Location = new System.Drawing.Point(115, 130);
+            this.lblPrograma.Name = "lblPrograma";
+            this.lblPrograma.Size = new System.Drawing.Size(294, 18);
+            this.lblPrograma.TabIndex = 16;
+            this.lblPrograma.Text = "(IDS 2020) INGENIERIA DE SOFTWARE";
             // 
             // label13
             // 
@@ -347,15 +347,15 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "ID:";
             // 
-            // label15
+            // lblID
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(60, 100);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 18);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "1100234";
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(60, 100);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(70, 18);
+            this.lblID.TabIndex = 16;
+            this.lblID.Text = "1100234";
             // 
             // MedioTerminoUc
             // 
@@ -369,8 +369,8 @@
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.boxTrimestre);
             this.Controls.Add(this.boxYear);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.lblPrograma);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label12);
@@ -404,7 +404,7 @@
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.ComboBox boxTrimestre;
         private System.Windows.Forms.ComboBox boxYear;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblPrograma;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
@@ -413,6 +413,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblID;
     }
 }

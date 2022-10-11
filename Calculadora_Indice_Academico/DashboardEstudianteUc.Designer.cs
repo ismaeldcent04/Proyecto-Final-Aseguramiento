@@ -35,7 +35,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.pnlHorario = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataAsignatura = new System.Windows.Forms.DataGridView();
             this.Seccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asignatura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Creditos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +49,7 @@
             this.Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTrimestres = new System.Windows.Forms.Panel();
             this.proTrimestres = new CircularProgressBar.CircularProgressBar();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblTriCur2 = new System.Windows.Forms.Label();
             this.pnlAvisos = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.pnlCreditos.SuspendLayout();
             this.pnlHorario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataAsignatura)).BeginInit();
             this.pnlTrimestres.SuspendLayout();
             this.pnlAvisos.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -144,7 +144,7 @@
             // 
             this.pnlHorario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.pnlHorario.Controls.Add(this.label14);
-            this.pnlHorario.Controls.Add(this.dataGridView1);
+            this.pnlHorario.Controls.Add(this.dataAsignatura);
             this.pnlHorario.Location = new System.Drawing.Point(22, 469);
             this.pnlHorario.Name = "pnlHorario";
             this.pnlHorario.Size = new System.Drawing.Size(1039, 345);
@@ -161,12 +161,12 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Asignaturas Seleccionadas";
             // 
-            // dataGridView1
+            // dataAsignatura
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataAsignatura.AllowUserToAddRows = false;
+            this.dataAsignatura.AllowUserToDeleteRows = false;
+            this.dataAsignatura.AllowUserToResizeColumns = false;
+            this.dataAsignatura.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -174,9 +174,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataAsignatura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataAsignatura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataAsignatura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seccion,
             this.Asignatura,
             this.Creditos,
@@ -188,11 +188,11 @@
             this.Viernes,
             this.Sabado,
             this.Profesor});
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
+            this.dataAsignatura.EnableHeadersVisualStyles = false;
+            this.dataAsignatura.GridColor = System.Drawing.SystemColors.ControlText;
+            this.dataAsignatura.Location = new System.Drawing.Point(20, 55);
+            this.dataAsignatura.Name = "dataAsignatura";
+            this.dataAsignatura.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -200,10 +200,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.Size = new System.Drawing.Size(1000, 258);
-            this.dataGridView1.TabIndex = 1;
+            this.dataAsignatura.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataAsignatura.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataAsignatura.Size = new System.Drawing.Size(1000, 258);
+            this.dataAsignatura.TabIndex = 1;
             // 
             // Seccion
             // 
@@ -286,7 +286,7 @@
             // 
             this.pnlTrimestres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.pnlTrimestres.Controls.Add(this.proTrimestres);
-            this.pnlTrimestres.Controls.Add(this.label17);
+            this.pnlTrimestres.Controls.Add(this.lblTriCur2);
             this.pnlTrimestres.Location = new System.Drawing.Point(631, 243);
             this.pnlTrimestres.Name = "pnlTrimestres";
             this.pnlTrimestres.Size = new System.Drawing.Size(200, 210);
@@ -324,16 +324,16 @@
             this.proTrimestres.TextMargin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.proTrimestres.Value = 10;
             // 
-            // label17
+            // lblTriCur2
             // 
-            this.label17.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.Control;
-            this.label17.Location = new System.Drawing.Point(30, 150);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(140, 36);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Trimestres cursados de 13";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTriCur2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTriCur2.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTriCur2.Location = new System.Drawing.Point(30, 150);
+            this.lblTriCur2.Name = "lblTriCur2";
+            this.lblTriCur2.Size = new System.Drawing.Size(140, 36);
+            this.lblTriCur2.TabIndex = 3;
+            this.lblTriCur2.Text = "Trimestres cursados de 13";
+            this.lblTriCur2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlAvisos
             // 
@@ -663,7 +663,7 @@
             this.pnlCreditos.ResumeLayout(false);
             this.pnlHorario.ResumeLayout(false);
             this.pnlHorario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataAsignatura)).EndInit();
             this.pnlTrimestres.ResumeLayout(false);
             this.pnlAvisos.ResumeLayout(false);
             this.pnlAvisos.PerformLayout();
@@ -687,7 +687,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel pnlTrimestres;
         private CircularProgressBar.CircularProgressBar proTrimestres;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblTriCur2;
         private System.Windows.Forms.Panel pnlAvisos;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label13;
@@ -709,7 +709,7 @@
         private System.Windows.Forms.Panel pnlAprobadas;
         private CircularProgressBar.CircularProgressBar proAprobadas;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataAsignatura;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asignatura;
         private System.Windows.Forms.DataGridViewTextBoxColumn Creditos;

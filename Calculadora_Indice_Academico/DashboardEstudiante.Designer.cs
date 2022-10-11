@@ -29,17 +29,12 @@
         private void InitializeComponent()
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnSeleccion = new System.Windows.Forms.Button();
             this.subMenuRpts = new System.Windows.Forms.Panel();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnFinales = new System.Windows.Forms.Button();
             this.btnMedio = new System.Windows.Forms.Button();
-            this.btnReportes = new System.Windows.Forms.Button();
             this.pnlUsuario = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
+            this.lblUser = new System.Windows.Forms.Label();
             this.pnlCreditos = new System.Windows.Forms.Panel();
             this.proCreditos = new CircularProgressBar.CircularProgressBar();
             this.label18 = new System.Windows.Forms.Label();
@@ -59,6 +54,12 @@
             this.dashboardEstudianteUc = new Calculadora_Indice_Academico.DashboardEstudianteUc();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.seleccionUc = new Calculadora_Indice_Academico.SeleccionUc();
+            this.btnSeleccion = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
+            this.btnConfig = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.subMenuRpts.SuspendLayout();
             this.pnlUsuario.SuspendLayout();
@@ -79,25 +80,6 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(250, 850);
             this.pnlMenu.TabIndex = 14;
-            // 
-            // btnSeleccion
-            // 
-            this.btnSeleccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.btnSeleccion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSeleccion.FlatAppearance.BorderSize = 0;
-            this.btnSeleccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccion.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccion.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSeleccion.Image = global::Calculadora_Indice_Academico.Properties.Resources.seleccione_32x32;
-            this.btnSeleccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeleccion.Location = new System.Drawing.Point(0, 300);
-            this.btnSeleccion.Name = "btnSeleccion";
-            this.btnSeleccion.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
-            this.btnSeleccion.Size = new System.Drawing.Size(250, 60);
-            this.btnSeleccion.TabIndex = 16;
-            this.btnSeleccion.Text = "Seleccion";
-            this.btnSeleccion.UseVisualStyleBackColor = false;
-            this.btnSeleccion.Click += new System.EventHandler(this.btnSeleccion_Click);
             // 
             // subMenuRpts
             // 
@@ -164,28 +146,10 @@
             this.btnMedio.UseVisualStyleBackColor = false;
             this.btnMedio.Click += new System.EventHandler(this.btnMedio_Click);
             // 
-            // btnReportes
-            // 
-            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReportes.Image = global::Calculadora_Indice_Academico.Properties.Resources.reportes;
-            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 60);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
-            this.btnReportes.Size = new System.Drawing.Size(250, 60);
-            this.btnReportes.TabIndex = 1;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.UseVisualStyleBackColor = false;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
-            // 
             // pnlUsuario
             // 
-            this.pnlUsuario.Controls.Add(this.label1);
+            this.pnlUsuario.Controls.Add(this.btnConfig);
+            this.pnlUsuario.Controls.Add(this.lblUser);
             this.pnlUsuario.Controls.Add(this.pictureBox1);
             this.pnlUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlUsuario.Location = new System.Drawing.Point(0, 690);
@@ -193,64 +157,15 @@
             this.pnlUsuario.Size = new System.Drawing.Size(250, 100);
             this.pnlUsuario.TabIndex = 0;
             // 
-            // label1
+            // lblUser
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(80, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 19);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "User Name";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Calculadora_Indice_Academico.Properties.Resources.perfil;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(133)))), ((int)(((byte)(133)))));
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLogout.Image = global::Calculadora_Indice_Academico.Properties.Resources.log_out_32x32;
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 790);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
-            this.btnLogout.Size = new System.Drawing.Size(250, 60);
-            this.btnLogout.TabIndex = 2;
-            this.btnLogout.Text = "Cerrar Sesión";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(133)))), ((int)(((byte)(133)))));
-            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDashboard.Image = global::Calculadora_Indice_Academico.Properties.Resources.home;
-            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 0);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
-            this.btnDashboard.Size = new System.Drawing.Size(250, 60);
-            this.btnDashboard.TabIndex = 2;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = false;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            this.lblUser.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.lblUser.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblUser.Location = new System.Drawing.Point(80, 25);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(115, 44);
+            this.lblUser.TabIndex = 3;
+            this.lblUser.Text = "User Name";
             // 
             // pnlCreditos
             // 
@@ -475,6 +390,108 @@
             this.seleccionUc.Size = new System.Drawing.Size(1350, 850);
             this.seleccionUc.TabIndex = 23;
             // 
+            // btnSeleccion
+            // 
+            this.btnSeleccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.btnSeleccion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSeleccion.FlatAppearance.BorderSize = 0;
+            this.btnSeleccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccion.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccion.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSeleccion.Image = global::Calculadora_Indice_Academico.Properties.Resources.seleccione_32x32;
+            this.btnSeleccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeleccion.Location = new System.Drawing.Point(0, 300);
+            this.btnSeleccion.Name = "btnSeleccion";
+            this.btnSeleccion.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.btnSeleccion.Size = new System.Drawing.Size(250, 60);
+            this.btnSeleccion.TabIndex = 16;
+            this.btnSeleccion.Text = "Seleccion";
+            this.btnSeleccion.UseVisualStyleBackColor = false;
+            this.btnSeleccion.Click += new System.EventHandler(this.btnSeleccion_Click);
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnReportes.Image = global::Calculadora_Indice_Academico.Properties.Resources.reportes;
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.Location = new System.Drawing.Point(0, 60);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.btnReportes.Size = new System.Drawing.Size(250, 60);
+            this.btnReportes.TabIndex = 1;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            // 
+            // btnConfig
+            // 
+            this.btnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.btnConfig.FlatAppearance.BorderSize = 0;
+            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfig.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfig.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnConfig.Image = global::Calculadora_Indice_Academico.Properties.Resources.settings_32x32;
+            this.btnConfig.Location = new System.Drawing.Point(195, 25);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.btnConfig.Size = new System.Drawing.Size(45, 44);
+            this.btnConfig.TabIndex = 17;
+            this.btnConfig.UseVisualStyleBackColor = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Calculadora_Indice_Academico.Properties.Resources.perfil;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(133)))), ((int)(((byte)(133)))));
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnLogout.Image = global::Calculadora_Indice_Academico.Properties.Resources.log_out_32x32;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(0, 790);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.btnLogout.Size = new System.Drawing.Size(250, 60);
+            this.btnLogout.TabIndex = 2;
+            this.btnLogout.Text = "Cerrar Sesión";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(133)))), ((int)(((byte)(133)))));
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDashboard.Image = global::Calculadora_Indice_Academico.Properties.Resources.home;
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 0);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.btnDashboard.Size = new System.Drawing.Size(250, 60);
+            this.btnDashboard.TabIndex = 2;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
             // DashboardEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,7 +510,6 @@
             this.pnlMenu.ResumeLayout(false);
             this.subMenuRpts.ResumeLayout(false);
             this.pnlUsuario.ResumeLayout(false);
-            this.pnlUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -502,7 +518,7 @@
         #endregion
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Panel pnlUsuario;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnDashboard;
@@ -531,5 +547,6 @@
         private HistorialUc historialUc;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private SeleccionUc seleccionUc;
+        private System.Windows.Forms.Button btnConfig;
     }
 }

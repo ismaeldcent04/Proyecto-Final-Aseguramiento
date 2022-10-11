@@ -18,7 +18,7 @@ namespace Calculadora_Indice_Academico
         public estudiante()
         {
             this.calificacions = new HashSet<calificacion>();
-            this.estudianteHistoricoes = new HashSet<estudianteHistorico>();
+            this.estudiante_historico = new HashSet<estudiante_historico>();
         }
     
         public int estudiante_id { get; set; }
@@ -29,12 +29,11 @@ namespace Calculadora_Indice_Academico
         public string estudiante_telefono { get; set; }
         public string estudiante_correo { get; set; }
         public int trimestre_entrada { get; set; }
-        public string estudiante_contrasena { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<calificacion> calificacions { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<estudianteHistorico> estudianteHistoricoes { get; set; }
+        public virtual ICollection<estudiante_historico> estudiante_historico { get; set; }
         public virtual trimestre trimestre { get; set; }
     }
 }

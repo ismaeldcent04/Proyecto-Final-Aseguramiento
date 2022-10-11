@@ -146,7 +146,7 @@
     <Compile Include="estudiante.cs">
       <DependentUpon>AseguramientoDb.tt</DependentUpon>
     </Compile>
-    <Compile Include="estudianteHistorico.cs">
+    <Compile Include="estudiante_historico.cs">
       <DependentUpon>AseguramientoDb.tt</DependentUpon>
     </Compile>
     <Compile Include="HistorialUc.cs">
@@ -184,11 +184,11 @@
     <Compile Include="Recuperar Contraseña.Designer.cs">
       <DependentUpon>Recuperar Contraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="Recuperar ContraseñaHome.cs">
+    <Compile Include="CambiarClave.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Recuperar ContraseñaHome.Designer.cs">
-      <DependentUpon>Recuperar ContraseñaHome.cs</DependentUpon>
+    <Compile Include="CambiarClave.Designer.cs">
+      <DependentUpon>CambiarClave.cs</DependentUpon>
     </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
@@ -215,6 +215,9 @@
       <DependentUpon>AseguramientoDb.tt</DependentUpon>
     </Compile>
     <Compile Include="trimestre_materia.cs">
+      <DependentUpon>AseguramientoDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_login.cs">
       <DependentUpon>AseguramientoDb.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AgregarEstudiantes.resx">
@@ -263,8 +266,8 @@
     <EmbeddedResource Include="Recuperar Contraseña.resx">
       <DependentUpon>Recuperar Contraseña.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Recuperar ContraseñaHome.resx">
-      <DependentUpon>Recuperar ContraseñaHome.cs</DependentUpon>
+    <EmbeddedResource Include="CambiarClave.resx">
+      <DependentUpon>CambiarClave.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
