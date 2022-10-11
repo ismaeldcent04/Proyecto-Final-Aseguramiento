@@ -13,7 +13,7 @@ namespace Calculadora_Indice_Academico
 {
     public partial class FinalesUc : UserControl
     {
-        AseguramientoDbEntities Db = new AseguramientoDbEntities();
+        AseguramientoDbEntities5 Db = new AseguramientoDbEntities5();
         public FinalesUc()
         {
             InitializeComponent();

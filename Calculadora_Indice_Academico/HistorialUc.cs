@@ -15,7 +15,7 @@ namespace Calculadora_Indice_Academico
 {
     public partial class HistorialUc : UserControl
     {
-        AseguramientoDbEntities Db = new AseguramientoDbEntities();
+        AseguramientoDbEntities5 Db = new AseguramientoDbEntities5();
         public HistorialUc()
         {
             InitializeComponent();
