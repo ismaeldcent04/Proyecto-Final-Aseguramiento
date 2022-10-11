@@ -12,7 +12,7 @@ namespace Calculadora_Indice_Academico
 {
     public partial class DashboardAdmin : UserControl
     {
-
+        Aseguramiento_dbEntities1 db = new Aseguramiento_dbEntities1();
         public DashboardAdmin()
         {
             InitializeComponent();
@@ -25,7 +25,8 @@ namespace Calculadora_Indice_Academico
 
         private void DashboardAdmin_Load(object sender, EventArgs e)
         {
-            
+            dgv_estudiantes.DataSource = db.show_students();
+            dgv_docentes.DataSource = db.show_docente();
         }
     }
 }

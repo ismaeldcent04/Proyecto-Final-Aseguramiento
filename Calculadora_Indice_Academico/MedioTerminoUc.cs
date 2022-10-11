@@ -13,7 +13,7 @@ namespace Calculadora_Indice_Academico
 {
     public partial class MedioTerminoUc : UserControl
     {
-        AseguramientoDbEntities5 Db = new AseguramientoDbEntities5();
+        Aseguramiento_dbEntities1 Db = new Aseguramiento_dbEntities1();
         public MedioTerminoUc()
         {
             InitializeComponent();

@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlDatosGenerales = new System.Windows.Forms.Panel();
             this.txt_apellido = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -43,12 +40,18 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pnlHorario = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgv_estudiantes = new System.Windows.Forms.DataGridView();
+            this.dgv_docentes = new System.Windows.Forms.DataGridView();
             this.pnlDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pnlHorario.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_estudiantes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_docentes)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDatosGenerales
@@ -65,16 +68,16 @@
             this.pnlDatosGenerales.Controls.Add(this.pictureBox2);
             this.pnlDatosGenerales.Controls.Add(this.label4);
             this.pnlDatosGenerales.Controls.Add(this.label3);
-            this.pnlDatosGenerales.Location = new System.Drawing.Point(31, 100);
+            this.pnlDatosGenerales.Location = new System.Drawing.Point(292, 35);
             this.pnlDatosGenerales.Name = "pnlDatosGenerales";
-            this.pnlDatosGenerales.Size = new System.Drawing.Size(404, 242);
+            this.pnlDatosGenerales.Size = new System.Drawing.Size(404, 189);
             this.pnlDatosGenerales.TabIndex = 28;
             // 
             // txt_apellido
             // 
             this.txt_apellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.txt_apellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_apellido.Location = new System.Drawing.Point(88, 161);
+            this.txt_apellido.Location = new System.Drawing.Point(106, 136);
             this.txt_apellido.Name = "txt_apellido";
             this.txt_apellido.Size = new System.Drawing.Size(62, 13);
             this.txt_apellido.TabIndex = 32;
@@ -84,7 +87,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(105, 158);
+            this.label7.Location = new System.Drawing.Point(123, 133);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 16);
             this.label7.TabIndex = 31;
@@ -93,7 +96,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(16, 158);
+            this.label17.Location = new System.Drawing.Point(34, 133);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(68, 16);
             this.label17.TabIndex = 30;
@@ -103,7 +106,7 @@
             // 
             this.txt_Nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.txt_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Nombre.Location = new System.Drawing.Point(88, 123);
+            this.txt_Nombre.Location = new System.Drawing.Point(106, 98);
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(45, 13);
             this.txt_Nombre.TabIndex = 28;
@@ -113,7 +116,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(105, 120);
+            this.label15.Location = new System.Drawing.Point(123, 95);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(0, 16);
             this.label15.TabIndex = 27;
@@ -122,7 +125,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(16, 120);
+            this.label16.Location = new System.Drawing.Point(34, 95);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(66, 16);
             this.label16.TabIndex = 26;
@@ -141,7 +144,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(51, 81);
+            this.textBox2.Location = new System.Drawing.Point(69, 56);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(82, 13);
             this.textBox2.TabIndex = 6;
@@ -150,7 +153,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Calculadora_Indice_Academico.Properties.Resources.user_in_a_square_150x150;
-            this.pictureBox2.Location = new System.Drawing.Point(234, 56);
+            this.pictureBox2.Location = new System.Drawing.Point(241, 34);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(138, 130);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -161,7 +164,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 78);
+            this.label4.Location = new System.Drawing.Point(38, 53);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 16);
             this.label4.TabIndex = 1;
@@ -179,46 +182,85 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Datos Generales";
             // 
-            // chart2
+            // pnlHorario
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart2.Legends.Add(legend3);
-            this.chart2.Location = new System.Drawing.Point(535, 100);
-            this.chart2.Name = "chart2";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart2.Series.Add(series3);
-            this.chart2.Size = new System.Drawing.Size(470, 254);
-            this.chart2.TabIndex = 29;
-            this.chart2.Text = "chart2";
+            this.pnlHorario.AutoScroll = true;
+            this.pnlHorario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.pnlHorario.Controls.Add(this.dgv_estudiantes);
+            this.pnlHorario.Controls.Add(this.label14);
+            this.pnlHorario.Location = new System.Drawing.Point(13, 242);
+            this.pnlHorario.Name = "pnlHorario";
+            this.pnlHorario.Size = new System.Drawing.Size(1039, 345);
+            this.pnlHorario.TabIndex = 29;
             // 
-            // dataGridView1
+            // label14
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 431);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1012, 313);
-            this.dataGridView1.TabIndex = 30;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.label14.Location = new System.Drawing.Point(20, 20);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(169, 32);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Estudiantes";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.panel1.Controls.Add(this.dgv_docentes);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(13, 610);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1039, 345);
+            this.panel1.TabIndex = 30;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.label1.Location = new System.Drawing.Point(20, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Docentes";
+            // 
+            // dgv_estudiantes
+            // 
+            this.dgv_estudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_estudiantes.Location = new System.Drawing.Point(26, 68);
+            this.dgv_estudiantes.Name = "dgv_estudiantes";
+            this.dgv_estudiantes.Size = new System.Drawing.Size(994, 232);
+            this.dgv_estudiantes.TabIndex = 1;
+            // 
+            // dgv_docentes
+            // 
+            this.dgv_docentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_docentes.Location = new System.Drawing.Point(22, 56);
+            this.dgv_docentes.Name = "dgv_docentes";
+            this.dgv_docentes.Size = new System.Drawing.Size(994, 232);
+            this.dgv_docentes.TabIndex = 2;
             // 
             // DashboardAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.chart2);
+            this.AutoScroll = true;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlHorario);
             this.Controls.Add(this.pnlDatosGenerales);
             this.Name = "DashboardAdmin";
-            this.Size = new System.Drawing.Size(1080, 799);
+            this.Size = new System.Drawing.Size(1063, 799);
             this.Load += new System.EventHandler(this.DashboardAdmin_Load);
             this.pnlDatosGenerales.ResumeLayout(false);
             this.pnlDatosGenerales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.pnlHorario.ResumeLayout(false);
+            this.pnlHorario.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_estudiantes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_docentes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,7 +278,11 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel pnlHorario;
+        private System.Windows.Forms.DataGridView dgv_estudiantes;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dgv_docentes;
+        private System.Windows.Forms.Label label1;
     }
 }

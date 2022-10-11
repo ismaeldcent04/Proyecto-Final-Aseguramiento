@@ -10,14 +10,16 @@
 namespace Calculadora_Indice_Academico
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class sysdiagram
+    public partial class search_docen_Result
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int ID { get; set; }
+        public string Cedula { get; set; }
+        public string Nombres { get; set; }
+        public string Primer_Apellido { get; set; }
+        public string Segundo_apellido { get; set; }
+        public string Telefono { get; set; }
+        public string Correo { get; set; }
+        public string Area { get; set; }
     }
 }

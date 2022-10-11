@@ -15,10 +15,10 @@ namespace Calculadora_Indice_Academico
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class AseguramientoDbEntities5 : DbContext
+    public partial class Aseguramiento_dbEntities1 : DbContext
     {
-        public AseguramientoDbEntities5()
-            : base("name=AseguramientoDbEntities5")
+        public Aseguramiento_dbEntities1()
+            : base("name=Aseguramiento_dbEntities1")
         {
         }
     
@@ -36,7 +36,6 @@ namespace Calculadora_Indice_Academico
         public virtual DbSet<estudiante> estudiantes { get; set; }
         public virtual DbSet<estudiante_historico> estudiante_historico { get; set; }
         public virtual DbSet<materia> materias { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<tipo_aula> tipo_aula { get; set; }
         public virtual DbSet<trimestre> trimestres { get; set; }
         public virtual DbSet<trimestre_materia> trimestre_materia { get; set; }
@@ -116,6 +115,24 @@ namespace Calculadora_Indice_Academico
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insert_student", estudiante_cedulaParameter, estudiante_nombresParameter, estudiante_apellidoPParameter, estudiante_apellidoMParameter, estudiante_telefonoParameter, estudiante_correoParameter, carrera_idParameter, user_passwordParameter);
         }
     
+        public virtual ObjectResult<search_docen_Result> search_docen(string docente_id)
+        {
+            var docente_idParameter = docente_id != null ?
+                new ObjectParameter("docente_id", docente_id) :
+                new ObjectParameter("docente_id", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<search_docen_Result>("search_docen", docente_idParameter);
+        }
+    
+        public virtual ObjectResult<search_estudiante_Result> search_estudiante(string estudiante_id)
+        {
+            var estudiante_idParameter = estudiante_id != null ?
+                new ObjectParameter("estudiante_id", estudiante_id) :
+                new ObjectParameter("estudiante_id", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<search_estudiante_Result>("search_estudiante", estudiante_idParameter);
+        }
+    
         public virtual ObjectResult<show_carreras_Result> show_carreras()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<show_carreras_Result>("show_carreras");
@@ -136,107 +153,75 @@ namespace Calculadora_Indice_Academico
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<show_students_Result>("show_students");
         }
     
-        public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        public virtual int upt_docente(string docente_id, string docente_cedula, string docente_nombres, string docente_apellidoP, string docente_apellidoM, string docente_telefono, string docente_correo)
         {
-            var diagramnameParameter = diagramname != null ?
-                new ObjectParameter("diagramname", diagramname) :
-                new ObjectParameter("diagramname", typeof(string));
+            var docente_idParameter = docente_id != null ?
+                new ObjectParameter("docente_id", docente_id) :
+                new ObjectParameter("docente_id", typeof(string));
     
-            var owner_idParameter = owner_id.HasValue ?
-                new ObjectParameter("owner_id", owner_id) :
-                new ObjectParameter("owner_id", typeof(int));
+            var docente_cedulaParameter = docente_cedula != null ?
+                new ObjectParameter("docente_cedula", docente_cedula) :
+                new ObjectParameter("docente_cedula", typeof(string));
     
-            var versionParameter = version.HasValue ?
-                new ObjectParameter("version", version) :
-                new ObjectParameter("version", typeof(int));
+            var docente_nombresParameter = docente_nombres != null ?
+                new ObjectParameter("docente_nombres", docente_nombres) :
+                new ObjectParameter("docente_nombres", typeof(string));
     
-            var definitionParameter = definition != null ?
-                new ObjectParameter("definition", definition) :
-                new ObjectParameter("definition", typeof(byte[]));
+            var docente_apellidoPParameter = docente_apellidoP != null ?
+                new ObjectParameter("docente_apellidoP", docente_apellidoP) :
+                new ObjectParameter("docente_apellidoP", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_alterdiagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+            var docente_apellidoMParameter = docente_apellidoM != null ?
+                new ObjectParameter("docente_apellidoM", docente_apellidoM) :
+                new ObjectParameter("docente_apellidoM", typeof(string));
+    
+            var docente_telefonoParameter = docente_telefono != null ?
+                new ObjectParameter("docente_telefono", docente_telefono) :
+                new ObjectParameter("docente_telefono", typeof(string));
+    
+            var docente_correoParameter = docente_correo != null ?
+                new ObjectParameter("docente_correo", docente_correo) :
+                new ObjectParameter("docente_correo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("upt_docente", docente_idParameter, docente_cedulaParameter, docente_nombresParameter, docente_apellidoPParameter, docente_apellidoMParameter, docente_telefonoParameter, docente_correoParameter);
         }
     
-        public virtual int sp_creatediagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        public virtual int upt_estudiante(string estudiante_id, string estudiante_cedula, string estudiante_nombres, string estudiante_apellidoP, string estudiante_apellidoM, string estudiante_telefono, string estudiante_correo)
         {
-            var diagramnameParameter = diagramname != null ?
-                new ObjectParameter("diagramname", diagramname) :
-                new ObjectParameter("diagramname", typeof(string));
+            var estudiante_idParameter = estudiante_id != null ?
+                new ObjectParameter("estudiante_id", estudiante_id) :
+                new ObjectParameter("estudiante_id", typeof(string));
     
-            var owner_idParameter = owner_id.HasValue ?
-                new ObjectParameter("owner_id", owner_id) :
-                new ObjectParameter("owner_id", typeof(int));
+            var estudiante_cedulaParameter = estudiante_cedula != null ?
+                new ObjectParameter("estudiante_cedula", estudiante_cedula) :
+                new ObjectParameter("estudiante_cedula", typeof(string));
     
-            var versionParameter = version.HasValue ?
-                new ObjectParameter("version", version) :
-                new ObjectParameter("version", typeof(int));
+            var estudiante_nombresParameter = estudiante_nombres != null ?
+                new ObjectParameter("estudiante_nombres", estudiante_nombres) :
+                new ObjectParameter("estudiante_nombres", typeof(string));
     
-            var definitionParameter = definition != null ?
-                new ObjectParameter("definition", definition) :
-                new ObjectParameter("definition", typeof(byte[]));
+            var estudiante_apellidoPParameter = estudiante_apellidoP != null ?
+                new ObjectParameter("estudiante_apellidoP", estudiante_apellidoP) :
+                new ObjectParameter("estudiante_apellidoP", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_creatediagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+            var estudiante_apellidoMParameter = estudiante_apellidoM != null ?
+                new ObjectParameter("estudiante_apellidoM", estudiante_apellidoM) :
+                new ObjectParameter("estudiante_apellidoM", typeof(string));
+    
+            var estudiante_telefonoParameter = estudiante_telefono != null ?
+                new ObjectParameter("estudiante_telefono", estudiante_telefono) :
+                new ObjectParameter("estudiante_telefono", typeof(string));
+    
+            var estudiante_correoParameter = estudiante_correo != null ?
+                new ObjectParameter("estudiante_correo", estudiante_correo) :
+                new ObjectParameter("estudiante_correo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("upt_estudiante", estudiante_idParameter, estudiante_cedulaParameter, estudiante_nombresParameter, estudiante_apellidoPParameter, estudiante_apellidoMParameter, estudiante_telefonoParameter, estudiante_correoParameter);
         }
     
-        public virtual int sp_dropdiagram(string diagramname, Nullable<int> owner_id)
+        public virtual ObjectResult<show_seleccions_Result> show_seleccions()
         {
-            var diagramnameParameter = diagramname != null ?
-                new ObjectParameter("diagramname", diagramname) :
-                new ObjectParameter("diagramname", typeof(string));
-    
-            var owner_idParameter = owner_id.HasValue ?
-                new ObjectParameter("owner_id", owner_id) :
-                new ObjectParameter("owner_id", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_dropdiagram", diagramnameParameter, owner_idParameter);
-        }
-    
-        public virtual ObjectResult<sp_helpdiagramdefinition_Result> sp_helpdiagramdefinition(string diagramname, Nullable<int> owner_id)
-        {
-            var diagramnameParameter = diagramname != null ?
-                new ObjectParameter("diagramname", diagramname) :
-                new ObjectParameter("diagramname", typeof(string));
-    
-            var owner_idParameter = owner_id.HasValue ?
-                new ObjectParameter("owner_id", owner_id) :
-                new ObjectParameter("owner_id", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagramdefinition_Result>("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
-        }
-    
-        public virtual ObjectResult<sp_helpdiagrams_Result> sp_helpdiagrams(string diagramname, Nullable<int> owner_id)
-        {
-            var diagramnameParameter = diagramname != null ?
-                new ObjectParameter("diagramname", diagramname) :
-                new ObjectParameter("diagramname", typeof(string));
-    
-            var owner_idParameter = owner_id.HasValue ?
-                new ObjectParameter("owner_id", owner_id) :
-                new ObjectParameter("owner_id", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagrams_Result>("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
-        }
-    
-        public virtual int sp_renamediagram(string diagramname, Nullable<int> owner_id, string new_diagramname)
-        {
-            var diagramnameParameter = diagramname != null ?
-                new ObjectParameter("diagramname", diagramname) :
-                new ObjectParameter("diagramname", typeof(string));
-    
-            var owner_idParameter = owner_id.HasValue ?
-                new ObjectParameter("owner_id", owner_id) :
-                new ObjectParameter("owner_id", typeof(int));
-    
-            var new_diagramnameParameter = new_diagramname != null ?
-                new ObjectParameter("new_diagramname", new_diagramname) :
-                new ObjectParameter("new_diagramname", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_renamediagram", diagramnameParameter, owner_idParameter, new_diagramnameParameter);
-        }
-    
-        public virtual int sp_upgraddiagrams()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<show_seleccions_Result>("show_seleccions");
         }
     }
 }

@@ -12,12 +12,12 @@ namespace Calculadora_Indice_Academico
 {
     public partial class SeleccionUc : UserControl
     {
-        AseguramientoDbEntities5 Db = new AseguramientoDbEntities5();
+        Aseguramiento_dbEntities1 Db = new Aseguramiento_dbEntities1();
         public SeleccionUc()
         {
             InitializeComponent();
             hideAll();
-            dataCB.DataSource = Db.show_seleccion();
+            dataCB.DataSource = Db.show_seleccions();
             DataGridViewCheckBoxColumn chkbox = new DataGridViewCheckBoxColumn();
             chkbox.HeaderText = "Select";
             chkbox.Width = 25;
@@ -83,8 +83,10 @@ namespace Calculadora_Indice_Academico
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("Seccion");
+            dt.Columns.Add("Codigo");
             dt.Columns.Add("Asignatura");
             dt.Columns.Add("Cr.");
+            dt.Columns.Add("Aula");
             dt.Columns.Add("Lun");
             dt.Columns.Add("Ma");
             dt.Columns.Add("Mi");
@@ -98,11 +100,16 @@ namespace Calculadora_Indice_Academico
                 bool chckboxselect = Convert.ToBoolean(drv.Cells["dgvchkbox"].Value);
                 if (chckboxselect)
                 {
-                    dt.Rows.Add(drv.Cells[1].Value, drv.Cells[2].Value, drv.Cells[3].Value, drv.Cells[4].Value, drv.Cells[5].Value, drv.Cells[6].Value, drv.Cells[7].Value, drv.Cells[8].Value, drv.Cells[9].Value, drv.Cells[10].Value);
+                    dt.Rows.Add(drv.Cells[1].Value, drv.Cells[2].Value, drv.Cells[3].Value, drv.Cells[4].Value, drv.Cells[5].Value, drv.Cells[6].Value, drv.Cells[7].Value, drv.Cells[8].Value, drv.Cells[9].Value, drv.Cells[10].Value, drv.Cells[11].Value, drv.Cells[12].Value);
                 }
                 dataSele.DataSource = dt;
             }
             
+        }
+
+        private void SeleccionUc_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

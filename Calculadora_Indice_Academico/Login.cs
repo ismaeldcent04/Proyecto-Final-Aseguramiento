@@ -25,7 +25,7 @@ namespace Calculadora_Indice_Academico
           int nWidthEllipse, // height of ellipse
           int nHeightEllipse // width of ellipse
       );
-        AseguramientoDbEntities5 Db = new AseguramientoDbEntities5();
+        Aseguramiento_dbEntities1 Db = new Aseguramiento_dbEntities1();
         public Login()
         {
             InitializeComponent();

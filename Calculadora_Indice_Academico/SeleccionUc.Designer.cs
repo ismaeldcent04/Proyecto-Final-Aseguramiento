@@ -529,7 +529,8 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnGuardar);
             this.Name = "SeleccionUc";
-            this.Size = new System.Drawing.Size(1083, 850);
+            this.Size = new System.Drawing.Size(1066, 833);
+            this.Load += new System.EventHandler(this.SeleccionUc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSele)).EndInit();
             this.pnlSelDisp.ResumeLayout(false);
             this.pnlNG.ResumeLayout(false);
