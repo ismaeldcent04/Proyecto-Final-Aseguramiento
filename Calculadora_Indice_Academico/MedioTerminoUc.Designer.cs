@@ -28,20 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asignatura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Calif = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Creditos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataMedio = new System.Windows.Forms.DataGridView();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.boxTrimestre = new System.Windows.Forms.ComboBox();
             this.boxYear = new System.Windows.Forms.ComboBox();
@@ -55,7 +49,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataMedio)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -109,86 +103,37 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "Teorías:";
             // 
-            // dataGridView1
+            // dataMedio
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Clave,
-            this.Seccion,
-            this.Asignatura,
-            this.Calif,
-            this.Creditos,
-            this.Puntos});
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 181);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.Size = new System.Drawing.Size(1050, 450);
-            this.dataGridView1.TabIndex = 20;
-            // 
-            // Clave
-            // 
-            this.Clave.HeaderText = "Clave";
-            this.Clave.Name = "Clave";
-            this.Clave.ReadOnly = true;
-            this.Clave.Width = 70;
-            // 
-            // Seccion
-            // 
-            this.Seccion.HeaderText = "Sec";
-            this.Seccion.Name = "Seccion";
-            this.Seccion.ReadOnly = true;
-            this.Seccion.Width = 80;
-            // 
-            // Asignatura
-            // 
-            this.Asignatura.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Asignatura.HeaderText = "Asignatura";
-            this.Asignatura.Name = "Asignatura";
-            this.Asignatura.ReadOnly = true;
-            // 
-            // Calif
-            // 
-            this.Calif.HeaderText = "Calif";
-            this.Calif.Name = "Calif";
-            this.Calif.ReadOnly = true;
-            this.Calif.Width = 60;
-            // 
-            // Creditos
-            // 
-            this.Creditos.HeaderText = "CR";
-            this.Creditos.Name = "Creditos";
-            this.Creditos.ReadOnly = true;
-            this.Creditos.Width = 50;
-            // 
-            // Puntos
-            // 
-            this.Puntos.HeaderText = "Puntos";
-            this.Puntos.Name = "Puntos";
-            this.Puntos.ReadOnly = true;
-            this.Puntos.Width = 60;
+            this.dataMedio.AllowUserToAddRows = false;
+            this.dataMedio.AllowUserToDeleteRows = false;
+            this.dataMedio.AllowUserToResizeColumns = false;
+            this.dataMedio.AllowUserToResizeRows = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataMedio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataMedio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataMedio.EnableHeadersVisualStyles = false;
+            this.dataMedio.GridColor = System.Drawing.SystemColors.ControlText;
+            this.dataMedio.Location = new System.Drawing.Point(26, 181);
+            this.dataMedio.Name = "dataMedio";
+            this.dataMedio.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataMedio.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataMedio.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataMedio.Size = new System.Drawing.Size(1050, 450);
+            this.dataMedio.TabIndex = 20;
             // 
             // btnGenerar
             // 
@@ -199,16 +144,17 @@
             this.btnGenerar.TabIndex = 19;
             this.btnGenerar.Text = "Generar Reporte";
             this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // boxTrimestre
             // 
             this.boxTrimestre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxTrimestre.FormattingEnabled = true;
             this.boxTrimestre.Items.AddRange(new object[] {
-            "FEBRERO - ABRIL",
-            "MAYO - JULIO",
-            "AGOSTO - OCTUBRE",
-            "NOVIEMBRO - ENERO"});
+            "FEBRERO-ABRIL",
+            "MAYO-JULIO",
+            "AGOSTO-OCTUBRE",
+            "NOVIEMBRO-ENERO"});
             this.boxTrimestre.Location = new System.Drawing.Point(290, 57);
             this.boxTrimestre.Name = "boxTrimestre";
             this.boxTrimestre.Size = new System.Drawing.Size(161, 26);
@@ -365,7 +311,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataMedio);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.boxTrimestre);
             this.Controls.Add(this.boxYear);
@@ -382,7 +328,7 @@
             this.Controls.Add(this.label3);
             this.Name = "MedioTerminoUc";
             this.Size = new System.Drawing.Size(1100, 850);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataMedio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,13 +340,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Seccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Asignatura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Calif;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Creditos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Puntos;
+        private System.Windows.Forms.DataGridView dataMedio;
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.ComboBox boxTrimestre;
         private System.Windows.Forms.ComboBox boxYear;

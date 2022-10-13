@@ -33,6 +33,9 @@
             this.txt_buscarDocente = new System.Windows.Forms.TextBox();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.pnlDatosGenerales = new System.Windows.Forms.Panel();
+            this.txt_apellidoS = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.txt_cedula = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,10 +60,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_editar = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.txt_apellidoS = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.btn_actualizar = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_docentes)).BeginInit();
             this.pnlDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -106,8 +108,10 @@
             this.pnlDatosGenerales.Controls.Add(this.txt_apellidoS);
             this.pnlDatosGenerales.Controls.Add(this.label8);
             this.pnlDatosGenerales.Controls.Add(this.label9);
+            this.pnlDatosGenerales.Controls.Add(this.textBox1);
             this.pnlDatosGenerales.Controls.Add(this.txt_cedula);
             this.pnlDatosGenerales.Controls.Add(this.label1);
+            this.pnlDatosGenerales.Controls.Add(this.label14);
             this.pnlDatosGenerales.Controls.Add(this.label6);
             this.pnlDatosGenerales.Controls.Add(this.txt_apellidoP);
             this.pnlDatosGenerales.Controls.Add(this.label7);
@@ -133,15 +137,44 @@
             this.pnlDatosGenerales.Size = new System.Drawing.Size(974, 276);
             this.pnlDatosGenerales.TabIndex = 27;
             // 
+            // txt_apellidoS
+            // 
+            this.txt_apellidoS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.txt_apellidoS.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_apellidoS.Location = new System.Drawing.Point(587, 82);
+            this.txt_apellidoS.Name = "txt_apellidoS";
+            this.txt_apellidoS.Size = new System.Drawing.Size(158, 13);
+            this.txt_apellidoS.TabIndex = 38;
+            this.txt_apellidoS.Text = "Dicent";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(532, 80);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 16);
+            this.label8.TabIndex = 37;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(439, 79);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(138, 16);
+            this.label9.TabIndex = 36;
+            this.label9.Text = " Segundo Apellido:";
+            // 
             // txt_cedula
             // 
             this.txt_cedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.txt_cedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_cedula.Location = new System.Drawing.Point(515, 195);
+            this.txt_cedula.Location = new System.Drawing.Point(515, 231);
             this.txt_cedula.Name = "txt_cedula";
             this.txt_cedula.Size = new System.Drawing.Size(158, 13);
             this.txt_cedula.TabIndex = 35;
-            this.txt_cedula.Text = "402-3124333-4";
+            this.txt_cedula.Text = "00000";
             // 
             // label1
             // 
@@ -369,35 +402,6 @@
             this.label18.TabIndex = 25;
             this.label18.Text = "Gestionar Profesor";
             // 
-            // txt_apellidoS
-            // 
-            this.txt_apellidoS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.txt_apellidoS.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_apellidoS.Location = new System.Drawing.Point(587, 82);
-            this.txt_apellidoS.Name = "txt_apellidoS";
-            this.txt_apellidoS.Size = new System.Drawing.Size(158, 13);
-            this.txt_apellidoS.TabIndex = 38;
-            this.txt_apellidoS.Text = "Dicent";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(532, 80);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 16);
-            this.label8.TabIndex = 37;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(439, 79);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(138, 16);
-            this.label9.TabIndex = 36;
-            this.label9.Text = " Segundo Apellido:";
-            // 
             // btn_actualizar
             // 
             this.btn_actualizar.Location = new System.Drawing.Point(694, 462);
@@ -407,6 +411,26 @@
             this.btn_actualizar.Text = "Actualizar";
             this.btn_actualizar.UseVisualStyleBackColor = true;
             this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(407, 229);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(92, 16);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "Contraseña:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(517, 195);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(158, 13);
+            this.textBox1.TabIndex = 35;
+            this.textBox1.Text = "402-3124333-4";
             // 
             // EliminarProfesores
             // 
@@ -467,5 +491,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_actualizar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label14;
     }
 }

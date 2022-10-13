@@ -11,15 +11,14 @@ namespace Calculadora_Indice_Academico
 {
     using System;
     
-    public partial class search_docen_Result
+    public partial class show_medio_Result
     {
-        public int ID { get; set; }
-        public string Carrera { get; set; }
-        public string Nombre { get; set; }
-        public string Primer_apellido { get; set; }
-        public string Segundo_apellido { get; set; }
-        public string Telefono { get; set; }
-        public string Correo { get; set; }
-        public string Cedula { get; set; }
+        public Nullable<int> Seccion { get; set; }
+        public string Codigo { get; set; }
+        public string Asignatura { get; set; }
+        public int Cr_ { get; set; }
+        public string Aula { get; set; }
+        public string Profesor { get; set; }
+        public Nullable<decimal> Nota { get; set; }
     }
 }

@@ -28,25 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlCreditos = new System.Windows.Forms.Panel();
             this.proCreditos = new CircularProgressBar.CircularProgressBar();
             this.label18 = new System.Windows.Forms.Label();
             this.pnlHorario = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.dataAsignatura = new System.Windows.Forms.DataGridView();
-            this.Seccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asignatura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Creditos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Aula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lunes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Martes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Miercoles = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Jueves = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Viernes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sabado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTrimestres = new System.Windows.Forms.Panel();
             this.proTrimestres = new CircularProgressBar.CircularProgressBar();
             this.lblTriCur2 = new System.Windows.Forms.Label();
@@ -75,6 +64,9 @@
             this.pnlAprobadas = new System.Windows.Forms.Panel();
             this.proAprobadas = new CircularProgressBar.CircularProgressBar();
             this.label15 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlCreditos.SuspendLayout();
             this.pnlHorario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataAsignatura)).BeginInit();
@@ -85,6 +77,7 @@
             this.pnlDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlAprobadas.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCreditos
@@ -92,9 +85,9 @@
             this.pnlCreditos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.pnlCreditos.Controls.Add(this.proCreditos);
             this.pnlCreditos.Controls.Add(this.label18);
-            this.pnlCreditos.Location = new System.Drawing.Point(861, 243);
+            this.pnlCreditos.Location = new System.Drawing.Point(853, 254);
             this.pnlCreditos.Name = "pnlCreditos";
-            this.pnlCreditos.Size = new System.Drawing.Size(200, 210);
+            this.pnlCreditos.Size = new System.Drawing.Size(200, 200);
             this.pnlCreditos.TabIndex = 18;
             // 
             // proCreditos
@@ -109,6 +102,7 @@
             this.proCreditos.InnerWidth = -1;
             this.proCreditos.Location = new System.Drawing.Point(35, 15);
             this.proCreditos.MarqueeAnimationSpeed = 2000;
+            this.proCreditos.Maximum = 278;
             this.proCreditos.Name = "proCreditos";
             this.proCreditos.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.proCreditos.OuterMargin = -25;
@@ -133,9 +127,9 @@
             // 
             this.label18.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.Control;
-            this.label18.Location = new System.Drawing.Point(35, 150);
+            this.label18.Location = new System.Drawing.Point(20, 150);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(124, 36);
+            this.label18.Size = new System.Drawing.Size(156, 36);
             this.label18.TabIndex = 3;
             this.label18.Text = "Créditos aprobados de 279";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -167,129 +161,40 @@
             this.dataAsignatura.AllowUserToDeleteRows = false;
             this.dataAsignatura.AllowUserToResizeColumns = false;
             this.dataAsignatura.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataAsignatura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataAsignatura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataAsignatura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataAsignatura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Seccion,
-            this.Asignatura,
-            this.Creditos,
-            this.Aula,
-            this.Lunes,
-            this.Martes,
-            this.Miercoles,
-            this.Jueves,
-            this.Viernes,
-            this.Sabado,
-            this.Profesor});
             this.dataAsignatura.EnableHeadersVisualStyles = false;
             this.dataAsignatura.GridColor = System.Drawing.SystemColors.ControlText;
             this.dataAsignatura.Location = new System.Drawing.Point(20, 55);
             this.dataAsignatura.Name = "dataAsignatura";
             this.dataAsignatura.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataAsignatura.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataAsignatura.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataAsignatura.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataAsignatura.Size = new System.Drawing.Size(1000, 258);
             this.dataAsignatura.TabIndex = 1;
-            // 
-            // Seccion
-            // 
-            this.Seccion.HeaderText = "Sección";
-            this.Seccion.Name = "Seccion";
-            this.Seccion.ReadOnly = true;
-            this.Seccion.Width = 70;
-            // 
-            // Asignatura
-            // 
-            this.Asignatura.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Asignatura.HeaderText = "Asignatura";
-            this.Asignatura.Name = "Asignatura";
-            this.Asignatura.ReadOnly = true;
-            // 
-            // Creditos
-            // 
-            this.Creditos.HeaderText = "Cr.";
-            this.Creditos.Name = "Creditos";
-            this.Creditos.ReadOnly = true;
-            this.Creditos.Width = 50;
-            // 
-            // Aula
-            // 
-            this.Aula.HeaderText = "Aula";
-            this.Aula.Name = "Aula";
-            this.Aula.ReadOnly = true;
-            this.Aula.Width = 80;
-            // 
-            // Lunes
-            // 
-            this.Lunes.HeaderText = "Lun";
-            this.Lunes.Name = "Lunes";
-            this.Lunes.ReadOnly = true;
-            this.Lunes.Width = 60;
-            // 
-            // Martes
-            // 
-            this.Martes.HeaderText = "Ma";
-            this.Martes.Name = "Martes";
-            this.Martes.ReadOnly = true;
-            this.Martes.Width = 60;
-            // 
-            // Miercoles
-            // 
-            this.Miercoles.HeaderText = "Mi";
-            this.Miercoles.Name = "Miercoles";
-            this.Miercoles.ReadOnly = true;
-            this.Miercoles.Width = 60;
-            // 
-            // Jueves
-            // 
-            this.Jueves.HeaderText = "Ju";
-            this.Jueves.Name = "Jueves";
-            this.Jueves.ReadOnly = true;
-            this.Jueves.Width = 60;
-            // 
-            // Viernes
-            // 
-            this.Viernes.HeaderText = "Vi";
-            this.Viernes.Name = "Viernes";
-            this.Viernes.ReadOnly = true;
-            this.Viernes.Width = 60;
-            // 
-            // Sabado
-            // 
-            this.Sabado.HeaderText = "Sab";
-            this.Sabado.Name = "Sabado";
-            this.Sabado.ReadOnly = true;
-            this.Sabado.Width = 60;
-            // 
-            // Profesor
-            // 
-            this.Profesor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Profesor.HeaderText = "Profesor";
-            this.Profesor.Name = "Profesor";
-            this.Profesor.ReadOnly = true;
             // 
             // pnlTrimestres
             // 
             this.pnlTrimestres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.pnlTrimestres.Controls.Add(this.proTrimestres);
             this.pnlTrimestres.Controls.Add(this.lblTriCur2);
-            this.pnlTrimestres.Location = new System.Drawing.Point(631, 243);
+            this.pnlTrimestres.Location = new System.Drawing.Point(29, 254);
             this.pnlTrimestres.Name = "pnlTrimestres";
-            this.pnlTrimestres.Size = new System.Drawing.Size(200, 210);
+            this.pnlTrimestres.Size = new System.Drawing.Size(200, 200);
             this.pnlTrimestres.TabIndex = 19;
             // 
             // proTrimestres
@@ -340,9 +245,9 @@
             this.pnlAvisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.pnlAvisos.Controls.Add(this.panel5);
             this.pnlAvisos.Controls.Add(this.label12);
-            this.pnlAvisos.Location = new System.Drawing.Point(22, 253);
+            this.pnlAvisos.Location = new System.Drawing.Point(618, 14);
             this.pnlAvisos.Name = "pnlAvisos";
-            this.pnlAvisos.Size = new System.Drawing.Size(590, 200);
+            this.pnlAvisos.Size = new System.Drawing.Size(443, 223);
             this.pnlAvisos.TabIndex = 21;
             // 
             // panel5
@@ -352,14 +257,14 @@
             this.panel5.Controls.Add(this.label13);
             this.panel5.Location = new System.Drawing.Point(25, 55);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(540, 130);
+            this.panel5.Size = new System.Drawing.Size(399, 151);
             this.panel5.TabIndex = 1;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(200, 60);
+            this.label13.Location = new System.Drawing.Point(132, 69);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(142, 16);
             this.label13.TabIndex = 3;
@@ -382,9 +287,9 @@
             this.pnlIndice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.pnlIndice.Controls.Add(this.proIndice);
             this.pnlIndice.Controls.Add(this.label16);
-            this.pnlIndice.Location = new System.Drawing.Point(861, 14);
+            this.pnlIndice.Location = new System.Drawing.Point(235, 254);
             this.pnlIndice.Name = "pnlIndice";
-            this.pnlIndice.Size = new System.Drawing.Size(200, 220);
+            this.pnlIndice.Size = new System.Drawing.Size(200, 200);
             this.pnlIndice.TabIndex = 22;
             // 
             // proIndice
@@ -399,6 +304,7 @@
             this.proIndice.InnerWidth = -1;
             this.proIndice.Location = new System.Drawing.Point(35, 15);
             this.proIndice.MarqueeAnimationSpeed = 2000;
+            this.proIndice.Maximum = 4;
             this.proIndice.Name = "proIndice";
             this.proIndice.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.proIndice.OuterMargin = -25;
@@ -415,9 +321,8 @@
             this.proIndice.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
             this.proIndice.SuperscriptText = "";
             this.proIndice.TabIndex = 4;
-            this.proIndice.Text = "3.80";
+            this.proIndice.Text = "0";
             this.proIndice.TextMargin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.proIndice.Value = 80;
             // 
             // label16
             // 
@@ -599,9 +504,9 @@
             this.pnlAprobadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.pnlAprobadas.Controls.Add(this.proAprobadas);
             this.pnlAprobadas.Controls.Add(this.label15);
-            this.pnlAprobadas.Location = new System.Drawing.Point(631, 14);
+            this.pnlAprobadas.Location = new System.Drawing.Point(647, 254);
             this.pnlAprobadas.Name = "pnlAprobadas";
-            this.pnlAprobadas.Size = new System.Drawing.Size(200, 220);
+            this.pnlAprobadas.Size = new System.Drawing.Size(200, 200);
             this.pnlAprobadas.TabIndex = 24;
             // 
             // proAprobadas
@@ -616,6 +521,7 @@
             this.proAprobadas.InnerWidth = -1;
             this.proAprobadas.Location = new System.Drawing.Point(35, 15);
             this.proAprobadas.MarqueeAnimationSpeed = 2000;
+            this.proAprobadas.Maximum = 112;
             this.proAprobadas.Name = "proAprobadas";
             this.proAprobadas.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.proAprobadas.OuterMargin = -25;
@@ -644,13 +550,67 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(150, 36);
             this.label15.TabIndex = 3;
-            this.label15.Text = "Asignaturas aprobadas de 113";
+            this.label15.Text = "Asignaturas aprobadas de 112";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.panel1.Controls.Add(this.circularProgressBar1);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Location = new System.Drawing.Point(441, 254);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 200);
+            this.panel1.TabIndex = 18;
+            // 
+            // circularProgressBar1
+            // 
+            this.circularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.circularProgressBar1.AnimationSpeed = 500;
+            this.circularProgressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.circularProgressBar1.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold);
+            this.circularProgressBar1.ForeColor = System.Drawing.Color.White;
+            this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.circularProgressBar1.InnerMargin = 0;
+            this.circularProgressBar1.InnerWidth = -1;
+            this.circularProgressBar1.Location = new System.Drawing.Point(35, 15);
+            this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
+            this.circularProgressBar1.Maximum = 4;
+            this.circularProgressBar1.Name = "circularProgressBar1";
+            this.circularProgressBar1.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar1.OuterMargin = -25;
+            this.circularProgressBar1.OuterWidth = 26;
+            this.circularProgressBar1.ProgressColor = System.Drawing.Color.White;
+            this.circularProgressBar1.ProgressWidth = 7;
+            this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.circularProgressBar1.Size = new System.Drawing.Size(128, 128);
+            this.circularProgressBar1.StartAngle = 270;
+            this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.circularProgressBar1.SubscriptText = "";
+            this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.circularProgressBar1.SuperscriptText = "";
+            this.circularProgressBar1.TabIndex = 4;
+            this.circularProgressBar1.Text = "0";
+            this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Control;
+            this.label8.Location = new System.Drawing.Point(35, 150);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(124, 36);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Indice Trimestral";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DashboardEstudianteUc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlCreditos);
             this.Controls.Add(this.pnlHorario);
             this.Controls.Add(this.pnlTrimestres);
@@ -674,6 +634,7 @@
             this.pnlDatosGenerales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlAprobadas.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -710,20 +671,12 @@
         private CircularProgressBar.CircularProgressBar proAprobadas;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dataAsignatura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Seccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Asignatura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Creditos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Aula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lunes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Martes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Miercoles;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Jueves;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Viernes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sabado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Profesor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label lblTel;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private CircularProgressBar.CircularProgressBar circularProgressBar1;
+        private System.Windows.Forms.Label label8;
     }
 }

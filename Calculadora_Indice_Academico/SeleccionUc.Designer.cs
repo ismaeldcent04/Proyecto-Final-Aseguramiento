@@ -66,6 +66,9 @@
             this.dataCB = new System.Windows.Forms.DataGridView();
             this.btnCB = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataSele)).BeginInit();
             this.pnlSelDisp.SuspendLayout();
             this.pnlNG.SuspendLayout();
@@ -136,6 +139,7 @@
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -515,6 +519,39 @@
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.label2.Location = new System.Drawing.Point(288, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(347, 32);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Seleccion de Asignaturas";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.label3.Location = new System.Drawing.Point(667, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(347, 32);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Seleccion de Asignaturas";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.label4.Location = new System.Drawing.Point(558, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(347, 32);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Seleccion de Asignaturas";
+            // 
             // SeleccionUc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -522,6 +559,9 @@
             this.AutoScroll = true;
             this.Controls.Add(this.pnlSelDisp);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataSele);
@@ -529,7 +569,7 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnGuardar);
             this.Name = "SeleccionUc";
-            this.Size = new System.Drawing.Size(1066, 833);
+            this.Size = new System.Drawing.Size(1063, 816);
             this.Load += new System.EventHandler(this.SeleccionUc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSele)).EndInit();
             this.pnlSelDisp.ResumeLayout(false);
@@ -573,5 +613,8 @@
         private System.Windows.Forms.DataGridView dataCB;
         private System.Windows.Forms.Button btnCB;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

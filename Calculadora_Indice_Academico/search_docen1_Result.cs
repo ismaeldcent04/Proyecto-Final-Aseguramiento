@@ -11,7 +11,7 @@ namespace Calculadora_Indice_Academico
 {
     using System;
     
-    public partial class search_docen_Result
+    public partial class search_docen1_Result
     {
         public int ID { get; set; }
         public string Carrera { get; set; }

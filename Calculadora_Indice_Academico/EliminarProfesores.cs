@@ -12,7 +12,7 @@ namespace Calculadora_Indice_Academico
 {
     public partial class EliminarProfesores : UserControl
     {
-        Aseguramiento_dbEntities1 db = new Aseguramiento_dbEntities1();
+        AseguramientoDbEntities db = new AseguramientoDbEntities();
         public EliminarProfesores()
         {
             InitializeComponent();
@@ -67,7 +67,7 @@ namespace Calculadora_Indice_Academico
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            db.upt_docente(txt_id.Text,txt_cedula.Text,txt_Nombre.Text, txt_apellidoP.Text,txt_apellidoS.Text,txt_telefono.Text,txt_correo.Text);
+            db.upt_docen(txt_id.Text, txt_cedula.Text, txt_Nombre.Text, txt_apellidoP.Text, txt_apellidoS.Text, txt_telefono.Text, txt_correo.Text, txt_AreaAcademica.Text);
             dgv_docentes.DataSource = db.search_docen(txt_buscarDocente.Text);
         }
     }

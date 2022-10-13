@@ -11,15 +11,9 @@ namespace Calculadora_Indice_Academico
 {
     using System;
     
-    public partial class search_docen_Result
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int ID { get; set; }
-        public string Carrera { get; set; }
-        public string Nombre { get; set; }
-        public string Primer_apellido { get; set; }
-        public string Segundo_apellido { get; set; }
-        public string Telefono { get; set; }
-        public string Correo { get; set; }
-        public string Cedula { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

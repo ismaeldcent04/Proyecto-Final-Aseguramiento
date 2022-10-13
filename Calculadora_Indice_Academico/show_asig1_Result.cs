@@ -11,9 +11,9 @@ namespace Calculadora_Indice_Academico
 {
     using System;
     
-    public partial class show_seleccions_Result
+    public partial class show_asig1_Result
     {
-        public int Seccion { get; set; }
+        public Nullable<int> Seccion { get; set; }
         public string Codigo { get; set; }
         public string Asignatura { get; set; }
         public int Cr_ { get; set; }

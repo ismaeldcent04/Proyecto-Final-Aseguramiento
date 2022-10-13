@@ -12,7 +12,7 @@ namespace Calculadora_Indice_Academico
 {
     public partial class btn_eliminar : UserControl
     {
-        Aseguramiento_dbEntities1 db = new Aseguramiento_dbEntities1();
+        AseguramientoDbEntities db = new AseguramientoDbEntities();
         public btn_eliminar()
         {
             InitializeComponent();

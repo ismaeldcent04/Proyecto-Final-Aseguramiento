@@ -12,15 +12,10 @@ namespace Calculadora_Indice_Academico
 {
     public partial class DashboardAdmin : UserControl
     {
-        Aseguramiento_dbEntities1 db = new Aseguramiento_dbEntities1();
+        AseguramientoDbEntities db = new AseguramientoDbEntities();
         public DashboardAdmin()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void DashboardAdmin_Load(object sender, EventArgs e)

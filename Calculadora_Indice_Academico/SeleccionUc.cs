@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Cache;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,12 @@ namespace Calculadora_Indice_Academico
 {
     public partial class SeleccionUc : UserControl
     {
-        Aseguramiento_dbEntities1 Db = new Aseguramiento_dbEntities1();
+        AseguramientoDbEntities Db = new AseguramientoDbEntities();
         public SeleccionUc()
         {
             InitializeComponent();
             hideAll();
-            dataCB.DataSource = Db.show_seleccions();
+            dataCB.DataSource = Db.show_seleccion();
             DataGridViewCheckBoxColumn chkbox = new DataGridViewCheckBoxColumn();
             chkbox.HeaderText = "Select";
             chkbox.Width = 25;
@@ -109,7 +110,29 @@ namespace Calculadora_Indice_Academico
 
         private void SeleccionUc_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            string asignatura, codigo, seccion, triMatid;
+            int i = 0;
+            foreach (DataGridViewRow drv in dataSele.Rows)
+            {
+                codigo = Convert.ToString(dataSele.Rows[i].Cells[1].Value);
+                var fullEntries = (from t in Db.trimestre_materia
+                                   join m in Db.materias on t.materia_id equals m.materia_id
+                                   where m.materia_codigo == codigo
+                                   select new
+                                   {
+                                       ID = t.triMat_id
+                                   }).Take(1).ToList();
+                foreach(var a in fullEntries)
+                {
+                    Db.insert_calif(UserLoginCache.idUser.ToString(), a.ID.ToString());
+                }
+                i++;
+            }
         }
     }
 }
