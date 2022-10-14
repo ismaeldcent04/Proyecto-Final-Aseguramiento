@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Calculadora_Indice_Academico
 {
-    public partial class EliminarProfesores : UserControl
+    public partial class RevisionCalificacionProfesores : Form
     {
-        public EliminarProfesores()
+        public RevisionCalificacionProfesores()
         {
             InitializeComponent();
         }
-
-        private void EliminarProfesores_Load(object sender, EventArgs e)
-        {
-
-        }
-
-     
     }
 }
